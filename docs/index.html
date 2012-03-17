@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Proem Framework &mdash; A lightweight, simple, fast MVC implementation for PHP5.4</title>
+    <meta name="description" content="">
+    <meta name="author" content="Tony R Quilkey">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/prettify.js"></script>
+    <script src="/scripts/proem.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/styles/proem.css">
+  </head>
+  <body>
+    <div class="topnav">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="brand">
+            <strong>Proem</strong> Framework
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/docs">Documentation</a></li>
+              <!--<li><a href="/contrib">Contribute</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="docs container">
+      <div class="row">
+        <div class="span3">
+          <ul class="nav nav-tabs nav-stacked">
+            <li><a href="/docs">Overview</a></li>
+            <li><a href="/docs/autoloader.html">The Autoloader</a></li>
+            <li><a href="/docs/cascading-namespace.html">The Cascading Namespace</a></li>
+            <li><a href="/docs/opt-component.html">The Opt Component</a></li>
+            <li><a href="/docs/route-component.html">Routing</a></li>
+            <li><a href="/docs/signal-component.html">Signals</a></li>
+            <li><a href="/docs/services-component.html">Dependency Injection</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <div class="well">
+  <h2>Overview</h2>
+  <p>
+    The Proem framework aims to be a lightweight, simple &amp; fast MVC implementation built on top of PHP5.4
+  </p>
+  <p>
+    The overall design has been kicking around my head for a number of years, slowly becoming more
+    and more refined over time. This is actually the third iteration of the idea, with the previous attempt being stalled here.
+  </p>
+  <p>
+    The current idea will see the framework become Event driven, with the Bootstrap process executing a filter chain to
+    instantiate the bulk of the components required to build an application. During the execution of each step in the
+    filter chain more events will be exposed and these events will be easy to subscribe / listen too.
+  </p>
+  <p>
+    This should see the bootstrap process become very easy to extend and customise. I will begin documentation as I get components completed.
+  </p>
+  <p>
+    We currently have this website, <a href="http://proemframework.org">http://proemframework.org</a>, an irc channel on #proem
+    irc.freenode.net, and our issue tracker and code repositories on <a href="https://github.coim/proem/proem">GitHub</a>.
+  </p>
+</div>
+        </div>
+      </div>
+    </div>
+      </body>
+</html>
