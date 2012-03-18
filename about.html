@@ -59,49 +59,29 @@
   </div>
     <div class="docs container">
       <div class="row">
-        <div class="span3">
-          <ul class="nav nav-tabs nav-stacked">
-            <li><a href="/docs">Overview</a></li>
-            <li><a href="/docs/installation.html">Installation</a></li>
-            <li><a href="/docs/autoloader.html">The Autoloader</a></li>
-            <li><a href="/docs/cascading-namespace.html">The Cascading Namespace</a></li>
-            <li><a href="/docs/opt-component.html">The Opt Component</a></li>
-            <li><a href="/docs/route-component.html">Routing</a></li>
-            <li><a href="/docs/signal-component.html">Signals</a></li>
-            <li><a href="/docs/services-component.html">Dependency Injection</a></li>
-          </ul>
-        </div>
-        <div class="span9">
+        <div class="span12">
           <div class="well">
-  <h2>Overview</h2>
+  <h2>Where did Proem come from?</h2>
+  <blockquote>
+    –noun an introductory discourse; introduction; preface; preamble.<br />
+    Origin: 1350–1400; < L prooemium < Gk prooímion prelude (pro- pro-2 + oím(ē) song + -ion dim. suffix); r. ME proheme < MF < L, as above
+  </blockquote>
   <p>
-    The Proem framework aims to be a lightweight, simple &amp; fast MVC implementation built on top of PHP5.4
+    Proem started life in around early 2010 and has seen a few different incarnations since. At one stage
+    around the end of 2010 I had an almost complete framework in place. Things change however and a few
+    rewrites latter it is where it is today.
   </p>
   <p>
-    The overall design has been kicking around my head for a number of years, slowly becoming more
-    and more refined over time. This is actually the third iteration of the idea, with the previous attempt being stalled here.
+    The current incarnation was started at the end of 2011 after playing with the PHP5.4 alphas for about 6 months.
   </p>
+</div>
+<a name="contact"></a>
+<div class="well">
+  <h3>Contact me</h3>
   <p>
-    The current idea will see the framework become Event driven, with the Bootstrap process executing a filter chain to
-    instantiate the bulk of the components required to build an application. During the execution of each step in the
-    filter chain more events will be exposed and these events will be easy to subscribe / listen too.
+    I can be contacted via email at <a mailto="trq@proemframework.org">trq@proemframework.org</a>, find me
+    lurking on our #proem channel on freenode, or follow <a href="http://twitter.com/proem">@proem</a> or <a href="http://twitter.com">@tonyrq</a>
   </p>
-  <p>
-    This should see the bootstrap process become very easy to extend and customise. I will begin documentation as I get components completed.
-  </p>
-  <p>
-    We currently have this website, <a href="http://proemframework.org">http://proemframework.org</a>, an irc channel on #proem
-    irc.freenode.net, and our issue tracker and code repositories on <a href="https://github.com/proem/proem">GitHub</a>.
-  </p>
-  <div class="alert alert-error">
-    <p>
-      Please be aware that while this documentation is accurate, Proem is a fast moving target at this point in time.
-    </p>
-    <p>
-      Proem is still very much in early pre-alpha stages and is <strong>not currently usable</strong>. There is no Controller or View
-      components currently in place.
-    </p>
-  </div>
 </div>
         </div>
       </div>
