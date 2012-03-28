@@ -65,6 +65,7 @@
             <li><a href="/docs/installation.html">Installation</a></li>
             <li><a href="/docs/autoloader.html">The Autoloader</a></li>
             <li><a href="/docs/cascading-namespace.html">The Cascading Namespace</a></li>
+            <li><a href="/docs/bootstrap.html">The Bootstrap Process</a></li>
             <li><a href="/docs/opt-component.html">The Opt Component</a></li>
             <li><a href="/docs/route-component.html">Routing</a></li>
             <li><a href="/docs/signal-component.html">Signals</a></li>
@@ -120,7 +121,7 @@
   <pre class="prettyprint">
     include 'phar://proem.phar';
 
-    (new Proem)->init();
+    (new \Proem\Proem)->init();
   </pre>
   <p>
     The phar archive takes care of adding Proem to the Autoloader so everything is just ready to go.
@@ -150,9 +151,7 @@
   <pre class="prettyprint">
     require_once 'Proem/Autoloader.php';
 
-    use Proem\Autoloader;
-
-    (new AutoLoader)
+    (new \Proem\AutoLoader)
       ->registerNamespace('Proem', '/path/to/proem/lib')
       ->register();
   </pre>

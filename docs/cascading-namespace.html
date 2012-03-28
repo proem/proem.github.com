@@ -65,6 +65,7 @@
             <li><a href="/docs/installation.html">Installation</a></li>
             <li><a href="/docs/autoloader.html">The Autoloader</a></li>
             <li><a href="/docs/cascading-namespace.html">The Cascading Namespace</a></li>
+            <li><a href="/docs/bootstrap.html">The Bootstrap Process</a></li>
             <li><a href="/docs/opt-component.html">The Opt Component</a></li>
             <li><a href="/docs/route-component.html">Routing</a></li>
             <li><a href="/docs/signal-component.html">Signals</a></li>
@@ -102,7 +103,7 @@
     and using it instead wherever you need to use setDefaults().
   </p>
   <pre class="prettyprint">
-    class MyOption extends Proem\Util\Opt\Option {}
+    class MyOption extends \Proem\Util\Opt\Option {}
 
     class example
     {
@@ -132,7 +133,7 @@
   </p>
   <p><i>/home/foo/project/Proem/Util/Opt/Option.php</i></p>
   <pre class="prettyprint">
-    name space Proem;
+    namespace Proem;
 
     class Option extends \Proem\Api\Util\Opt\Option 
     {
@@ -152,7 +153,7 @@
   <pre class="prettyprint">
     require_once '/usr/share/proem/lib/Proem/Autoloader.php';
 
-    $loader = new Proem\AutoLoader();
+    $loader = new \Proem\AutoLoader();
     $loader->registerNamespaces([
         'Proem' => ['/home/foo/project', '/usr/share/proem/lib']
     ])->register();

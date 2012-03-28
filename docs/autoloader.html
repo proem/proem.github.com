@@ -65,6 +65,7 @@
             <li><a href="/docs/installation.html">Installation</a></li>
             <li><a href="/docs/autoloader.html">The Autoloader</a></li>
             <li><a href="/docs/cascading-namespace.html">The Cascading Namespace</a></li>
+            <li><a href="/docs/bootstrap.html">The Bootstrap Process</a></li>
             <li><a href="/docs/opt-component.html">The Opt Component</a></li>
             <li><a href="/docs/route-component.html">Routing</a></li>
             <li><a href="/docs/signal-component.html">Signals</a></li>
@@ -97,9 +98,7 @@
   <pre class="prettyprint">
     require_once './lib/Proem/Autoloader.php';
 
-    use Proem\Autoloader;
-
-    (new AutoLoader)
+    (new \Proem\AutoLoader)
         ->registerNamespace('Proem', './lib')
         ->register();
   </pre>
@@ -115,7 +114,7 @@
   <h3>Multiple locations for a single namespace</h3>
   <p>You can also register multiple file system paths for a single name space to reside in:</p>
   <pre class="prettyprint">
-    (new AutoLoader)
+    (new \Proem\AutoLoader)
         ->registerNamespaces([
             'Proem' => ['/myproem', 'lib']
         ]);
@@ -132,7 +131,7 @@
     Classes implementing the PEAR naming conventions can also be added to the autoloader:
   </p>
   <pre class="prettyprint">
-    (new AutoLoader())
+    (new \Proem\AutoLoader())
         ->registerPearPrefix('Pear_', '/usr/share/php');
   </pre>
   <p>
@@ -146,15 +145,13 @@
   <pre class="prettyprint">
     require_once 'Proem/Autoloader.php';
 
-    use Proem\Autoloader;
-
-    (new AutoLoader())
+    (new \Proem\AutoLoader())
         ->registerNamespace('Proem', './lib')
         ->register();
 
     // some more code
 
-    (new AutoLoader())
+    (new \Proem\AutoLoader())
         ->registerNamespace('Foo', './foo')
         ->register();
 

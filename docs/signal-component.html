@@ -65,6 +65,7 @@
             <li><a href="/docs/installation.html">Installation</a></li>
             <li><a href="/docs/autoloader.html">The Autoloader</a></li>
             <li><a href="/docs/cascading-namespace.html">The Cascading Namespace</a></li>
+            <li><a href="/docs/bootstrap.html">The Bootstrap Process</a></li>
             <li><a href="/docs/opt-component.html">The Opt Component</a></li>
             <li><a href="/docs/route-component.html">Routing</a></li>
             <li><a href="/docs/signal-component.html">Signals</a></li>
@@ -96,7 +97,7 @@
   <pre class="prettyprint">
     require_once 'phar://proem.phar';
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     // Attach a listener to 'some.event'
     $signal_manager->attach([
@@ -129,7 +130,7 @@
   <pre class="prettyprint">
     require_once 'phar://proem.phar';
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     // Attach a listener
     $signal_manager->attach([
@@ -156,7 +157,12 @@
     class Foo
     {
         protected $manager;
-        public function __construct(Proem\Signal\Manager $manager)
+
+        /**
+         * Proem\Signal\Manager\Template is the interface implemented by
+         * Proem\Signal\Manager\Standard
+         */
+        public function __construct(Proem\Signal\Manager\Template $manager)
         {
             $this->manager = $manager;
         }
@@ -171,7 +177,7 @@
         }
     }
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     $signal_manager->attach([
         'name'      => 'foo.something',
@@ -189,7 +195,7 @@
   <pre class="prettyprint">
     require_once 'phar://proem.phar';
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     // Attach a listener to 'some.event'
     $signal_manager->attach([
@@ -219,7 +225,7 @@
   <pre class="prettyprint">
     require_once 'phar://proem.phar';
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     // Attach a listener to 'some.event'
     $signal_manager->attach([
@@ -276,7 +282,7 @@
         }
     }
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     $signal_manager->attach([
         'name'      => 'foo.something',
@@ -310,7 +316,7 @@
   <pre class="prettyprint">
     require_once 'phar://proem.phar';
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     $signal_manager->attach([
         'name'      => 'foo.something',
@@ -336,7 +342,12 @@
     class Foo 
     {
         protected $manager;
-        public function __construct(Proem\Signal\Manager $manager)
+
+        /**
+         * Proem\Signal\Manager\Template is the interface implemented by
+         * Proem\Signal\Manager\Standard
+         */
+        public function __construct(Proem\Signal\Manager\Template $manager)
         {
             $this->manager = $manager;
         }
@@ -358,7 +369,7 @@
         }
     }
 
-    $signal_manager = new Proem\Signal\Manager;
+    $signal_manager = new Proem\Signal\Manager\Standard;
 
     $signal_manager->attach([
         'name'      => 'foo.something',
