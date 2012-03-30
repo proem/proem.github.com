@@ -288,8 +288,8 @@
     <li>post.in.response</li>
     <li>pre.in.request</li>
     <li>post.in.request</li>
-    <li>pre.in.route</li>
-    <li>post.in.route</li>
+    <li>pre.in.router</li>
+    <li>post.in.router</li>
     <li>pre.in.dispatch</li>
     <li>post.in.dispatch</li>
     <li>pre.out.dispatch</li>
@@ -324,12 +324,12 @@
     (new \Proem\Proem)->attachEventListener([
         'name' => 'post.in.route',
         'callback' => function($e) {
-            $e->getServiceManager()->get('router')->map([
+            $e->getServiceManager()->get('router')->map(
                 'logout', new \Proem\Routing\Route\Standard([
                     'rule'      => '/logout',
                     'targets'   => ['controller' => 'auth', 'action' => 'logout']
                 ])
-            ]);
+            );
         }
     ])->init();
   </pre>
