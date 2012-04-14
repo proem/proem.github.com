@@ -1790,7 +1790,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Dispatch/Standard.php" hash="10e6b08f38bf461a44066cfa95d003b6" package="Default">
+  <file path="Proem/Api/Dispatch/Standard.php" hash="3559601ac24b863b6dc83ba5a54c1bc5" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1816,7 +1816,6 @@ THE SOFTWARE.</p>]]></long-description>
     <parse_markers>
       <error line="91" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in __construct()</error>
       <error line="102" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $payload in setPayload()</error>
-      <error line="114" code="50015">Argument $map is missing from the Docblock of registerControllerMap()</error>
     </parse_markers>
     <namespace-alias name="Template">Proem\Dispatch\Template</namespace-alias>
     <namespace-alias name="Manager">Proem\Service\Manager\Template</namespace-alias>
@@ -1943,7 +1942,7 @@ for classes within a namepspace.]]></description>
           <type>Payload</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="126" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="129" package="">
         <name>registerControllerMap</name>
         <type>function</type>
         <docblock line="114">
@@ -1956,17 +1955,23 @@ which the dispatcher can use to locate controllers.</p>
 
 <p>You can create your own. The tokens :module and :controller will be replaced
 with the module and controller that are made available via the payload.</p>]]></long-description>
+          <tag line="114" name="param" description="" type="string" variable="$map">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="114" name="return" description="" type="\Proem\Dispatch\Template">
+            <type by_reference="false">\Proem\Dispatch\Template</type>
+          </tag>
         </docblock>
-        <argument line="126">
+        <argument line="129">
           <name>$map</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="142" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="146" package="">
         <name>isDispatchable</name>
         <type>function</type>
-        <docblock line="130">
+        <docblock line="134">
           <description><![CDATA[Test to see if the current payload is dispatchable.]]></description>
           <long-description><![CDATA[<p>This method iterates through all of the controller maps
 and checks to see if the class can be instantiated and the
@@ -1974,15 +1979,15 @@ action executed.</p>
 
 <p>This method will actually store an instantiated controller
 within the $class property of this Dispatch object.</p>]]></long-description>
-          <tag line="130" name="return" description="" type="bool">
+          <tag line="134" name="return" description="" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="182" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="186" package="">
         <name>dispatch</name>
         <type>function</type>
-        <docblock line="168">
+        <docblock line="172">
           <description><![CDATA[Dispatch the current controller stored within
 the $class property.]]></description>
           <long-description><![CDATA[<p>Prior to dispatch this method will add any params
@@ -1991,8 +1996,8 @@ within the service manager.</p>
 
 <p>It will then execute the controllers preAction method, the action
 method provided by the payload, then postAction.</p>]]></long-description>
-          <tag line="168" name="todo" description="The preAction and postAction could likely be replaced by events"/>
-          <tag line="168" name="return" description="" type="\Proem\Api\Dispatch\Standard">
+          <tag line="172" name="todo" description="The preAction and postAction could likely be replaced by events"/>
+          <tag line="172" name="return" description="" type="\Proem\Api\Dispatch\Standard">
             <type by_reference="false">\Proem\Api\Dispatch\Standard</type>
           </tag>
         </docblock>

@@ -498,3 +498,7 @@ div.labels
         width: 203px;
     }
 }
+
+.topnav .navbar .nav {
+  float: right;
+}
