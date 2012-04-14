@@ -1,0 +1,180 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Proem\Api\Routing\Route\Generic</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Proem.html"><i class="icon-th"></i> Proem</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">60</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">11</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Instantiate this route"><span class="description">Instantiate this route</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#getPayload" title="getPayload :: Retrieve the Payload."><span class="description">Retrieve the Payload.</span><pre>getPayload()</pre></a></li>
+<li class="method public "><a href="#isMatch" title="isMatch :: Was a match found?"><span class="description">Was a match found?</span><pre>isMatch()</pre></a></li>
+<li class="method public "><a href="#process" title="process :: Method to actually test for a match."><span class="description">Method to actually test for a match.</span><pre>process()</pre></a></li>
+<li class="method public "><a href="#setMatch" title="setMatch :: Set matched flag."><span class="description">Set matched flag.</span><pre>setMatch()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24matched" title="$matched :: Store a flag indicating a route match"><span class="description">Store a flag indicating a route match</span><pre>$matched</pre></a></li>
+<li class="property protected "><a href="#%24options" title="$options :: Store the options for this route"><span class="description">Store the options for this route</span><pre>$options</pre></a></li>
+<li class="property protected "><a href="#%24payload" title="$payload :: Store matched parameters within a Dispatch\Payload object."><span class="description">Store matched parameters within a Dispatch\Payload object.</span><pre>$payload</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CProem%5CApi%5CRouting%5CRoute%5CGeneric" id="\Proem\Api\Routing\Route\Generic"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Proem.html">Proem</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Proem.Api.html">Api</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Proem.Api.Routing.html">Routing</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Proem.Api.Routing.Route.html">Route</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Proem.Api.Routing.Route.Generic.html">Generic</a>
+</li>
+</ul>
+<div href="../classes/Proem.Api.Routing.Route.Generic.html" class="element class">
+<p class="short_description">Generic route abstract.</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Instantiate this route</h2>
+<pre>__construct(array $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><p>An array of Proem\Util\Opt\Option objects</p>
+</div>
+</div></div>
+</div>
+<a name="getPayload" id="getPayload"></a><div class="element clickable method public getPayload" data-toggle="collapse" data-target=".getPayload .collapse">
+<h2>Retrieve the Payload.</h2>
+<pre>getPayload() : \Proem\Routing\Route\Payload</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Routing\Route\Payload</code></div>
+</div></div>
+</div>
+<a name="isMatch" id="isMatch"></a><div class="element clickable method public isMatch" data-toggle="collapse" data-target=".isMatch .collapse">
+<h2>Was a match found?</h2>
+<pre>isMatch() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="process" id="process"></a><div class="element clickable method public process" data-toggle="collapse" data-target=".process .collapse">
+<h2>Method to actually test for a match.</h2>
+<pre>process(string $uri) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>If a match is found, $this->matched should be set to true
+and the payload needs to be instantiated to contain the relevent
+matched data.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$uri</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="setMatch" id="setMatch"></a><div class="element clickable method public setMatch" data-toggle="collapse" data-target=".setMatch .collapse">
+<h2>Set matched flag.</h2>
+<pre>setMatch() : \Proem\Routing\Route\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Routing\Route\Template</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24matched" id="$matched"> </a><div class="element clickable property protected $matched" data-toggle="collapse" data-target=".$matched .collapse">
+<h2>Store a flag indicating a route match</h2>
+<pre>$matched : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24options" id="$options"> </a><div class="element clickable property protected $options" data-toggle="collapse" data-target=".$options .collapse">
+<h2>Store the options for this route</h2>
+<pre>$options : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24payload" id="$payload"> </a><div class="element clickable property protected $payload" data-toggle="collapse" data-target=".$payload .collapse">
+<h2>Store matched parameters within a Dispatch\Payload object.</h2>
+<pre>$payload : \Proem\Routing\Route\Payload</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-04-14T16:37:46+10:00.<br></footer></div>
+</div>
+</body>
+</html>
