@@ -59,10 +59,10 @@
 <li class="nav-header">
 <i class="icon-custom icon-interface"></i> Interfaces</li>
 <li><a href="#Template" title="Interface that all request object must implement.">Template</a></li>
-<li><a href="#Template" title="Proem\Api\IO\Response\Template">Template</a></li>
+<li><a href="#Template" title="Interface that all Response objects must implement.">Template</a></li>
 <li><a href="#Template" title="Interface all routers must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that all routes must implement.">Template</a></li>
-<li><a href="#Template" title="Proem\Dispatch\Template">Template</a></li>
+<li><a href="#Template" title="Interface all dispatcher must implement.">Template</a></li>
 <li><a href="#Template" title="Interface describing a controller.">Template</a></li>
 <li><a href="#Template" title="Base interface that all modules and plugins must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that all assets must implement.">Template</a></li>
@@ -70,7 +70,7 @@
 <li><a href="#Template" title="Interface that all filter events must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that service managers must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that all events must implement.">Template</a></li>
-<li><a href="#Template" title="Proem\Api\Signal\Manager\Template">Template</a></li>
+<li><a href="#Template" title="Interface that all signal managers must implement.">Template</a></li>
 <li class="nav-header">
 <i class="icon-custom icon-class"></i> Classes</li>
 <li><a href="#Autoloader" title="The Proem Autoloader">Autoloader</a></li>
@@ -81,7 +81,7 @@
 <li><a href="#Payload" title="The route payload.">Payload</a></li>
 <li><a href="#Generic" title="Generic route abstract.">Generic</a></li>
 <li><a href="#Standard" title="Proem's standard route.">Standard</a></li>
-<li><a href="#RouteMatch" title="Proem\Api\Bootstrap\Signal\Event\Bootstrap">RouteMatch</a></li>
+<li><a href="#RouteMatch" title="A custom event used by the router to communicate matching routes">RouteMatch</a></li>
 <li><a href="#RouteExhausted" title="Proem\Api\Bootstrap\Signal\Event\Bootstrap">RouteExhausted</a></li>
 <li><a href="#Standard" title="Proem\Dispatch\Standard">Standard</a></li>
 <li><a href="#Stage" title="The dispatch stage.">Stage</a></li>
@@ -168,7 +168,7 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
 <a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Dispatch.Template.html">
 <h1>Template<a href="../classes/Proem.Api.Dispatch.Template.html">¶</a>
 </h1>
-<p class="short_description">Proem\Dispatch\Template</p>
+<p class="short_description">Interface all dispatcher must implement.</p>
 <div class="details collapse"></div>
 <a href="../classes/Proem.Api.Dispatch.Template.html" class="more">« More »</a>
 </div>
@@ -203,7 +203,7 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
 <a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.IO.Response.Template.html">
 <h1>Template<a href="../classes/Proem.Api.IO.Response.Template.html">¶</a>
 </h1>
-<p class="short_description">Proem\Api\IO\Response\Template</p>
+<p class="short_description">Interface that all Response objects must implement.</p>
 <div class="details collapse"></div>
 <a href="../classes/Proem.Api.IO.Response.Template.html" class="more">« More »</a>
 </div>
@@ -245,7 +245,7 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
 <a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Signal.Manager.Template.html">
 <h1>Template<a href="../classes/Proem.Api.Signal.Manager.Template.html">¶</a>
 </h1>
-<p class="short_description">Proem\Api\Signal\Manager\Template</p>
+<p class="short_description">Interface that all signal managers must implement.</p>
 <div class="details collapse"></div>
 <a href="../classes/Proem.Api.Signal.Manager.Template.html" class="more">« More »</a>
 </div>
@@ -399,7 +399,7 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
 <a name="RouteMatch" id="RouteMatch"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Signal.Event.RouteMatch.html">
 <h1>RouteMatch<a href="../classes/Proem.Api.Routing.Signal.Event.RouteMatch.html">¶</a>
 </h1>
-<p class="short_description">Proem\Api\Bootstrap\Signal\Event\Bootstrap</p>
+<p class="short_description">A custom event used by the router to communicate matching routes</p>
 <div class="details collapse"></div>
 <a href="../classes/Proem.Api.Routing.Signal.Event.RouteMatch.html" class="more">« More »</a>
 </div>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a2" title="">
-  <file path="Proem/Autoloader.php" hash="ffcc644be652fbbb782e839b4445126c" package="Default">
+  <file path="Proem/Autoloader.php" hash="d40800d6af456b075f09e7c39d1effec" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -63,8 +63,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="55" name="param" description="An array of namespaces" type="array" variable="$namespaces">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="55" name="return" description="" type="\Proem\Autoloader">
-            <type by_reference="false">\Proem\Autoloader</type>
+          <tag line="55" name="return" description="" type="\Proem\Api\Autoloader">
+            <type by_reference="false">\Proem\Api\Autoloader</type>
           </tag>
         </docblock>
         <argument line="61">
@@ -86,8 +86,8 @@ THE SOFTWARE.</p>]]></long-description>
             <type by_reference="false">array</type>
             <type by_reference="false">string</type>
           </tag>
-          <tag line="69" name="return" description="" type="\Proem\Autoloader">
-            <type by_reference="false">\Proem\Autoloader</type>
+          <tag line="69" name="return" description="" type="\Proem\Api\Autoloader">
+            <type by_reference="false">\Proem\Api\Autoloader</type>
           </tag>
         </docblock>
         <argument line="76">
@@ -205,7 +205,7 @@ namespace, and then aliasing that class back to Proem (without the \Api suffix)<
       </method>
     </class>
   </file>
-  <file path="Proem/Api/IO/Request/Http/Fake.php" hash="580a57ec8d22e0055e11eeead173049d" package="Default">
+  <file path="Proem/Api/IO/Request/Http/Fake.php" hash="d0ec8500de556271328f676091f89045" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a>
@@ -305,7 +305,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/IO/Request/Http/Standard.php" hash="1db8f9f40ca47d98bb634cf7b4acd36d" package="Default">
+  <file path="Proem/Api/IO/Request/Http/Standard.php" hash="7b963992eb00cef109b809b293768f44" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -466,8 +466,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="152" name="param" description="" type="string" variable="$type">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="152" name="return" description="" type="\Proem\IO\Request\Template">
-            <type by_reference="false">\Proem\IO\Request\Template</type>
+          <tag line="152" name="return" description="" type="\Proem\Api\IO\Request\Template">
+            <type by_reference="false">\Proem\Api\IO\Request\Template</type>
           </tag>
         </docblock>
         <argument line="158">
@@ -496,8 +496,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="191" name="param" description="" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="191" name="return" description="" type="\Proem\IO\Request\Template">
-            <type by_reference="false">\Proem\IO\Request\Template</type>
+          <tag line="191" name="return" description="" type="\Proem\Api\IO\Request\Template">
+            <type by_reference="false">\Proem\Api\IO\Request\Template</type>
           </tag>
         </docblock>
         <argument line="197">
@@ -515,8 +515,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="211" name="param" description="" type="array" variable="$data">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="211" name="return" description="" type="\Proem\IO\Request\Template">
-            <type by_reference="false">\Proem\IO\Request\Template</type>
+          <tag line="211" name="return" description="" type="\Proem\Api\IO\Request\Template">
+            <type by_reference="false">\Proem\Api\IO\Request\Template</type>
           </tag>
         </docblock>
         <argument line="217">
@@ -604,7 +604,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/IO/Request/Template.php" hash="6a6e69eeaec521054aa5afaf9fd0a778" package="Default">
+  <file path="Proem/Api/IO/Request/Template.php" hash="73df6cad3a27da394d01aa0cc43cf59f" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -653,7 +653,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/IO/Response/Http/Standard.php" hash="c2d4f2386387e3b26e1836389808684d" package="Default">
+  <file path="Proem/Api/IO/Response/Http/Standard.php" hash="c79b7bf000aa532db1a5c4fb1eaadeed" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -726,8 +726,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="62">
           <description><![CDATA[Store headers]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="62" name="var" description="" type="\Proem\Util\Storage\KeyValStore">
-            <type by_reference="false">\Proem\Util\Storage\KeyValStore</type>
+          <tag line="62" name="var" description="" type="\Proem\Api\Util\Storage\KeyValStore">
+            <type by_reference="false">\Proem\Api\Util\Storage\KeyValStore</type>
           </tag>
         </docblock>
       </property>
@@ -772,8 +772,8 @@ and may pose a security concern. It's just here as an easter
 egg more than anything. Removing it from this Request may
 not remove it all together as PHP itself can produce this
 same heeader.</p>]]></long-description>
-          <tag line="133" name="return" description="" type="\Proem\IO\Response\Template;">
-            <type by_reference="false">\Proem\IO\Response\Template;</type>
+          <tag line="133" name="return" description="" type="\Proem\Api\IO\Response\Template;">
+            <type by_reference="false">\Proem\Api\IO\Response\Template;</type>
           </tag>
         </docblock>
       </method>
@@ -786,8 +786,8 @@ same heeader.</p>]]></long-description>
           <tag line="150" name="param" description="" type="float" variable="$version">
             <type by_reference="false">float</type>
           </tag>
-          <tag line="150" name="return" description="" type="\Proem\IO\Response\Template;">
-            <type by_reference="false">\Proem\IO\Response\Template;</type>
+          <tag line="150" name="return" description="" type="\Proem\Api\IO\Response\Template;">
+            <type by_reference="false">\Proem\Api\IO\Response\Template;</type>
           </tag>
         </docblock>
         <argument line="156">
@@ -813,8 +813,8 @@ same heeader.</p>]]></long-description>
           <tag line="172" name="param" description="" type="int" variable="$status">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="172" name="return" description="" type="\Proem\IO\Response\Template;">
-            <type by_reference="false">\Proem\IO\Response\Template;</type>
+          <tag line="172" name="return" description="" type="\Proem\Api\IO\Response\Template;">
+            <type by_reference="false">\Proem\Api\IO\Response\Template;</type>
           </tag>
         </docblock>
         <argument line="178">
@@ -855,8 +855,8 @@ same heeader.</p>]]></long-description>
           <tag line="205" name="param" description="" type="string" variable="$value">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="205" name="return" description="" type="\Proem\IO\Response\Template;">
-            <type by_reference="false">\Proem\IO\Response\Template;</type>
+          <tag line="205" name="return" description="" type="\Proem\Api\IO\Response\Template;">
+            <type by_reference="false">\Proem\Api\IO\Response\Template;</type>
           </tag>
         </docblock>
         <argument line="212">
@@ -895,8 +895,8 @@ same heeader.</p>]]></long-description>
         <docblock line="231">
           <description><![CDATA[Retrieve HTTP headers.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="231" name="return" description="" type="\Proem\Util\Storage\KeyValStore">
-            <type by_reference="false">\Proem\Util\Storage\KeyValStore</type>
+          <tag line="231" name="return" description="" type="\Proem\Api\Util\Storage\KeyValStore">
+            <type by_reference="false">\Proem\Api\Util\Storage\KeyValStore</type>
           </tag>
         </docblock>
       </method>
@@ -910,8 +910,8 @@ property is incremented accordingly.</p>]]></long-description>
           <tag line="241" name="param" description="" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="241" name="return" description="" type="\Proem\IO\Response\Template;">
-            <type by_reference="false">\Proem\IO\Response\Template;</type>
+          <tag line="241" name="return" description="" type="\Proem\Api\IO\Response\Template;">
+            <type by_reference="false">\Proem\Api\IO\Response\Template;</type>
           </tag>
         </docblock>
         <argument line="250">
@@ -949,7 +949,7 @@ property is incremented accordingly.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/IO/Response/Template.php" hash="3d0f566a5b8e70ae94e41da4dad5428e" package="Default">
+  <file path="Proem/Api/IO/Response/Template.php" hash="9fc717ba8f5a44300d2a7163c20f83f0" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -977,7 +977,7 @@ THE SOFTWARE.</p>]]></long-description>
       <full_name>\Proem\Api\IO\Response\Template</full_name>
       <extends/>
       <docblock line="33">
-        <description><![CDATA[Proem\Api\IO\Response\Template]]></description>
+        <description><![CDATA[Interface that all Response objects must implement.]]></description>
         <long-description><![CDATA[]]></long-description>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\IO\Response" line="48" package="">
@@ -990,8 +990,8 @@ property should be incremented accordingly.</p>]]></long-description>
           <tag line="39" name="param" description="" type="string" variable="$string">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="39" name="return" description="" type="\Proem\IO\Response\Template;">
-            <type by_reference="false">\Proem\IO\Response\Template;</type>
+          <tag line="39" name="return" description="" type="\Proem\Api\IO\Response\Template;">
+            <type by_reference="false">\Proem\Api\IO\Response\Template;</type>
           </tag>
         </docblock>
         <argument line="48">
@@ -1021,7 +1021,7 @@ property should be incremented accordingly.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Routing/Router/Template.php" hash="8ac3cdfb1298d8eba5dadd9b99d9e95e" package="Default">
+  <file path="Proem/Api/Routing/Router/Template.php" hash="fe95dc34cebedcd18b514df67316ee41" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1065,8 +1065,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="40" name="param" description="" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="40" name="param" description="" type="\Proem\Routing\Route\Template" variable="$route">
-            <type by_reference="false">\Proem\Routing\Route\Template</type>
+          <tag line="40" name="param" description="" type="\Proem\Api\Routing\Route\Template" variable="$route">
+            <type by_reference="false">\Proem\Api\Routing\Route\Template</type>
           </tag>
           <tag line="40" name="todo" description="This method should be renamed to register()"/>
         </docblock>
@@ -1097,7 +1097,7 @@ again.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Routing/Router/Standard.php" hash="86d1d2034149eeeb9148ddd98b06957e" package="Default">
+  <file path="Proem/Api/Routing/Router/Standard.php" hash="1045f3b345ed060b4e88e04a71710831" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1153,8 +1153,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="50">
           <description><![CDATA[Store our routes]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="50" name="var" description="" type="\Proem\Util\Storage\KeyValStore">
-            <type by_reference="false">\Proem\Util\Storage\KeyValStore</type>
+          <tag line="50" name="var" description="" type="\Proem\Api\Util\Storage\KeyValStore">
+            <type by_reference="false">\Proem\Api\Util\Storage\KeyValStore</type>
           </tag>
         </docblock>
       </property>
@@ -1183,11 +1183,11 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="68" name="param" description="" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="68" name="param" description="" type="\Proem\Routing\Route\Template" variable="$route">
-            <type by_reference="false">\Proem\Routing\Route\Template</type>
+          <tag line="68" name="param" description="" type="\Proem\Api\Routing\Route\Template" variable="$route">
+            <type by_reference="false">\Proem\Api\Routing\Route\Template</type>
           </tag>
-          <tag line="68" name="return" description="" type="\Proem\Signal\Manager\Template">
-            <type by_reference="false">\Proem\Signal\Manager\Template</type>
+          <tag line="68" name="return" description="" type="\Proem\Api\Signal\Manager\Template">
+            <type by_reference="false">\Proem\Api\Signal\Manager\Template</type>
           </tag>
           <tag line="68" name="todo" description="This method should be renamed to register()"/>
         </docblock>
@@ -1214,15 +1214,15 @@ all routes have been processed.</p>
 <p>Once exhausted this function returns false and the
 internal pointer is reset so the Router can be used
 again.</p>]]></long-description>
-          <tag line="82" name="return" description="" type="bool|\Proem\Routing\Route\Payload">
+          <tag line="82" name="return" description="" type="bool|\Proem\Api\Routing\Route\Payload">
             <type by_reference="false">bool</type>
-            <type by_reference="false">\Proem\Routing\Route\Payload</type>
+            <type by_reference="false">\Proem\Api\Routing\Route\Payload</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Routing/Route/Payload.php" hash="bb5cd3a9067a6de34eaad6f361e778dd" package="Default">
+  <file path="Proem/Api/Routing/Route/Payload.php" hash="77ac73691a766e31f3e5dbda497cebce" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1282,14 +1282,14 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="57">
           <description><![CDATA[Set the populated flag]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="57" name="return" description="" type="\Proem\Routing\Route\Template">
-            <type by_reference="false">\Proem\Routing\Route\Template</type>
+          <tag line="57" name="return" description="" type="\Proem\Api\Routing\Route\Template">
+            <type by_reference="false">\Proem\Api\Routing\Route\Template</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Routing/Route/Generic.php" hash="574d3c4a888ad166b2251c86393d4b7e" package="Default">
+  <file path="Proem/Api/Routing/Route/Generic.php" hash="3bfa9bf548798a0f2670e8dd665271a0" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1354,8 +1354,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="68">
           <description><![CDATA[Store matched parameters within a Dispatch\Payload object.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="68" name="var" description="" type="\Proem\Routing\Route\Payload">
-            <type by_reference="false">\Proem\Routing\Route\Payload</type>
+          <tag line="68" name="var" description="" type="\Proem\Api\Routing\Route\Payload">
+            <type by_reference="false">\Proem\Api\Routing\Route\Payload</type>
           </tag>
         </docblock>
       </property>
@@ -1365,7 +1365,7 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="75">
           <description><![CDATA[Instantiate this route]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="75" name="param" description="An array of Proem\Util\Opt\Option objects" type="array" variable="$options">
+          <tag line="75" name="param" description="An array of Proem\Api\Util\Opt\Option objects" type="array" variable="$options">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
@@ -1392,8 +1392,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="99">
           <description><![CDATA[Set matched flag.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="99" name="return" description="" type="\Proem\Routing\Route\Template">
-            <type by_reference="false">\Proem\Routing\Route\Template</type>
+          <tag line="99" name="return" description="" type="\Proem\Api\Routing\Route\Template">
+            <type by_reference="false">\Proem\Api\Routing\Route\Template</type>
           </tag>
         </docblock>
       </method>
@@ -1403,8 +1403,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="110">
           <description><![CDATA[Retrieve the Payload.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="110" name="return" description="" type="\Proem\Routing\Route\Payload">
-            <type by_reference="false">\Proem\Routing\Route\Payload</type>
+          <tag line="110" name="return" description="" type="\Proem\Api\Routing\Route\Payload">
+            <type by_reference="false">\Proem\Api\Routing\Route\Payload</type>
           </tag>
         </docblock>
       </method>
@@ -1428,7 +1428,7 @@ matched data.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Routing/Route/Template.php" hash="c52a72b660c86c3dce688500e333554e" package="Default">
+  <file path="Proem/Api/Routing/Route/Template.php" hash="b8a718592cb56c5e29510d1b89972e6d" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1477,7 +1477,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Routing/Route/Standard.php" hash="fe6ee1f8f5ea58129599b4a82c9b5d04" package="Default">
+  <file path="Proem/Api/Routing/Route/Standard.php" hash="915254f5639c416e06cedba523de1544" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1577,8 +1577,8 @@ into key => value pairs).</p>]]></long-description>
           <tag line="82" name="param" description="" type="string" variable="$uri">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="82" name="return" description="" type="\Proem\Routing\Route\Template">
-            <type by_reference="false">\Proem\Routing\Route\Template</type>
+          <tag line="82" name="return" description="" type="\Proem\Api\Routing\Route\Template">
+            <type by_reference="false">\Proem\Api\Routing\Route\Template</type>
           </tag>
         </docblock>
         <argument line="109">
@@ -1589,7 +1589,7 @@ into key => value pairs).</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Routing/Signal/Event/RouteMatch.php" hash="50d6ce4df84070f9b86131423757386c" package="Default">
+  <file path="Proem/Api/Routing/Signal/Event/RouteMatch.php" hash="6b39f1c2993fda7f282f00b3434f4569" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1617,20 +1617,23 @@ THE SOFTWARE.</p>]]></long-description>
     </parse_markers>
     <namespace-alias name="Standard">Proem\Signal\Event\Standard</namespace-alias>
     <namespace-alias name="Payload">Proem\Routing\Route\Payload</namespace-alias>
-    <class final="false" abstract="false" namespace="Proem\Api\Routing\Signal\Event" line="41" package="Default">
+    <class final="false" abstract="false" namespace="Proem\Api\Routing\Signal\Event" line="39" package="Default">
       <name>RouteMatch</name>
       <full_name>\Proem\Api\Routing\Signal\Event\RouteMatch</full_name>
       <extends>\Proem\Signal\Event\Standard</extends>
       <docblock line="36">
-        <description><![CDATA[Proem\Api\Bootstrap\Signal\Event\Bootstrap]]></description>
-        <long-description><![CDATA[<p>A custom event used by the router to communicate matching routes</p>]]></long-description>
+        <description><![CDATA[A custom event used by the router to communicate matching routes]]></description>
+        <long-description><![CDATA[]]></long-description>
       </docblock>
       <property final="false" static="false" visibility="protected" line="46" package="Default">
         <name>$payload</name>
         <default><![CDATA[]]></default>
-        <docblock line="43">
+        <docblock line="41">
           <description><![CDATA[Store the routes payload]]></description>
           <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="var" description="" type="\Proem\Api\Dispatch\Payload">
+            <type by_reference="false">\Proem\Api\Dispatch\Payload</type>
+          </tag>
         </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Routing\Signal\Event" line="53" package="">
@@ -1639,8 +1642,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="48">
           <description><![CDATA[Set the payload]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="48" name="param" description="" type="\Proem\Dispatch\Payload" variable="$payload">
-            <type by_reference="false">\Proem\Dispatch\Payload</type>
+          <tag line="48" name="param" description="" type="\Proem\Api\Dispatch\Payload" variable="$payload">
+            <type by_reference="false">\Proem\Api\Dispatch\Payload</type>
           </tag>
         </docblock>
         <argument line="53">
@@ -1649,12 +1652,15 @@ THE SOFTWARE.</p>]]></long-description>
           <type>Payload</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Routing\Signal\Event" line="62" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Routing\Signal\Event" line="64" package="">
         <name>getPayload</name>
         <type>function</type>
         <docblock line="59">
           <description><![CDATA[Retrieve the payload]]></description>
           <long-description><![CDATA[]]></long-description>
+          <tag line="59" name="return" description="$payload" type="\Proem\Api\Dispatch\Payload">
+            <type by_reference="false">\Proem\Api\Dispatch\Payload</type>
+          </tag>
         </docblock>
       </method>
     </class>
@@ -1694,7 +1700,7 @@ THE SOFTWARE.</p>]]></long-description>
       </docblock>
     </class>
   </file>
-  <file path="Proem/Api/Dispatch/Template.php" hash="d31404f4c7db6e0a01bfeba46de8e1a0" package="Default">
+  <file path="Proem/Api/Dispatch/Template.php" hash="b20d7c71bf550b6b261d531b9fcedf14" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1728,7 +1734,7 @@ THE SOFTWARE.</p>]]></long-description>
       <full_name>\Proem\Api\Dispatch\Template</full_name>
       <extends/>
       <docblock line="35">
-        <description><![CDATA[Proem\Dispatch\Template]]></description>
+        <description><![CDATA[Interface all dispatcher must implement.]]></description>
         <long-description><![CDATA[]]></long-description>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="45" package="">
@@ -1737,8 +1743,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="40">
           <description><![CDATA[Setup the dispatcher]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="40" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="40" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="45">
@@ -1753,8 +1759,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="47">
           <description><![CDATA[Set the payload object]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="47" name="param" description="" type="\Proem\Routing\Route\Payload" variable="$payload">
-            <type by_reference="false">\Proem\Routing\Route\Payload</type>
+          <tag line="47" name="param" description="" type="\Proem\Api\Routing\Route\Payload" variable="$payload">
+            <type by_reference="false">\Proem\Api\Routing\Route\Payload</type>
           </tag>
           <tag line="47" name="return" description="" type="\Proem\Api\Dispatch\Template">
             <type by_reference="false">\Proem\Api\Dispatch\Template</type>
@@ -1783,14 +1789,14 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="62">
           <description><![CDATA[Dispatch the current controller/action]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="62" name="return" description="" type="\Proem\Api\Dispatch\Teample">
-            <type by_reference="false">\Proem\Api\Dispatch\Teample</type>
+          <tag line="62" name="return" description="" type="\Proem\Api\Dispatch\Template">
+            <type by_reference="false">\Proem\Api\Dispatch\Template</type>
           </tag>
         </docblock>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Dispatch/Standard.php" hash="3559601ac24b863b6dc83ba5a54c1bc5" package="Default">
+  <file path="Proem/Api/Dispatch/Standard.php" hash="f849c1381923bff6a76a1afda72478fb" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -1835,8 +1841,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="41">
           <description><![CDATA[Store the Assets manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="41" name="var" description="" type="\Proem\Service\Manager\Template">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="41" name="var" description="" type="\Proem\Api\Service\Manager\Template">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </property>
@@ -1869,8 +1875,8 @@ for classes within a namepspace.]]></description>
         <docblock line="63">
           <description><![CDATA[Store the Router Payload.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="63" name="var" description="" type="\Proem\Routing\Route\Payload">
-            <type by_reference="false">\Proem\Routing\Route\Payload</type>
+          <tag line="63" name="var" description="" type="\Proem\Api\Routing\Route\Payload">
+            <type by_reference="false">\Proem\Api\Routing\Route\Payload</type>
           </tag>
         </docblock>
       </property>
@@ -1913,8 +1919,8 @@ for classes within a namepspace.]]></description>
         <docblock line="91">
           <description><![CDATA[Setup the dispatcher]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="91" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="91" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="96">
@@ -1929,8 +1935,8 @@ for classes within a namepspace.]]></description>
         <docblock line="102">
           <description><![CDATA[Set the payload object]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="102" name="param" description="" type="\Proem\Routing\Route\Payload" variable="$payload">
-            <type by_reference="false">\Proem\Routing\Route\Payload</type>
+          <tag line="102" name="param" description="" type="\Proem\Api\Routing\Route\Payload" variable="$payload">
+            <type by_reference="false">\Proem\Api\Routing\Route\Payload</type>
           </tag>
           <tag line="102" name="return" description="" type="\Proem\Api\Dispatch\Template">
             <type by_reference="false">\Proem\Api\Dispatch\Template</type>
@@ -1958,8 +1964,8 @@ with the module and controller that are made available via the payload.</p>]]></
           <tag line="114" name="param" description="" type="string" variable="$map">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="114" name="return" description="" type="\Proem\Dispatch\Template">
-            <type by_reference="false">\Proem\Dispatch\Template</type>
+          <tag line="114" name="return" description="" type="\Proem\Api\Dispatch\Template">
+            <type by_reference="false">\Proem\Api\Dispatch\Template</type>
           </tag>
         </docblock>
         <argument line="129">
@@ -2004,7 +2010,7 @@ method provided by the payload, then postAction.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Dispatch/Stage.php" hash="803390813c6cb3e6cf53911bde11960e" package="Default">
+  <file path="Proem/Api/Dispatch/Stage.php" hash="9478d38dd56483719b8f5104427e3975" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2048,8 +2054,8 @@ can put on there show</p>]]></long-description>
         <docblock line="44">
           <description><![CDATA[Store the Services Manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="44" name="var" description="" type="\Proem\Services\Manager\Template">
-            <type by_reference="false">\Proem\Services\Manager\Template</type>
+          <tag line="44" name="var" description="" type="\Proem\Api\Services\Manager\Template">
+            <type by_reference="false">\Proem\Api\Services\Manager\Template</type>
           </tag>
         </docblock>
       </property>
@@ -2072,8 +2078,8 @@ for both the route.macth &amp; route.exhausted events</p>
 <p>We then start processing the routes. Once the dispatchable
 flag is true the route is dispatched and execution moves
 into userland <em>controller</em> code</p>]]></long-description>
-          <tag line="56" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="56" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="68">
@@ -2110,8 +2116,8 @@ exit this method.</p>
 
 <p>If all matching routes have been exhausted a route.exhausted event
 is triggered.</p>]]></long-description>
-          <tag line="106" name="triggers" description="Proem\Routing\Signal\Event\RouteMatch route.match"/>
-          <tag line="106" name="triggers" description="Proem\Routing\Signal\Event\RouteExhausted route.exhausted"/>
+          <tag line="106" name="triggers" description="Proem\Api\Routing\Signal\Event\RouteMatch route.match"/>
+          <tag line="106" name="triggers" description="Proem\Api\Routing\Signal\Event\RouteExhausted route.exhausted"/>
           <tag line="106" name="todo" description="Instead of setting a dispatchable flag, a new event could likely be triggered"/>
         </docblock>
       </method>
@@ -2130,8 +2136,8 @@ is triggered.</p>]]></long-description>
           <description><![CDATA[Listen for the route.match Event.]]></description>
           <long-description><![CDATA[<p>Pass the RouteMatch event to the dispatcher and have it tested
 to see if it is dispatchable. Return the result.</p>]]></long-description>
-          <tag line="159" name="param" description="" type="\Proem\Routing\Signal\Event\RouteMatch" variable="$e">
-            <type by_reference="false">\Proem\Routing\Signal\Event\RouteMatch</type>
+          <tag line="159" name="param" description="" type="\Proem\Api\Routing\Signal\Event\RouteMatch" variable="$e">
+            <type by_reference="false">\Proem\Api\Routing\Signal\Event\RouteMatch</type>
           </tag>
           <tag line="159" name="return" description="" type="bool">
             <type by_reference="false">bool</type>
@@ -2149,8 +2155,8 @@ to see if it is dispatchable. Return the result.</p>]]></long-description>
         <docblock line="177">
           <description><![CDATA[Listen for a route.exhuasted Event.]]></description>
           <long-description><![CDATA[<p>If triggered, dispatch a very standard default 404</p>]]></long-description>
-          <tag line="177" name="param" description="" type="\Proem\Routing\Signal\Event\RouteMatch" variable="$e">
-            <type by_reference="false">\Proem\Routing\Signal\Event\RouteMatch</type>
+          <tag line="177" name="param" description="" type="\Proem\Api\Routing\Signal\Event\RouteMatch" variable="$e">
+            <type by_reference="false">\Proem\Api\Routing\Signal\Event\RouteMatch</type>
           </tag>
         </docblock>
         <argument line="184">
@@ -2161,7 +2167,7 @@ to see if it is dispatchable. Return the result.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Proem.php" hash="40bbd96dfa56a03176b8f1a38a33d267" package="Default">
+  <file path="Proem/Api/Proem.php" hash="04e9da93b9d693cdb16649893aa70fb9" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2223,8 +2229,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="57">
           <description><![CDATA[Store events]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="57" name="var" description="" type="\Proem\Signal\Manager\Template">
-            <type by_reference="false">\Proem\Signal\Manager\Template</type>
+          <tag line="57" name="var" description="" type="\Proem\Api\Signal\Manager\Template">
+            <type by_reference="false">\Proem\Api\Signal\Manager\Template</type>
           </tag>
         </docblock>
       </property>
@@ -2234,8 +2240,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="64">
           <description><![CDATA[Store the service manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="64" name="var" description="" type="\Proem\Service\Manager\Template">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="64" name="var" description="" type="\Proem\Api\Service\Manager\Template">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </property>
@@ -2245,8 +2251,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="71">
           <description><![CDATA[Register an extension]]></description>
           <long-description><![CDATA[<p>An extension is just a lower level interface that modules and plugins implement</p>]]></long-description>
-          <tag line="71" name="param" description="" type="\Proem\Ext\Template" variable="$extension">
-            <type by_reference="false">\Proem\Ext\Template</type>
+          <tag line="71" name="param" description="" type="\Proem\Api\Ext\Template" variable="$extension">
+            <type by_reference="false">\Proem\Api\Ext\Template</type>
           </tag>
           <tag line="71" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
             <type by_reference="false">string</type>
@@ -2254,8 +2260,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="71" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="71" name="return" description="" type="\Proem\Proem">
-            <type by_reference="false">\Proem\Proem</type>
+          <tag line="71" name="return" description="" type="\Proem\Api\Proem">
+            <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
         <argument line="81">
@@ -2291,8 +2297,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="106" name="param" description="" type="array" variable="$listener">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="106" name="return" description="" type="\Proem\Proem">
-            <type by_reference="false">\Proem\Proem</type>
+          <tag line="106" name="return" description="" type="\Proem\Api\Proem">
+            <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
         <argument line="112">
@@ -2310,8 +2316,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="118" name="param" description="" type="array" variable="$listeners">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="118" name="return" description="" type="\Proem\Proem">
-            <type by_reference="false">\Proem\Proem</type>
+          <tag line="118" name="return" description="" type="\Proem\Api\Proem">
+            <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
         <argument line="124">
@@ -2326,15 +2332,15 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="132">
           <description><![CDATA[Register a plugin]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="132" name="param" description="Proem\Ext\Plugin\Generic" type="" variable="$plugin"/>
+          <tag line="132" name="param" description="Proem\Api\Ext\Plugin\Generic" type="" variable="$plugin"/>
           <tag line="132" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
             <type by_reference="false">string</type>
           </tag>
           <tag line="132" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="132" name="return" description="" type="\Proem\Proem">
-            <type by_reference="false">\Proem\Proem</type>
+          <tag line="132" name="return" description="" type="\Proem\Api\Proem">
+            <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
         <argument line="140">
@@ -2359,15 +2365,15 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="145">
           <description><![CDATA[Register a module]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="145" name="param" description="Proem\Proem\Ext\Module\Generic" type="" variable="$module"/>
+          <tag line="145" name="param" description="Proem\Api\Proem\Ext\Module\Generic" type="" variable="$module"/>
           <tag line="145" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
             <type by_reference="false">string</type>
           </tag>
           <tag line="145" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="145" name="return" description="" type="\Proem\Proem">
-            <type by_reference="false">\Proem\Proem</type>
+          <tag line="145" name="return" description="" type="\Proem\Api\Proem">
+            <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
         <argument line="153">
@@ -2457,7 +2463,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Controller/Standard.php" hash="ccd4bd01daee7a6bf0133a5152219dfe" package="Default">
+  <file path="Proem/Api/Controller/Standard.php" hash="89ae1913ba812391e8a7b21d0108fdf8" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2500,8 +2506,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="40">
           <description><![CDATA[Store the service manager.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="40" name="var" description="" type="\Proem\Service\Manager\Template">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="40" name="var" description="" type="\Proem\Api\Service\Manager\Template">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </property>
@@ -2512,7 +2518,7 @@ THE SOFTWARE.</p>]]></long-description>
           <description><![CDATA[Setup the service manager.]]></description>
           <long-description><![CDATA[<p>This construct has been marked final so that it can not
 be overriden by child implementations.</p>]]></long-description>
-          <tag line="47" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="47" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
         </docblock>
         <argument line="55">
           <name>$assets</name>
@@ -2540,7 +2546,7 @@ be overriden by child implementations.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Util/Storage/KeyValStore.php" hash="5a05ae7c2c575c6b5fbd96340f9544bf" package="Default">
+  <file path="Proem/Api/Util/Storage/KeyValStore.php" hash="3b7eff27dda0b727a688355006ebd987" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2670,8 +2676,8 @@ implementing the \Iterator interface.]]></description>
           <tag line="91" name="param" description="" type="mixed" variable="$value">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="91" name="return" description="" type="\Proem\Util\Storage\KeyValStore">
-            <type by_reference="false">\Proem\Util\Storage\KeyValStore</type>
+          <tag line="91" name="return" description="" type="\Proem\Api\Util\Storage\KeyValStore">
+            <type by_reference="false">\Proem\Api\Util\Storage\KeyValStore</type>
           </tag>
         </docblock>
         <argument line="98">
@@ -2721,8 +2727,8 @@ implementing the \Iterator interface.]]></description>
           <tag line="120" name="param" description="" type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="120" name="return" description="" type="\Proem\Util\Storage\KeyValStore">
-            <type by_reference="false">\Proem\Util\Storage\KeyValStore</type>
+          <tag line="120" name="return" description="" type="\Proem\Api\Util\Storage\KeyValStore">
+            <type by_reference="false">\Proem\Api\Util\Storage\KeyValStore</type>
           </tag>
         </docblock>
         <argument line="126">
@@ -2807,7 +2813,7 @@ implementing the \Iterator interface.]]></description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Util/Storage/Queue.php" hash="4ddb3df0c9d023588dede614fee3b235" package="Default">
+  <file path="Proem/Api/Util/Storage/Queue.php" hash="c22864d5744fff387bc9a05a59277e03" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2902,8 +2908,8 @@ such items are lost as they are iterated over.</p>]]></long-description>
           <tag line="80" name="param" description="" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="80" name="return" description="" type="\Proem\Util\Storage\Queue">
-            <type by_reference="false">\Proem\Util\Storage\Queue</type>
+          <tag line="80" name="return" description="" type="\Proem\Api\Util\Storage\Queue">
+            <type by_reference="false">\Proem\Api\Util\Storage\Queue</type>
           </tag>
         </docblock>
         <argument line="87">
@@ -3030,7 +3036,7 @@ THE SOFTWARE.</p>]]></long-description>
       </docblock>
     </class>
   </file>
-  <file path="Proem/Api/Util/Opt/Options.php" hash="2b9a1c4801788a3b59f7e8b9582da7cb" package="Default">
+  <file path="Proem/Api/Util/Opt/Options.php" hash="d06913ed35b4612af0f8f3784aa3b142" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3081,7 +3087,7 @@ THE SOFTWARE.</p>]]></long-description>
       </argument>
     </function>
   </file>
-  <file path="Proem/Api/Util/Opt/Option.php" hash="4733d510fea865716d22f006b90baad8" package="Default">
+  <file path="Proem/Api/Util/Opt/Option.php" hash="da82fd3e2cdf3c85ff6e30fc9c48ac86" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3113,7 +3119,7 @@ THE SOFTWARE.</p>]]></long-description>
       <extends/>
       <docblock line="37">
         <description><![CDATA[Provides a mechanism for validiting a value.]]></description>
-        <long-description><![CDATA[<p>These values are used by the Proem\Utils\Opt\Options trait.</p>]]></long-description>
+        <long-description><![CDATA[<p>These values are used by the Proem\Api\Utils\Opt\Options trait.</p>]]></long-description>
       </docblock>
       <property final="false" static="false" visibility="protected" line="49" package="Default">
         <name>$value</name>
@@ -3247,8 +3253,8 @@ it is unlikely to ever be used as an actual value.</p>]]></long-description>
           <tag line="129" name="param" description="" type="bool" variable="$override">
             <type by_reference="false">bool</type>
           </tag>
-          <tag line="129" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="129" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="137">
@@ -3276,8 +3282,8 @@ it is unlikely to ever be used as an actual value.</p>]]></long-description>
           <tag line="145" name="param" description="" type="mixed" variable="$value">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="145" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="145" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="151">
@@ -3303,8 +3309,8 @@ it is unlikely to ever be used as an actual value.</p>]]></long-description>
         <docblock line="165">
           <description><![CDATA[Set this as required.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="165" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="165" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
       </method>
@@ -3325,12 +3331,12 @@ it is unlikely to ever be used as an actual value.</p>]]></long-description>
         <docblock line="184">
           <description><![CDATA[Disable this option from being required if some other argument(s) has been provided]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="184" name="param" description="An array of Proem\Util\Opt\Option objects" type="string|array" variable="$options">
+          <tag line="184" name="param" description="An array of Proem\Api\Util\Opt\Option objects" type="string|array" variable="$options">
             <type by_reference="false">string</type>
             <type by_reference="false">array</type>
           </tag>
-          <tag line="184" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="184" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="190">
@@ -3349,8 +3355,8 @@ an appropriate <em>type</em> validator.</p>]]></long-description>
           <tag line="200" name="param" description="" type="string" variable="$type">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="200" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="200" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="209">
@@ -3368,8 +3374,8 @@ an appropriate <em>type</em> validator.</p>]]></long-description>
           <tag line="215" name="param" description="A string representation of a class name" type="string" variable="$object">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="215" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="215" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="221">
@@ -3388,8 +3394,8 @@ providing a specific asset.]]></description>
           <tag line="227" name="param" description="The asset this option provides" type="\Proem\Api\Util\Opt\$provides" variable="$provides">
             <type by_reference="false">\Proem\Api\Util\Opt\$provides</type>
           </tag>
-          <tag line="227" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="227" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="234">
@@ -3407,8 +3413,8 @@ providing a specific asset.]]></description>
           <tag line="240" name="param" description="" type="\Exception" variable="$exception">
             <type by_reference="false">\Exception</type>
           </tag>
-          <tag line="240" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="240" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="246">
@@ -3427,8 +3433,8 @@ particular class or subclass.]]></description>
           <tag line="251" name="param" description="" type="string" variable="$class">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="251" name="return" description="" type="\Proem\Util\Opt\Option">
-            <type by_reference="false">\Proem\Util\Opt\Option</type>
+          <tag line="251" name="return" description="" type="\Proem\Api\Util\Opt\Option">
+            <type by_reference="false">\Proem\Api\Util\Opt\Option</type>
           </tag>
         </docblock>
         <argument line="258">
@@ -3465,7 +3471,7 @@ particular class or subclass.]]></description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Util/Process/Callback.php" hash="38d8bd6d4b352b12be804cd9ef15d6d4" package="Default">
+  <file path="Proem/Api/Util/Process/Callback.php" hash="3ba89b6e6403a82c7b09d9cc5328b758" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3555,7 +3561,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Util/ArrayHelper.php" hash="9b0c1f0ce334adf9cee6b4fca2d2296e" package="Default">
+  <file path="Proem/Api/Util/ArrayHelper.php" hash="67e145e4a7418286c0c32affdfb0f037" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3603,7 +3609,7 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
       </argument>
     </function>
   </file>
-  <file path="Proem/Api/Ext/Template.php" hash="aca8fd3bc37df9f6c3eee4edd7eddeb9" package="Default">
+  <file path="Proem/Api/Ext/Template.php" hash="8e7c8cdadc6ffb3eaf114217f4a8d7bf" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3644,8 +3650,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="40">
           <description><![CDATA[Called on initialisation.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="40" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="40" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
           <tag line="40" name="param" description="" type="string" variable="$environment">
             <type by_reference="false">string</type>
@@ -3664,7 +3670,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Ext/Plugin/Generic.php" hash="b7a54ac1b7a1746458a7598f93744a78" package="Default">
+  <file path="Proem/Api/Ext/Plugin/Generic.php" hash="1ab73c51c9c03ec487a76285f67869c5" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3707,8 +3713,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="41">
           <description><![CDATA[Called on intialisation]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="41" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="41" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
           <tag line="41" name="param" description="" type="string" variable="$environment">
             <type by_reference="false">string</type>
@@ -3727,7 +3733,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Ext/Module/Generic.php" hash="c9bb1399ad683226b93d1691afaf2cc0" package="Default">
+  <file path="Proem/Api/Ext/Module/Generic.php" hash="de31fe6dc6589c07fe873e8c5f0b9c5d" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3770,8 +3776,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="41">
           <description><![CDATA[Called on initialisation]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="41" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="41" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
           <tag line="41" name="param" description="" type="string" variable="$environment">
             <type by_reference="false">string</type>
@@ -3790,7 +3796,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Service/Asset/Template.php" hash="97159b1b88cceb74791b86c02a2da376" package="Default">
+  <file path="Proem/Api/Service/Asset/Template.php" hash="a766eac14369b01d389846e76d275d80" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -3849,8 +3855,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="47" name="param" description="" type="mixed" variable="$value">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="47" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="47" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="54">
@@ -3873,8 +3879,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="56" name="param" description="" type="array" variable="$params">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="56" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="56" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="62">
@@ -3922,8 +3928,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="78" name="param" description="" type="\Proem\Api\Service\Asset\Closure" variable="$closure">
             <type by_reference="false">\Proem\Api\Service\Asset\Closure</type>
           </tag>
-          <tag line="78" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="78" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="85">
@@ -3943,8 +3949,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="87">
           <description><![CDATA[Validate and retrieve an instantiated asset.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="87" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assetManager">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="87" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assetManager">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="92">
@@ -3972,7 +3978,7 @@ the same instance.]]></description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Service/Asset/Standard.php" hash="5e299d67d0b236c0eb17c3b47d2e686d" package="Default">
+  <file path="Proem/Api/Service/Asset/Standard.php" hash="7899ce5deef17aa814c796ecc062761e" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4084,8 +4090,8 @@ closure.</p>]]></long-description>
           <tag line="96" name="param" description="" type="mixed" variable="$value">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="96" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="96" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="103">
@@ -4111,8 +4117,8 @@ closure.</p>]]></long-description>
           <tag line="109" name="param" description="" type="mixed" variable="$value">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="109" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="109" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="116">
@@ -4135,8 +4141,8 @@ closure.</p>]]></long-description>
           <tag line="120" name="param" description="" type="array" variable="$params">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="120" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="120" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="126">
@@ -4200,8 +4206,8 @@ closure.</p>]]></long-description>
           <tag line="161" name="param" description="" type="\Proem\Api\Service\Asset\Closure" variable="$closure">
             <type by_reference="false">\Proem\Api\Service\Asset\Closure</type>
           </tag>
-          <tag line="161" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="161" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="168">
@@ -4225,8 +4231,8 @@ Proem\Service\Manager\Template implementation.</p>
 
 <p>This provides the closure with the ability to use any required parameters
 and also be able to call upon any other assets stored in the service manager.</p>]]></long-description>
-          <tag line="175" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assetManager">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="175" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assetManager">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="186">
@@ -4262,7 +4268,7 @@ $foo->setAsset($foo->single(function() {
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Service/Manager/Template.php" hash="a5af597e64b6229371e726d24ebdcb86" package="Default">
+  <file path="Proem/Api/Service/Manager/Template.php" hash="b9954a098a4e4f60324899afde157d2d" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4306,8 +4312,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="40" name="param" description="The index the asset will be referenced by." type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="40" name="param" description="" type="\Proem\Service\Asset\Template" variable="$asset">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="40" name="param" description="" type="\Proem\Api\Service\Asset\Template" variable="$asset">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
           <tag line="40" name="return" description="" type="\Proem\Api\Service\Manager\Template">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
@@ -4333,8 +4339,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="49" name="param" description="The index the asset is referenced by." type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="49" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="49" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="55">
@@ -4431,7 +4437,7 @@ asset and that it provides a specific object.]]></description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Service/Manager/Standard.php" hash="3ad51d07716a978918f651392cc85aa0" package="Default">
+  <file path="Proem/Api/Service/Manager/Standard.php" hash="5d5879c1eaec663b4647e11f484f52a2" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4505,8 +4511,8 @@ Assets this manager provides.]]></description>
           <tag line="64" name="param" description="The index the asset will be referenced by." type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="64" name="param" description="" type="\Proem\Service\Asset\Template" variable="$asset">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="64" name="param" description="" type="\Proem\Api\Service\Asset\Template" variable="$asset">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
           <tag line="64" name="return" description="" type="\Proem\Api\Service\Manager\Template">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
@@ -4532,8 +4538,8 @@ Assets this manager provides.]]></description>
           <tag line="78" name="param" description="The index the asset is referenced by." type="string" variable="$index">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="78" name="return" description="" type="\Proem\Service\Asset\Template">
-            <type by_reference="false">\Proem\Service\Asset\Template</type>
+          <tag line="78" name="return" description="" type="\Proem\Api\Service\Asset\Template">
+            <type by_reference="false">\Proem\Api\Service\Asset\Template</type>
           </tag>
         </docblock>
         <argument line="84">
@@ -4634,7 +4640,7 @@ finds the first that provides the functionality asked for.</p>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Filter/Event/Generic.php" hash="f05c9798d1aa86e56b8f9559ee5d209c" package="Default">
+  <file path="Proem/Api/Filter/Event/Generic.php" hash="11020cf98d91c691395635cb492b8dc3" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4685,8 +4691,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="47">
           <description><![CDATA[Called prior to inBound]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="47" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="47" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="52">
@@ -4701,8 +4707,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="54">
           <description><![CDATA[Define the method to be called on the way into the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="54" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="54" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="59">
@@ -4717,8 +4723,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="61">
           <description><![CDATA[Called after inBound]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="61" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="61" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="66">
@@ -4733,8 +4739,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="68">
           <description><![CDATA[Called prior outBound]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="68" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="68" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="73">
@@ -4749,8 +4755,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="75">
           <description><![CDATA[Define the method to be called on the way out of the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="75" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="75" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="80">
@@ -4765,8 +4771,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="82">
           <description><![CDATA[Called after outBound]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="82" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="82" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="87">
@@ -4783,11 +4789,11 @@ THE SOFTWARE.</p>]]></long-description>
           <long-description><![CDATA[<p>Executes preIn(), inBound() and postIn() then init() on the next event
 in the filter chain before returning to execute preOut(), outBound()
 and finally postOut().</p>]]></long-description>
-          <tag line="89" name="param" description="" type="\Proem\Filter\Manager" variable="$filterManager">
-            <type by_reference="false">\Proem\Filter\Manager</type>
+          <tag line="89" name="param" description="" type="\Proem\Api\Filter\Manager" variable="$filterManager">
+            <type by_reference="false">\Proem\Api\Filter\Manager</type>
           </tag>
-          <tag line="89" name="return" description="" type="\Proem\Filter\Manager">
-            <type by_reference="false">\Proem\Filter\Manager</type>
+          <tag line="89" name="return" description="" type="\Proem\Api\Filter\Manager">
+            <type by_reference="false">\Proem\Api\Filter\Manager</type>
           </tag>
         </docblock>
         <argument line="99">
@@ -4798,7 +4804,7 @@ and finally postOut().</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Filter/Event/Template.php" hash="7c8c35ac96b0d5b7f23387fb1f5e58d8" package="Default">
+  <file path="Proem/Api/Filter/Event/Template.php" hash="29ee6d98bd718db741874bb0a50f273d" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4840,8 +4846,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="40">
           <description><![CDATA[Define the method to be called on the way into the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="40" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="40" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="45">
@@ -4856,8 +4862,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="47">
           <description><![CDATA[Define the method to be called on the way out of the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="47" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="47" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="52">
@@ -4868,7 +4874,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Filter/Manager/Template.php" hash="c362d071e6be146abff79a6e774810d9" package="Default">
+  <file path="Proem/Api/Filter/Manager/Template.php" hash="76798b47dc9558fb6565a05927f41362" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4911,14 +4917,14 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="42">
           <description><![CDATA[Insert an event into the queue]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="42" name="param" description="" type="\Proem\Filter\Event\Template" variable="$event">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="42" name="param" description="" type="\Proem\Api\Filter\Event\Template" variable="$event">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
           <tag line="42" name="param" description="" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="42" name="return" description="" type="\Proem\Filter\Manager\Template">
-            <type by_reference="false">\Proem\Filter\Manager\Template</type>
+          <tag line="42" name="return" description="" type="\Proem\Api\Filter\Manager\Template">
+            <type by_reference="false">\Proem\Api\Filter\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="49">
@@ -4938,8 +4944,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="51">
           <description><![CDATA[Rewind the queue to the start and return the first event]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="51" name="return" description="" type="\Proem\Filter\Event\Template">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="51" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
@@ -4949,8 +4955,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="58">
           <description><![CDATA[Retrieve the next event in the filter]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="58" name="return" description="" type="\Proem\Filter\Event\Generic">
-            <type by_reference="false">\Proem\Filter\Event\Generic</type>
+          <tag line="58" name="return" description="" type="\Proem\Api\Filter\Event\Generic">
+            <type by_reference="false">\Proem\Api\Filter\Event\Generic</type>
           </tag>
         </docblock>
       </method>
@@ -4971,14 +4977,14 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="72">
           <description><![CDATA[Get the first event in the filter and execute it's init() method]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="72" name="return" description="" type="\Proem\Filter\Event\Template">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="72" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Filter/Manager/Standard.php" hash="b2f6dd5c59745f51cda6c3f824b09592" package="Default">
+  <file path="Proem/Api/Filter/Manager/Standard.php" hash="3c0740b82e23794cbf607574e297d962" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5044,8 +5050,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="51">
           <description><![CDATA[Store the priority queue.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="51" name="var" description="" type="\Proem\Util\Storage\Queue">
-            <type by_reference="false">\Proem\Util\Storage\Queue</type>
+          <tag line="51" name="var" description="" type="\Proem\Api\Util\Storage\Queue">
+            <type by_reference="false">\Proem\Api\Util\Storage\Queue</type>
           </tag>
         </docblock>
       </property>
@@ -5055,8 +5061,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="58">
           <description><![CDATA[Store the service manager.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="58" name="var" description="" type="\Proem\Service\Manager">
-            <type by_reference="false">\Proem\Service\Manager</type>
+          <tag line="58" name="var" description="" type="\Proem\Api\Service\Manager">
+            <type by_reference="false">\Proem\Api\Service\Manager</type>
           </tag>
         </docblock>
       </property>
@@ -5066,7 +5072,7 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="65">
           <description><![CDATA[Instantiate the Filter Manager.]]></description>
           <long-description><![CDATA[<p>This sets up the queues and service manager.</p>]]></long-description>
-          <tag line="65" name="param" description="Proem\Service\Manager\Template" type="" variable="$serviceManager"/>
+          <tag line="65" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$serviceManager"/>
         </docblock>
         <argument line="72">
           <name>$serviceManager</name>
@@ -5080,14 +5086,14 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="78">
           <description><![CDATA[Insert an event into the queue]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="78" name="param" description="" type="\Proem\Filter\Event\Template" variable="$event">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="78" name="param" description="" type="\Proem\Api\Filter\Event\Template" variable="$event">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
           <tag line="78" name="param" description="" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="78" name="return" description="" type="\Proem\Filter\Manager\Template">
-            <type by_reference="false">\Proem\Filter\Manager\Template</type>
+          <tag line="78" name="return" description="" type="\Proem\Api\Filter\Manager\Template">
+            <type by_reference="false">\Proem\Api\Filter\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="85">
@@ -5107,8 +5113,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="91">
           <description><![CDATA[Rewind the queue to the start and return the first event]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="91" name="return" description="" type="\Proem\Filter\Event\Template">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="91" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
@@ -5118,8 +5124,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="101">
           <description><![CDATA[Retrieve the next event in the filter]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="101" name="return" description="" type="\Proem\Filter\Event\Template">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="101" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
@@ -5129,8 +5135,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="112">
           <description><![CDATA[Retrieve the Service Manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="112" name="return" description="" type="\Proem\Service\Manager\Template">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="112" name="return" description="" type="\Proem\Api\Service\Manager\Template">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </method>
@@ -5151,14 +5157,14 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="132">
           <description><![CDATA[Get the first event in the filter and execute it's init() method]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="132" name="return" description="" type="\Proem\Filter\Event\Template">
-            <type by_reference="false">\Proem\Filter\Event\Template</type>
+          <tag line="132" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+            <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Signal/Event/Template.php" hash="6fa8750916a60ccc76de27fddf3f3a32" package="Default">
+  <file path="Proem/Api/Signal/Event/Template.php" hash="34aa113a2f094e35059a394772dbceb0" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5200,8 +5206,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="41" name="param" description="" type="array" variable="$params">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="41" name="return" description="" type="\Proem\Signal\Event\Template">
-            <type by_reference="false">\Proem\Signal\Event\Template</type>
+          <tag line="41" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
         <argument line="47">
@@ -5231,8 +5237,8 @@ this event was triggered from.</p>]]></long-description>
           <tag line="56" name="param" description="" type="object" variable="$target">
             <type by_reference="false">object</type>
           </tag>
-          <tag line="56" name="return" description="" type="\Proem\Signal\Event\Template">
-            <type by_reference="false">\Proem\Signal\Event\Template</type>
+          <tag line="56" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
         <argument line="65">
@@ -5262,8 +5268,8 @@ the method which has triggered this event.</p>]]></long-description>
           <tag line="74" name="param" description="" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="74" name="return" description="" type="\Proem\Signal\Event\Template">
-            <type by_reference="false">\Proem\Signal\Event\Template</type>
+          <tag line="74" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
         <argument line="83">
@@ -5285,7 +5291,7 @@ the method which has triggered this event.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Signal/Event/Standard.php" hash="6bf8fc117c8a89b8cbbed6a338526ccc" package="Default">
+  <file path="Proem/Api/Signal/Event/Standard.php" hash="2a7d1963f4ae8bd4418145888abb6e68" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5362,8 +5368,8 @@ THE SOFTWARE.</p>]]></long-description>
           <tag line="68" name="param" description="" type="array" variable="$params">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="68" name="return" description="" type="\Proem\Signal\Event\Template">
-            <type by_reference="false">\Proem\Signal\Event\Template</type>
+          <tag line="68" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
         <argument line="74">
@@ -5393,8 +5399,8 @@ this event was triggered from.</p>]]></long-description>
           <tag line="90" name="param" description="" type="object" variable="$target">
             <type by_reference="false">object</type>
           </tag>
-          <tag line="90" name="return" description="" type="\Proem\Signal\Event\Template">
-            <type by_reference="false">\Proem\Signal\Event\Template</type>
+          <tag line="90" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
         <argument line="99">
@@ -5424,8 +5430,8 @@ the method which has triggered this event.</p>]]></long-description>
           <tag line="115" name="param" description="" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="115" name="return" description="" type="\Proem\Signal\Event\Template">
-            <type by_reference="false">\Proem\Signal\Event\Template</type>
+          <tag line="115" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
         <argument line="124">
@@ -5447,7 +5453,7 @@ the method which has triggered this event.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Signal/Manager/Template.php" hash="6742f1d2fca5cfd5f23ea62f0714b403" package="Default">
+  <file path="Proem/Api/Signal/Manager/Template.php" hash="9da956120a170296a6ac47fe68bc3954" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5475,7 +5481,7 @@ THE SOFTWARE.</p>]]></long-description>
       <full_name>\Proem\Api\Signal\Manager\Template</full_name>
       <extends/>
       <docblock line="33">
-        <description><![CDATA[Proem\Api\Signal\Manager\Template]]></description>
+        <description><![CDATA[Interface that all signal managers must implement.]]></description>
         <long-description><![CDATA[]]></long-description>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Manager" line="44" package="">
@@ -5503,7 +5509,7 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="46">
           <description><![CDATA[Register a listener attached to a particular named event.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="46" name="param" description="An array of Proem\Util\Opt\Options objects" type="array" variable="$options">
+          <tag line="46" name="param" description="An array of Proem\Api\Util\Opt\Options objects" type="array" variable="$options">
             <type by_reference="false">array</type>
           </tag>
           <tag line="46" name="return" description="" type="\Proem\Api\Signal\Manager\Template">
@@ -5522,7 +5528,7 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="54">
           <description><![CDATA[Trigger the execution of all event listeners attached to a named event.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="54" name="param" description="An array of Proem\Util\Opt\Options objects" type="array" variable="$options">
+          <tag line="54" name="param" description="An array of Proem\Api\Util\Opt\Options objects" type="array" variable="$options">
             <type by_reference="false">array</type>
           </tag>
           <tag line="54" name="return" description="" type="\Proem\Api\Signal\Manager\Template">
@@ -5537,7 +5543,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Signal/Manager/Standard.php" hash="e693790040d19f9477646f94c64d4dd6" package="Default">
+  <file path="Proem/Api/Signal/Manager/Standard.php" hash="5f57158eea26c1b3d2f6bcb86cab7fd4" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5700,7 +5706,7 @@ that listener multiple times. This includes using the wildcard.</p>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Bootstrap/Filter/Event/Request.php" hash="4c5ddd56b9883e5039096aff1a8922b8" package="Default">
+  <file path="Proem/Api/Bootstrap/Filter/Event/Request.php" hash="6981cb30dd91755fa83801592f890b4e" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5750,12 +5756,12 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="44">
           <description><![CDATA[Called prior to inBound.]]></description>
           <long-description><![CDATA[<p>A listener responding with an object that implements the
-Proem\IO\Request\Template interface will result in that object
+Proem\Api\IO\Request\Template interface will result in that object
 being placed within the service manager under the <em>request</em> index.</p>]]></long-description>
-          <tag line="44" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="44" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="44" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.request"/>
+          <tag line="44" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.request"/>
         </docblock>
         <argument line="54">
           <name>$assets</name>
@@ -5769,10 +5775,10 @@ being placed within the service manager under the <em>request</em> index.</p>]]>
         <docblock line="72">
           <description><![CDATA[Method to be called on the way into the filter.]]></description>
           <long-description><![CDATA[<p>If not already provided this method will add a default
-Proem\IO\Request\Template implementation to the service manager
+Proem\Api\IO\Request\Template implementation to the service manager
 under the index of <em>request</em>.</p>]]></long-description>
-          <tag line="72" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="72" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="81">
@@ -5787,10 +5793,10 @@ under the index of <em>request</em>.</p>]]></long-description>
         <docblock line="94">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="94" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="94" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="94" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap post.in.request"/>
+          <tag line="94" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap post.in.request"/>
         </docblock>
         <argument line="100">
           <name>$assets</name>
@@ -5804,10 +5810,10 @@ under the index of <em>request</em>.</p>]]></long-description>
         <docblock line="114">
           <description><![CDATA[Called prior to outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="114" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="114" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="114" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.out.request"/>
+          <tag line="114" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.out.request"/>
         </docblock>
         <argument line="120">
           <name>$assets</name>
@@ -5821,8 +5827,8 @@ under the index of <em>request</em>.</p>]]></long-description>
         <docblock line="134">
           <description><![CDATA[Method to be called on the way out of the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="134" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="134" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="139">
@@ -5837,10 +5843,10 @@ under the index of <em>request</em>.</p>]]></long-description>
         <docblock line="144">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="144" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="144" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="144" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap post.out.request"/>
+          <tag line="144" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap post.out.request"/>
         </docblock>
         <argument line="150">
           <name>$assets</name>
@@ -5850,7 +5856,7 @@ under the index of <em>request</em>.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Bootstrap/Filter/Event/Response.php" hash="24ed29f5d2c6b420a069e76c4cd57007" package="Default">
+  <file path="Proem/Api/Bootstrap/Filter/Event/Response.php" hash="ac579e60caee5cfe616ba89916519a06" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5900,13 +5906,13 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="44">
           <description><![CDATA[Called prior to inBound.]]></description>
           <long-description><![CDATA[<p>A listener responding with an object implementing the
-Proem\IO\Response\Template interface, will result in that
+Proem\Api\IO\Response\Template interface, will result in that
 object being placed within the main service manager under
 the index of <em>response</em>.</p>]]></long-description>
-          <tag line="44" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="44" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="44" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.response"/>
+          <tag line="44" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.response"/>
         </docblock>
         <argument line="55">
           <name>$assets</name>
@@ -5920,10 +5926,10 @@ the index of <em>response</em>.</p>]]></long-description>
         <docblock line="73">
           <description><![CDATA[Method to be called on the way into the filter.]]></description>
           <long-description><![CDATA[<p>If not already provided, this method will add a default
-Proem\IO\Response\Template implementation to the main service
+Proem\Api\IO\Response\Template implementation to the main service
 manager under the index of <em>response</em>.</p>]]></long-description>
-          <tag line="73" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="73" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="82">
@@ -5938,10 +5944,10 @@ manager under the index of <em>response</em>.</p>]]></long-description>
         <docblock line="95">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="95" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="95" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="95" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap post.in.response"/>
+          <tag line="95" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap post.in.response"/>
         </docblock>
         <argument line="101">
           <name>$assets</name>
@@ -5955,10 +5961,10 @@ manager under the index of <em>response</em>.</p>]]></long-description>
         <docblock line="115">
           <description><![CDATA[Called prior to outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="115" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="115" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="115" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.out.response"/>
+          <tag line="115" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.out.response"/>
         </docblock>
         <argument line="121">
           <name>$assets</name>
@@ -5974,10 +5980,10 @@ manager under the index of <em>response</em>.</p>]]></long-description>
           <long-description><![CDATA[<p>This method is responseible for sending the response
 to the client.</p>]]></long-description>
           <tag line="135" name="see" description="\Proem\Api\IO\Response\Template" refers="\Proem\Api\IO\Response\Template"/>
-          <tag line="135" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="135" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="135" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.response"/>
+          <tag line="135" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.response"/>
         </docblock>
         <argument line="145">
           <name>$assets</name>
@@ -5991,10 +5997,10 @@ to the client.</p>]]></long-description>
         <docblock line="152">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="152" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="152" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="152" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap post.out.response"/>
+          <tag line="152" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap post.out.response"/>
         </docblock>
         <argument line="158">
           <name>$assets</name>
@@ -6004,7 +6010,7 @@ to the client.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Bootstrap/Filter/Event/Dispatch.php" hash="3ad9532e3f2d8e3b2449ab44d39a9c18" package="Default">
+  <file path="Proem/Api/Bootstrap/Filter/Event/Dispatch.php" hash="03cd8bbd02495dbb3b6cfc48cca3df3e" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -6058,8 +6064,8 @@ THE SOFTWARE.</p>]]></long-description>
 Proem\Dispatch\Template interface, will result in that object being
 placed within the main service manager under the index of <em>dispatch</em>.</p>]]></long-description>
           <tag line="45" name="see" description="\Proem\Api\Dispatch\Template" refers="\Proem\Api\Dispatch\Template"/>
-          <tag line="45" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
-          <tag line="45" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.dispatch"/>
+          <tag line="45" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="45" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.dispatch"/>
         </docblock>
         <argument line="56">
           <name>$assets</name>
@@ -6073,10 +6079,10 @@ placed within the main service manager under the index of <em>dispatch</em>.</p>
         <docblock line="74">
           <description><![CDATA[Method to be called on the way into the filter.]]></description>
           <long-description><![CDATA[<p>If not already provided, this method will add a default
-Proem\Dispatch\Template implementation to the main service
+Proem\Api\Dispatch\Template implementation to the main service
 manager under the index of <em>dispatch</em>.</p>]]></long-description>
           <tag line="74" name="see" description="\Proem\Api\Dispatch\Template" refers="\Proem\Api\Dispatch\Template"/>
-          <tag line="74" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="74" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
         </docblock>
         <argument line="84">
           <name>$assets</name>
@@ -6091,8 +6097,8 @@ manager under the index of <em>dispatch</em>.</p>]]></long-description>
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[<p>This method is reponsible for executing the DispatchStage process.</p>]]></long-description>
           <tag line="97" name="see" description="\Proem\Api\Dispatch\Stage" refers="\Proem\Api\Dispatch\Stage"/>
-          <tag line="97" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
-          <tag line="97" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap post.in.dispatch"/>
+          <tag line="97" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="97" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap post.in.dispatch"/>
         </docblock>
         <argument line="106">
           <name>$assets</name>
@@ -6106,8 +6112,8 @@ manager under the index of <em>dispatch</em>.</p>]]></long-description>
         <docblock line="122">
           <description><![CDATA[Called prior to outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="122" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
-          <tag line="122" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.out.dispatch"/>
+          <tag line="122" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="122" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.out.dispatch"/>
         </docblock>
         <argument line="128">
           <name>$assets</name>
@@ -6121,7 +6127,7 @@ manager under the index of <em>dispatch</em>.</p>]]></long-description>
         <docblock line="142">
           <description><![CDATA[Method to be called on the way out of the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="142" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="142" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
         </docblock>
         <argument line="147">
           <name>$assets</name>
@@ -6135,8 +6141,8 @@ manager under the index of <em>dispatch</em>.</p>]]></long-description>
         <docblock line="152">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="152" name="param" description="Proem\Service\Manager\Template" type="" variable="$assets"/>
-          <tag line="152" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap post.out.dispatch"/>
+          <tag line="152" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="152" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap post.out.dispatch"/>
         </docblock>
         <argument line="158">
           <name>$assets</name>
@@ -6146,7 +6152,7 @@ manager under the index of <em>dispatch</em>.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Bootstrap/Filter/Event/Route.php" hash="cdad173e329b85afbc8206b5e0be7b12" package="Default">
+  <file path="Proem/Api/Bootstrap/Filter/Event/Route.php" hash="8970fcb67e6cb86ad1deacd4f83d46c6" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -6197,13 +6203,13 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="45">
           <description><![CDATA[Called prior to inBound.]]></description>
           <long-description><![CDATA[<p>A listener responding with an object implementing the
-Proem\Routing\Router\Template interface, will result in that
+Proem\Api\Routing\Router\Template interface, will result in that
 object being placed within the main service manager under
 the index of <em>router</em>.</p>]]></long-description>
-          <tag line="45" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="45" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="45" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="45" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
         <argument line="56">
           <name>$assets</name>
@@ -6217,8 +6223,8 @@ the index of <em>router</em>.</p>]]></long-description>
         <docblock line="74">
           <description><![CDATA[Method to be called on the way into the filter.]]></description>
           <long-description><![CDATA[<p>This method is responsible for setting up the default routes.</p>]]></long-description>
-          <tag line="74" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="74" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="81">
@@ -6233,10 +6239,10 @@ the index of <em>router</em>.</p>]]></long-description>
         <docblock line="142">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="142" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="142" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="142" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="142" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
         <argument line="148">
           <name>$assets</name>
@@ -6250,10 +6256,10 @@ the index of <em>router</em>.</p>]]></long-description>
         <docblock line="162">
           <description><![CDATA[Called prior to outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="162" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="162" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="162" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="162" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
         <argument line="168">
           <name>$assets</name>
@@ -6267,8 +6273,8 @@ the index of <em>router</em>.</p>]]></long-description>
         <docblock line="182">
           <description><![CDATA[Method to be called on the way out of the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="182" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="182" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
         <argument line="187">
@@ -6283,10 +6289,10 @@ the index of <em>router</em>.</p>]]></long-description>
         <docblock line="192">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="192" name="param" description="" type="\Proem\Service\Manager\Template" variable="$assets">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="192" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="192" name="triggers" description="Proem\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="192" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
         <argument line="198">
           <name>$assets</name>
@@ -6296,7 +6302,7 @@ the index of <em>router</em>.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Bootstrap/Signal/Event/Bootstrap.php" hash="4fbc708e7184a19c1f5c47eee4a1e78e" package="Default">
+  <file path="Proem/Api/Bootstrap/Signal/Event/Bootstrap.php" hash="4afe0c3ddac211d1fb1233af36bb6ced" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -6338,8 +6344,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="41">
           <description><![CDATA[Store the service manager.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="41" name="var" description="" type="\Proem\Service\Manager\Template">
-            <type by_reference="false">\Proem\Service\Manager\Template</type>
+          <tag line="41" name="var" description="" type="\Proem\Api\Service\Manager\Template">
+            <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </property>
@@ -6360,8 +6366,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="55">
           <description><![CDATA[Set the service manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="55" name="param" description="" type="\Proem\Service\Manager" variable="$serviceManager">
-            <type by_reference="false">\Proem\Service\Manager</type>
+          <tag line="55" name="param" description="" type="\Proem\Api\Service\Manager" variable="$serviceManager">
+            <type by_reference="false">\Proem\Api\Service\Manager</type>
           </tag>
           <tag line="55" name="return" description="" type="\Proem\Api\Bootstrap\Signal\Event\Bootstrap">
             <type by_reference="false">\Proem\Api\Bootstrap\Signal\Event\Bootstrap</type>
@@ -6379,8 +6385,8 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="67">
           <description><![CDATA[Retrieve the service manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="67" name="return" description="" type="\Proem\Service\Manager">
-            <type by_reference="false">\Proem\Service\Manager</type>
+          <tag line="67" name="return" description="" type="\Proem\Api\Service\Manager">
+            <type by_reference="false">\Proem\Api\Service\Manager</type>
           </tag>
         </docblock>
       </method>

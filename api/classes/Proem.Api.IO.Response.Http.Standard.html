@@ -101,7 +101,7 @@
 </div>
 <a name="appendToBody" id="appendToBody"></a><div class="element clickable method public appendToBody" data-toggle="collapse" data-target=".appendToBody .collapse">
 <h2>Append to the HTTP body.</h2>
-<pre>appendToBody(string $string) : \Proem\IO\Response\Template;</pre>
+<pre>appendToBody(string $string) : \Proem\Api\IO\Response\Template;</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"><p>As data is appended to the body the $length
@@ -112,7 +112,7 @@ property is incremented accordingly.</p></p>
 <code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\IO\Response\Template;</code></div>
+<div class="subelement response"><code>\Proem\Api\IO\Response\Template;</code></div>
 </div></div>
 </div>
 <a name="getBody" id="getBody"></a><div class="element clickable method public getBody" data-toggle="collapse" data-target=".getBody .collapse">
@@ -142,12 +142,12 @@ property is incremented accordingly.</p></p>
 </div>
 <a name="getHeaders" id="getHeaders"></a><div class="element clickable method public getHeaders" data-toggle="collapse" data-target=".getHeaders .collapse">
 <h2>Retrieve HTTP headers.</h2>
-<pre>getHeaders() : \Proem\Util\Storage\KeyValStore</pre>
+<pre>getHeaders() : <a href="../classes/Proem.Api.Util.Storage.KeyValStore.html">\Proem\Api\Util\Storage\KeyValStore</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Util\Storage\KeyValStore</code></div>
+<div class="subelement response"><code><a href="../classes/Proem.Api.Util.Storage.KeyValStore.html">\Proem\Api\Util\Storage\KeyValStore</a></code></div>
 </div></div>
 </div>
 <a name="getHttpStatus" id="getHttpStatus"></a><div class="element clickable method public getHttpStatus" data-toggle="collapse" data-target=".getHttpStatus .collapse">
@@ -186,7 +186,7 @@ property is incremented accordingly.</p></p>
 </div>
 <a name="setHeader" id="setHeader"></a><div class="element clickable method public setHeader" data-toggle="collapse" data-target=".setHeader .collapse">
 <h2>Set a HTTP header by index.</h2>
-<pre>setHeader(string $index, string $value) : \Proem\IO\Response\Template;</pre>
+<pre>setHeader(string $index, string $value) : \Proem\Api\IO\Response\Template;</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -200,12 +200,12 @@ property is incremented accordingly.</p></p>
 <code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\IO\Response\Template;</code></div>
+<div class="subelement response"><code>\Proem\Api\IO\Response\Template;</code></div>
 </div></div>
 </div>
 <a name="setHttpStatus" id="setHttpStatus"></a><div class="element clickable method public setHttpStatus" data-toggle="collapse" data-target=".setHttpStatus .collapse">
 <h2>Set the HTTP status.</h2>
-<pre>setHttpStatus(int $status) : \Proem\IO\Response\Template;</pre>
+<pre>setHttpStatus(int $status) : \Proem\Api\IO\Response\Template;</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -215,12 +215,12 @@ property is incremented accordingly.</p></p>
 <code>int</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\IO\Response\Template;</code></div>
+<div class="subelement response"><code>\Proem\Api\IO\Response\Template;</code></div>
 </div></div>
 </div>
 <a name="setHttpVersion" id="setHttpVersion"></a><div class="element clickable method public setHttpVersion" data-toggle="collapse" data-target=".setHttpVersion .collapse">
 <h2>Set the HTTP version.</h2>
-<pre>setHttpVersion(float $version) : \Proem\IO\Response\Template;</pre>
+<pre>setHttpVersion(float $version) : \Proem\Api\IO\Response\Template;</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -230,12 +230,12 @@ property is incremented accordingly.</p></p>
 <code>float</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\IO\Response\Template;</code></div>
+<div class="subelement response"><code>\Proem\Api\IO\Response\Template;</code></div>
 </div></div>
 </div>
 <a name="silence" id="silence"></a><div class="element clickable method public silence" data-toggle="collapse" data-target=".silence .collapse">
 <h2>Silence the X-Powered-By header produced by Proem.</h2>
-<pre>silence() : \Proem\IO\Response\Template;</pre>
+<pre>silence() : \Proem\Api\IO\Response\Template;</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"><p>This header produces X-Powered-By: Proem Framework X.X.X
@@ -244,7 +244,7 @@ egg more than anything. Removing it from this Request may
 not remove it all together as PHP itself can produce this
 same heeader.</p></p>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\IO\Response\Template;</code></div>
+<div class="subelement response"><code>\Proem\Api\IO\Response\Template;</code></div>
 </div></div>
 </div>
 <h3>
@@ -257,7 +257,7 @@ same heeader.</p></p>
 </div>
 <a name="%24headers" id="$headers"> </a><div class="element clickable property protected $headers" data-toggle="collapse" data-target=".$headers .collapse">
 <h2>Store headers</h2>
-<pre>$headers : \Proem\Util\Storage\KeyValStore</pre>
+<pre>$headers : <a href="../classes/Proem.Api.Util.Storage.KeyValStore.html">\Proem\Api\Util\Storage\KeyValStore</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
 </div>
