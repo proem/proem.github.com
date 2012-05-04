@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a2" title="">
-  <file path="Proem/Autoloader.php" hash="d40800d6af456b075f09e7c39d1effec" package="Default">
+  <file path="Proem/Autoloader.php" hash="45e25c95719a563dfe332572cc7a1143" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -159,45 +159,56 @@ THE SOFTWARE.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem" line="133" package="">
-        <name>load</name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem" line="125" package="">
+        <name>unregister</name>
         <type>function</type>
         <docblock line="120">
+          <description><![CDATA[Unregister the autoloader.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="120" name="return" description="" type="\Proem\Api\Autoloader">
+            <type by_reference="false">\Proem\Api\Autoloader</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem" line="144" package="">
+        <name>load</name>
+        <type>function</type>
+        <docblock line="131">
           <description><![CDATA[Load a class]]></description>
           <long-description><![CDATA[<p>This load mechanism is not only responsible for locating and including the
 file where a class is defined, but is also responsible for implementing Proem's
 cascading file system. This is achieved by suffixing \Api onto the Proem part
 of any namespace starting with Proem, including the class from within the Proem\Api
 namespace, and then aliasing that class back to Proem (without the \Api suffix)</p>]]></long-description>
-          <tag line="120" name="link" description="http://proemframework.org/docs/cascading-namespace.html" link="http://proemframework.org/docs/cascading-namespace.html"/>
-          <tag line="120" name="param" description="The absolute (including namespace) name of the class" type="string" variable="$class">
+          <tag line="131" name="link" description="http://proemframework.org/docs/cascading-namespace.html" link="http://proemframework.org/docs/cascading-namespace.html"/>
+          <tag line="131" name="param" description="The absolute (including namespace) name of the class" type="string" variable="$class">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="120" name="return" description="" type="\Proem\Api\Autoloader">
+          <tag line="131" name="return" description="" type="\Proem\Api\Autoloader">
             <type by_reference="false">\Proem\Api\Autoloader</type>
           </tag>
         </docblock>
-        <argument line="133">
+        <argument line="144">
           <name>$class</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Proem" line="159" package="">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Proem" line="170" package="">
         <name>locate</name>
         <type>function</type>
-        <docblock line="153">
+        <docblock line="164">
           <description><![CDATA[Locate the path to the file where $class is defined.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="153" name="param" description="The name of the class" type="string" variable="$class">
+          <tag line="164" name="param" description="The name of the class" type="string" variable="$class">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="153" name="return" description="The path, if found" type="string|null">
+          <tag line="164" name="return" description="The path, if found" type="string|null">
             <type by_reference="false">string</type>
             <type by_reference="false">null</type>
           </tag>
         </docblock>
-        <argument line="159">
+        <argument line="170">
           <name>$class</name>
           <default><![CDATA[]]></default>
           <type/>
