@@ -50,9 +50,11 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods</li>
 <li class="method public "><a href="#getMethod" title="getMethod :: Retrieve method"><span class="description">Retrieve method</span><pre>getMethod()</pre></a></li>
+<li class="method public "><a href="#getName" title="getName :: Retrieve the event name"><span class="description">Retrieve the event name</span><pre>getName()</pre></a></li>
 <li class="method public "><a href="#getParams" title="getParams :: Retrieve any parameters passed to this Event"><span class="description">Retrieve any parameters passed to this Event</span><pre>getParams()</pre></a></li>
 <li class="method public "><a href="#getTarget" title="getTarget :: Retrieve target."><span class="description">Retrieve target.</span><pre>getTarget()</pre></a></li>
 <li class="method public "><a href="#setMethod" title="setMethod :: Set the method."><span class="description">Set the method.</span><pre>setMethod()</pre></a></li>
+<li class="method public "><a href="#setName" title="setName :: Set the name"><span class="description">Set the name</span><pre>setName()</pre></a></li>
 <li class="method public "><a href="#setParams" title="setParams :: Set params"><span class="description">Set params</span><pre>setParams()</pre></a></li>
 <li class="method public "><a href="#setTarget" title="setTarget :: Set the target."><span class="description">Set the target.</span><pre>setTarget()</pre></a></li>
 </ul>
@@ -86,6 +88,17 @@
 <div class="subelement response"><code>object</code></div>
 </div></div>
 </div>
+<a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
+<h2>Retrieve the event name</h2>
+<pre>getName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The name of the triggered event.</div>
+</div></div>
+</div>
 <a name="getParams" id="getParams"></a><div class="element clickable method public getParams" data-toggle="collapse" data-target=".getParams .collapse">
 <h2>Retrieve any parameters passed to this Event</h2>
 <pre>getParams() : array</pre>
@@ -116,6 +129,21 @@ the method which has triggered this event.</p></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$method</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Proem.Api.Signal.Event.Template.html">\Proem\Api\Signal\Event\Template</a></code></div>
+</div></div>
+</div>
+<a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
+<h2>Set the name</h2>
+<pre>setName(string $name) : <a href="../classes/Proem.Api.Signal.Event.Template.html">\Proem\Api\Signal\Event\Template</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>The name of the event that was triggered.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
 <code>string</code>
 </div>
 <h3>Returns</h3>

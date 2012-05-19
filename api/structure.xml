@@ -2178,7 +2178,7 @@ to see if it is dispatchable. Return the result.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Proem.php" hash="04e9da93b9d693cdb16649893aa70fb9" package="Default">
+  <file path="Proem/Api/Proem.php" hash="b95ff81ba91ce7762126885921d99ad1" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2202,9 +2202,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>]]></long-description>
     </docblock>
     <parse_markers>
-      <error line="71" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $extension in attachExtension()</error>
-      <error line="132" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $plugin in attachPlugin()</error>
-      <error line="145" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $module in attachModule()</error>
+      <error line="78" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $extension in attachExtension()</error>
+      <error line="139" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $plugin in attachPlugin()</error>
+      <error line="152" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $module in attachModule()</error>
     </parse_markers>
     <namespace-alias name="ServiceManager">Proem\Service\Manager\Standard</namespace-alias>
     <namespace-alias name="SignalManager">Proem\Signal\Manager\Standard</namespace-alias>
@@ -2224,11 +2224,11 @@ THE SOFTWARE.</p>]]></long-description>
       <extends/>
       <docblock line="45">
         <description><![CDATA[The Proem boostrap wrapper]]></description>
-        <long-description><![CDATA[<p>Responsible for aiding in the boostrap process</p>]]></long-description>
+        <long-description><![CDATA[<p>Responsible for aiding in the bootstrap process</p>]]></long-description>
       </docblock>
       <constant namespace="Proem\Api" line="55" package="Default">
         <name>VERSION</name>
-        <value><![CDATA['0.3.0']]></value>
+        <value><![CDATA['0.4.0']]></value>
         <docblock line="52">
           <description><![CDATA[Store the framework version]]></description>
           <long-description><![CDATA[]]></long-description>
@@ -2246,175 +2246,186 @@ THE SOFTWARE.</p>]]></long-description>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="69" package="Default">
-        <name>$serviceManager</name>
+        <name>$filterManager</name>
         <default><![CDATA[]]></default>
         <docblock line="64">
+          <description><![CDATA[Store the filter manager]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="64" name="var" description="" type="\Proem\Api\Filter\Manager\Template">
+            <type by_reference="false">\Proem\Api\Filter\Manager\Template</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="76" package="Default">
+        <name>$serviceManager</name>
+        <default><![CDATA[]]></default>
+        <docblock line="71">
           <description><![CDATA[Store the service manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="64" name="var" description="" type="\Proem\Api\Service\Manager\Template">
+          <tag line="71" name="var" description="" type="\Proem\Api\Service\Manager\Template">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Proem\Api" line="81" package="">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Proem\Api" line="88" package="">
         <name>attachExtension</name>
         <type>function</type>
-        <docblock line="71">
+        <docblock line="78">
           <description><![CDATA[Register an extension]]></description>
           <long-description><![CDATA[<p>An extension is just a lower level interface that modules and plugins implement</p>]]></long-description>
-          <tag line="71" name="param" description="" type="\Proem\Api\Ext\Template" variable="$extension">
+          <tag line="78" name="param" description="" type="\Proem\Api\Ext\Template" variable="$extension">
             <type by_reference="false">\Proem\Api\Ext\Template</type>
           </tag>
-          <tag line="71" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
+          <tag line="78" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="71" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
+          <tag line="78" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="71" name="return" description="" type="\Proem\Api\Proem">
+          <tag line="78" name="return" description="" type="\Proem\Api\Proem">
             <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
-        <argument line="81">
+        <argument line="88">
           <name>$extension</name>
           <default><![CDATA[]]></default>
           <type>Extension</type>
         </argument>
-        <argument line="81">
+        <argument line="88">
           <name>$event</name>
           <default><![CDATA['proem.init']]></default>
           <type/>
         </argument>
-        <argument line="81">
+        <argument line="88">
           <name>$priority</name>
           <default><![CDATA[0]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="96" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="103" package="">
         <name>__construct</name>
         <type>function</type>
-        <docblock line="93">
+        <docblock line="100">
           <description><![CDATA[Setup bootstraping]]></description>
           <long-description><![CDATA[]]></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="112" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="119" package="">
         <name>attachEventListener</name>
         <type>function</type>
-        <docblock line="106">
+        <docblock line="113">
           <description><![CDATA[Attach a listener to the signal event manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="106" name="param" description="" type="array" variable="$listener">
+          <tag line="113" name="param" description="" type="array" variable="$listener">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="106" name="return" description="" type="\Proem\Api\Proem">
+          <tag line="113" name="return" description="" type="\Proem\Api\Proem">
             <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
-        <argument line="112">
+        <argument line="119">
           <name>$listener</name>
           <default><![CDATA[]]></default>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="124" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="131" package="">
         <name>attachEventListeners</name>
         <type>function</type>
-        <docblock line="118">
+        <docblock line="125">
           <description><![CDATA[Attach a series of events to the signal event manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="118" name="param" description="" type="array" variable="$listeners">
+          <tag line="125" name="param" description="" type="array" variable="$listeners">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="118" name="return" description="" type="\Proem\Api\Proem">
+          <tag line="125" name="return" description="" type="\Proem\Api\Proem">
             <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
-        <argument line="124">
+        <argument line="131">
           <name>$listeners</name>
           <default><![CDATA[]]></default>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="140" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="147" package="">
         <name>attachPlugin</name>
         <type>function</type>
-        <docblock line="132">
+        <docblock line="139">
           <description><![CDATA[Register a plugin]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="132" name="param" description="Proem\Api\Ext\Plugin\Generic" type="" variable="$plugin"/>
-          <tag line="132" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
+          <tag line="139" name="param" description="Proem\Api\Ext\Plugin\Generic" type="" variable="$plugin"/>
+          <tag line="139" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="132" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
+          <tag line="139" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="132" name="return" description="" type="\Proem\Api\Proem">
+          <tag line="139" name="return" description="" type="\Proem\Api\Proem">
             <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
-        <argument line="140">
+        <argument line="147">
           <name>$plugin</name>
           <default><![CDATA[]]></default>
           <type>Plugin</type>
         </argument>
-        <argument line="140">
+        <argument line="147">
           <name>$event</name>
           <default><![CDATA['proem.init']]></default>
           <type/>
         </argument>
-        <argument line="140">
+        <argument line="147">
           <name>$priority</name>
           <default><![CDATA[0]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="153" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="160" package="">
         <name>attachModule</name>
         <type>function</type>
-        <docblock line="145">
+        <docblock line="152">
           <description><![CDATA[Register a module]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="145" name="param" description="Proem\Api\Proem\Ext\Module\Generic" type="" variable="$module"/>
-          <tag line="145" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
+          <tag line="152" name="param" description="Proem\Api\Proem\Ext\Module\Generic" type="" variable="$module"/>
+          <tag line="152" name="param" description="The event that will trigger this extensions init() method" type="string" variable="$event">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="145" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
+          <tag line="152" name="param" description="The priority the Event Listener is registered at" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="145" name="return" description="" type="\Proem\Api\Proem">
+          <tag line="152" name="return" description="" type="\Proem\Api\Proem">
             <type by_reference="false">\Proem\Api\Proem</type>
           </tag>
         </docblock>
-        <argument line="153">
+        <argument line="160">
           <name>$module</name>
           <default><![CDATA[]]></default>
           <type>Module</type>
         </argument>
-        <argument line="153">
+        <argument line="160">
           <name>$event</name>
           <default><![CDATA['proem.init']]></default>
           <type/>
         </argument>
-        <argument line="153">
+        <argument line="160">
           <name>$priority</name>
           <default><![CDATA[0]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="165" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api" line="172" package="">
         <name>init</name>
         <type>function</type>
-        <docblock line="158">
+        <docblock line="165">
           <description><![CDATA[Initialise the boostrap process]]></description>
           <long-description><![CDATA[<p>This simple call will start the filter chain in motion</p>]]></long-description>
-          <tag line="158" name="param" description="" type="string|null" variable="$environment">
+          <tag line="165" name="param" description="" type="string|null" variable="$environment">
             <type by_reference="false">string</type>
             <type by_reference="false">null</type>
           </tag>
         </docblock>
-        <argument line="165">
+        <argument line="172">
           <name>$environment</name>
           <default><![CDATA[null]]></default>
           <type/>
@@ -3989,7 +4000,7 @@ the same instance.]]></description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Service/Asset/Standard.php" hash="7899ce5deef17aa814c796ecc062761e" package="Default">
+  <file path="Proem/Api/Service/Asset/Standard.php" hash="94ec3b9b6ed4c8d31d8ebb9ec6141e09" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4013,7 +4024,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>]]></long-description>
     </docblock>
     <parse_markers>
-      <error line="120" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $params in setParams()</error>
       <error line="175" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assetManager in get()</error>
       <error line="192" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $closure in single()</error>
     </parse_markers>
@@ -4159,7 +4169,7 @@ closure.</p>]]></long-description>
         <argument line="126">
           <name>$params</name>
           <default><![CDATA[]]></default>
-          <type>Array</type>
+          <type>array</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Service\Asset" line="137" package="">
@@ -4885,7 +4895,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Filter/Manager/Template.php" hash="76798b47dc9558fb6565a05927f41362" package="Default">
+  <file path="Proem/Api/Filter/Manager/Template.php" hash="4afdaa42cd19ec7e87a4092b897a809e" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -4909,11 +4919,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>]]></long-description>
     </docblock>
     <parse_markers>
-      <error line="42" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $event in attachEvent()</error>
+      <error line="42" code="50010">No DocBlock was found for method setServiceManager()</error>
+      <error line="44" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $event in attachEvent()</error>
     </parse_markers>
     <namespace-alias name="Event">Proem\Filter\Event\Template</namespace-alias>
     <namespace-alias name="Queue">Proem\Util\Storage\Queue</namespace-alias>
-    <namespace-alias name="ServiceManager">Proem\Service\Manager</namespace-alias>
+    <namespace-alias name="ServiceManager">Proem\Service\Manager\Template</namespace-alias>
     <interface namespace="Proem\Api\Filter\Manager" line="40" package="Default">
       <name>Template</name>
       <full_name>\Proem\Api\Filter\Manager\Template</full_name>
@@ -4922,80 +4933,89 @@ THE SOFTWARE.</p>]]></long-description>
         <description><![CDATA[Interface that service managers must implement.]]></description>
         <long-description><![CDATA[]]></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="49" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="42" package="">
+        <name>setServiceManager</name>
+        <type>function</type>
+        <argument line="42">
+          <name>$serviceManager</name>
+          <default><![CDATA[]]></default>
+          <type>ServiceManager</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="51" package="">
         <name>attachEvent</name>
         <type>function</type>
-        <docblock line="42">
+        <docblock line="44">
           <description><![CDATA[Insert an event into the queue]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="42" name="param" description="" type="\Proem\Api\Filter\Event\Template" variable="$event">
+          <tag line="44" name="param" description="" type="\Proem\Api\Filter\Event\Template" variable="$event">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
-          <tag line="42" name="param" description="" type="int" variable="$priority">
+          <tag line="44" name="param" description="" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="42" name="return" description="" type="\Proem\Api\Filter\Manager\Template">
+          <tag line="44" name="return" description="" type="\Proem\Api\Filter\Manager\Template">
             <type by_reference="false">\Proem\Api\Filter\Manager\Template</type>
           </tag>
         </docblock>
-        <argument line="49">
+        <argument line="51">
           <name>$event</name>
           <default><![CDATA[]]></default>
           <type>Event</type>
         </argument>
-        <argument line="49">
+        <argument line="51">
           <name>$priority</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="56" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="58" package="">
         <name>getInitialEvent</name>
         <type>function</type>
-        <docblock line="51">
+        <docblock line="53">
           <description><![CDATA[Rewind the queue to the start and return the first event]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="51" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+          <tag line="53" name="return" description="" type="\Proem\Api\Filter\Event\Template">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="63" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="65" package="">
         <name>getNextEvent</name>
         <type>function</type>
-        <docblock line="58">
+        <docblock line="60">
           <description><![CDATA[Retrieve the next event in the filter]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="58" name="return" description="" type="\Proem\Api\Filter\Event\Generic">
+          <tag line="60" name="return" description="" type="\Proem\Api\Filter\Event\Generic">
             <type by_reference="false">\Proem\Api\Filter\Event\Generic</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="70" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="72" package="">
         <name>hasEvents</name>
         <type>function</type>
-        <docblock line="65">
+        <docblock line="67">
           <description><![CDATA[Check to see if there are more events left in the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="65" name="return" description="" type="bool">
+          <tag line="67" name="return" description="" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="77" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="79" package="">
         <name>init</name>
         <type>function</type>
-        <docblock line="72">
+        <docblock line="74">
           <description><![CDATA[Get the first event in the filter and execute it's init() method]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="72" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+          <tag line="74" name="return" description="" type="\Proem\Api\Filter\Event\Template">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Filter/Manager/Standard.php" hash="3c0740b82e23794cbf607574e297d962" package="Default">
+  <file path="Proem/Api/Filter/Manager/Standard.php" hash="fa62422926dc45bb8c866c4be49ea3e4" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5019,8 +5039,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>]]></long-description>
     </docblock>
     <parse_markers>
-      <error line="65" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $serviceManager in __construct()</error>
-      <error line="78" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $event in attachEvent()</error>
+      <notice line="65" code="50013">Parameter  could not be found in __construct()</notice>
+      <error line="77" code="50010">No DocBlock was found for method setServiceManager()</error>
+      <error line="83" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $event in attachEvent()</error>
     </parse_markers>
     <namespace-alias name="Event">Proem\Filter\Event\Template</namespace-alias>
     <namespace-alias name="Queue">Proem\Util\Storage\Queue</namespace-alias>
@@ -5083,99 +5104,103 @@ THE SOFTWARE.</p>]]></long-description>
         <docblock line="65">
           <description><![CDATA[Instantiate the Filter Manager.]]></description>
           <long-description><![CDATA[<p>This sets up the queues and service manager.</p>]]></long-description>
-          <tag line="65" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$serviceManager"/>
+          <tag line="65" name="param" description="Proem\Api\Service\Manager\Template" type="" variable=""/>
         </docblock>
-        <argument line="72">
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="77" package="">
+        <name>setServiceManager</name>
+        <type>function</type>
+        <argument line="77">
           <name>$serviceManager</name>
           <default><![CDATA[]]></default>
           <type>ServiceManager</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="85" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="90" package="">
         <name>attachEvent</name>
         <type>function</type>
-        <docblock line="78">
+        <docblock line="83">
           <description><![CDATA[Insert an event into the queue]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="78" name="param" description="" type="\Proem\Api\Filter\Event\Template" variable="$event">
+          <tag line="83" name="param" description="" type="\Proem\Api\Filter\Event\Template" variable="$event">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
-          <tag line="78" name="param" description="" type="int" variable="$priority">
+          <tag line="83" name="param" description="" type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="78" name="return" description="" type="\Proem\Api\Filter\Manager\Template">
+          <tag line="83" name="return" description="" type="\Proem\Api\Filter\Manager\Template">
             <type by_reference="false">\Proem\Api\Filter\Manager\Template</type>
           </tag>
         </docblock>
-        <argument line="85">
+        <argument line="90">
           <name>$event</name>
           <default><![CDATA[]]></default>
           <type>Event</type>
         </argument>
-        <argument line="85">
+        <argument line="90">
           <name>$priority</name>
           <default><![CDATA[self::RESPONSE_EVENT_PRIORITY]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="96" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="101" package="">
         <name>getInitialEvent</name>
         <type>function</type>
-        <docblock line="91">
+        <docblock line="96">
           <description><![CDATA[Rewind the queue to the start and return the first event]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="91" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+          <tag line="96" name="return" description="" type="\Proem\Api\Filter\Event\Template">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="106" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="111" package="">
         <name>getNextEvent</name>
         <type>function</type>
-        <docblock line="101">
+        <docblock line="106">
           <description><![CDATA[Retrieve the next event in the filter]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="101" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+          <tag line="106" name="return" description="" type="\Proem\Api\Filter\Event\Template">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="117" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="122" package="">
         <name>getServiceManager</name>
         <type>function</type>
-        <docblock line="112">
+        <docblock line="117">
           <description><![CDATA[Retrieve the Service Manager]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="112" name="return" description="" type="\Proem\Api\Service\Manager\Template">
+          <tag line="117" name="return" description="" type="\Proem\Api\Service\Manager\Template">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="127" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="132" package="">
         <name>hasEvents</name>
         <type>function</type>
-        <docblock line="122">
+        <docblock line="127">
           <description><![CDATA[Check to see if there are more events left in the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="122" name="return" description="" type="bool">
+          <tag line="127" name="return" description="" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="137" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Filter\Manager" line="142" package="">
         <name>init</name>
         <type>function</type>
-        <docblock line="132">
+        <docblock line="137">
           <description><![CDATA[Get the first event in the filter and execute it's init() method]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="132" name="return" description="" type="\Proem\Api\Filter\Event\Template">
+          <tag line="137" name="return" description="" type="\Proem\Api\Filter\Event\Template">
             <type by_reference="false">\Proem\Api\Filter\Event\Template</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Signal/Event/Template.php" hash="34aa113a2f094e35059a394772dbceb0" package="Default">
+  <file path="Proem/Api/Signal/Event/Template.php" hash="fee4f275cd4e353cc1d47e15dd7f0199" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5238,71 +5263,101 @@ THE SOFTWARE.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="65" package="">
-        <name>setTarget</name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="64" package="">
+        <name>setName</name>
         <type>function</type>
         <docblock line="56">
-          <description><![CDATA[Set the target.]]></description>
-          <long-description><![CDATA[<p>The target should be an instance of whatever object
-this event was triggered from.</p>]]></long-description>
-          <tag line="56" name="param" description="" type="object" variable="$target">
-            <type by_reference="false">object</type>
+          <description><![CDATA[Set the name]]></description>
+          <long-description><![CDATA[<p>The name of the event that was triggered.</p>]]></long-description>
+          <tag line="56" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
           </tag>
           <tag line="56" name="return" description="" type="\Proem\Api\Signal\Event\Template">
             <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
-        <argument line="65">
+        <argument line="64">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="71" package="">
+        <name>getName</name>
+        <type>function</type>
+        <docblock line="66">
+          <description><![CDATA[Retrieve the event name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="66" name="return" description="The name of the triggered event." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="82" package="">
+        <name>setTarget</name>
+        <type>function</type>
+        <docblock line="73">
+          <description><![CDATA[Set the target.]]></description>
+          <long-description><![CDATA[<p>The target should be an instance of whatever object
+this event was triggered from.</p>]]></long-description>
+          <tag line="73" name="param" description="" type="object" variable="$target">
+            <type by_reference="false">object</type>
+          </tag>
+          <tag line="73" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
+          </tag>
+        </docblock>
+        <argument line="82">
           <name>$target</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="72" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="89" package="">
         <name>getTarget</name>
         <type>function</type>
-        <docblock line="67">
+        <docblock line="84">
           <description><![CDATA[Retrieve target.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="67" name="return" description="" type="object">
+          <tag line="84" name="return" description="" type="object">
             <type by_reference="false">object</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="83" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="100" package="">
         <name>setMethod</name>
         <type>function</type>
-        <docblock line="74">
+        <docblock line="91">
           <description><![CDATA[Set the method.]]></description>
           <long-description><![CDATA[<p>The method should be a string representing the name of
 the method which has triggered this event.</p>]]></long-description>
-          <tag line="74" name="param" description="" type="string" variable="$method">
+          <tag line="91" name="param" description="" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="74" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+          <tag line="91" name="return" description="" type="\Proem\Api\Signal\Event\Template">
             <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
-        <argument line="83">
+        <argument line="100">
           <name>$method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="90" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="107" package="">
         <name>getMethod</name>
         <type>function</type>
-        <docblock line="85">
+        <docblock line="102">
           <description><![CDATA[Retrieve method]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="85" name="return" description="" type="object">
+          <tag line="102" name="return" description="" type="object">
             <type by_reference="false">object</type>
           </tag>
         </docblock>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Signal/Event/Standard.php" hash="2a7d1963f4ae8bd4418145888abb6e68" package="Default">
+  <file path="Proem/Api/Signal/Event/Standard.php" hash="154b2170239e7441eef8124993f6cb17" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5349,115 +5404,156 @@ THE SOFTWARE.</p>]]></long-description>
         </docblock>
       </property>
       <property final="false" static="false" visibility="protected" line="59" package="Default">
-        <name>$target</name>
+        <name>$name</name>
         <default><![CDATA[null]]></default>
         <docblock line="54">
-          <description><![CDATA[Store target]]></description>
+          <description><![CDATA[Store the name of the event]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="54" name="var" description="" type="object">
-            <type by_reference="false">object</type>
-          </tag>
-        </docblock>
-      </property>
-      <property final="false" static="false" visibility="protected" line="66" package="Default">
-        <name>$method</name>
-        <default><![CDATA[null]]></default>
-        <docblock line="61">
-          <description><![CDATA[Store the method]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="61" name="var" description="" type="string">
+          <tag line="54" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="74" package="">
+      <property final="false" static="false" visibility="protected" line="66" package="Default">
+        <name>$target</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="61">
+          <description><![CDATA[Store target]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="61" name="var" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="73" package="Default">
+        <name>$method</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="68">
+          <description><![CDATA[Store the method]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="68" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="81" package="">
         <name>setParams</name>
         <type>function</type>
-        <docblock line="68">
+        <docblock line="75">
           <description><![CDATA[Set params]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="68" name="param" description="" type="array" variable="$params">
+          <tag line="75" name="param" description="" type="array" variable="$params">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="68" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+          <tag line="75" name="return" description="" type="\Proem\Api\Signal\Event\Template">
             <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
-        <argument line="74">
+        <argument line="81">
           <name>$params</name>
           <default><![CDATA[]]></default>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="85" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="92" package="">
         <name>getParams</name>
         <type>function</type>
-        <docblock line="80">
+        <docblock line="87">
           <description><![CDATA[Retrieve any parameters passed to this Event]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="80" name="return" description="" type="array">
+          <tag line="87" name="return" description="" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="99" package="">
-        <name>setTarget</name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="105" package="">
+        <name>setName</name>
         <type>function</type>
-        <docblock line="90">
-          <description><![CDATA[Set the target.]]></description>
-          <long-description><![CDATA[<p>The target should be an instance of whatever object
-this event was triggered from.</p>]]></long-description>
-          <tag line="90" name="param" description="" type="object" variable="$target">
-            <type by_reference="false">object</type>
+        <docblock line="97">
+          <description><![CDATA[Set the name]]></description>
+          <long-description><![CDATA[<p>Set the name of the event being triggered.</p>]]></long-description>
+          <tag line="97" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
           </tag>
-          <tag line="90" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+          <tag line="97" name="return" description="" type="\Proem\Api\Signal\Event\Template">
             <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
-        <argument line="99">
+        <argument line="105">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="116" package="">
+        <name>getName</name>
+        <type>function</type>
+        <docblock line="111">
+          <description><![CDATA[Retrieve the event name.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="111" name="return" description="The name of the event triggered." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="130" package="">
+        <name>setTarget</name>
+        <type>function</type>
+        <docblock line="121">
+          <description><![CDATA[Set the target.]]></description>
+          <long-description><![CDATA[<p>The target should be an instance of whatever object
+this event was triggered from.</p>]]></long-description>
+          <tag line="121" name="param" description="" type="object" variable="$target">
+            <type by_reference="false">object</type>
+          </tag>
+          <tag line="121" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+            <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
+          </tag>
+        </docblock>
+        <argument line="130">
           <name>$target</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="110" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="141" package="">
         <name>getTarget</name>
         <type>function</type>
-        <docblock line="105">
+        <docblock line="136">
           <description><![CDATA[Retrieve target.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="105" name="return" description="" type="object">
+          <tag line="136" name="return" description="" type="object">
             <type by_reference="false">object</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="124" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="155" package="">
         <name>setMethod</name>
         <type>function</type>
-        <docblock line="115">
+        <docblock line="146">
           <description><![CDATA[Set the method.]]></description>
           <long-description><![CDATA[<p>The method should be a string representing the name of
 the method which has triggered this event.</p>]]></long-description>
-          <tag line="115" name="param" description="" type="string" variable="$method">
+          <tag line="146" name="param" description="" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="115" name="return" description="" type="\Proem\Api\Signal\Event\Template">
+          <tag line="146" name="return" description="" type="\Proem\Api\Signal\Event\Template">
             <type by_reference="false">\Proem\Api\Signal\Event\Template</type>
           </tag>
         </docblock>
-        <argument line="124">
+        <argument line="155">
           <name>$method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="135" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Signal\Event" line="166" package="">
         <name>getMethod</name>
         <type>function</type>
-        <docblock line="130">
+        <docblock line="161">
           <description><![CDATA[Retrieve method]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="130" name="return" description="" type="object">
+          <tag line="161" name="return" description="" type="object">
             <type by_reference="false">object</type>
           </tag>
         </docblock>
@@ -5554,7 +5650,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Signal/Manager/Standard.php" hash="5f57158eea26c1b3d2f6bcb86cab7fd4" package="Default">
+  <file path="Proem/Api/Signal/Manager/Standard.php" hash="000e1eb8626f3cd37e495dae5d9b0b88" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -6163,7 +6259,7 @@ manager under the index of <em>dispatch</em>.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Bootstrap/Filter/Event/Route.php" hash="8970fcb67e6cb86ad1deacd4f83d46c6" package="Default">
+  <file path="Proem/Api/Bootstrap/Filter/Event/Route.php" hash="8ad49460a9acc9a54929a0d977e99691" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -6189,10 +6285,10 @@ THE SOFTWARE.</p>]]></long-description>
     <parse_markers>
       <error line="45" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in preIn()</error>
       <error line="74" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in inBound()</error>
-      <error line="142" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in postIn()</error>
-      <error line="162" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in preOut()</error>
-      <error line="182" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in outBound()</error>
-      <error line="192" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in postOut()</error>
+      <error line="149" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in postIn()</error>
+      <error line="169" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in preOut()</error>
+      <error line="189" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in outBound()</error>
+      <error line="199" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in postOut()</error>
     </parse_markers>
     <namespace-alias name="Manager">Proem\Service\Manager\Template</namespace-alias>
     <namespace-alias name="Bootstrap">Proem\Bootstrap\Signal\Event\Bootstrap</namespace-alias>
@@ -6244,68 +6340,68 @@ the index of <em>router</em>.</p>]]></long-description>
           <type>Manager</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="148" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="155" package="">
         <name>postIn</name>
         <type>function</type>
-        <docblock line="142">
+        <docblock line="149">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="142" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+          <tag line="149" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="142" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="149" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
-        <argument line="148">
+        <argument line="155">
           <name>$assets</name>
           <default><![CDATA[]]></default>
           <type>Manager</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="168" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="175" package="">
         <name>preOut</name>
         <type>function</type>
-        <docblock line="162">
+        <docblock line="169">
           <description><![CDATA[Called prior to outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="162" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+          <tag line="169" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="162" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="169" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
-        <argument line="168">
+        <argument line="175">
           <name>$assets</name>
           <default><![CDATA[]]></default>
           <type>Manager</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="187" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="194" package="">
         <name>outBound</name>
         <type>function</type>
-        <docblock line="182">
+        <docblock line="189">
           <description><![CDATA[Method to be called on the way out of the filter.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="182" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+          <tag line="189" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
-        <argument line="187">
+        <argument line="194">
           <name>$assets</name>
           <default><![CDATA[]]></default>
           <type>Manager</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="198" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Bootstrap\Filter\Event" line="205" package="">
         <name>postOut</name>
         <type>function</type>
-        <docblock line="192">
+        <docblock line="199">
           <description><![CDATA[Called after outBound.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="192" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
+          <tag line="199" name="param" description="" type="\Proem\Api\Service\Manager\Template" variable="$assets">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
-          <tag line="192" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
+          <tag line="199" name="triggers" description="Proem\Api\Bootstrap\Signal\Event\Bootstrap pre.in.router"/>
         </docblock>
-        <argument line="198">
+        <argument line="205">
           <name>$assets</name>
           <default><![CDATA[]]></default>
           <type>Manager</type>
