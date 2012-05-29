@@ -1807,7 +1807,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Api/Dispatch/Standard.php" hash="f849c1381923bff6a76a1afda72478fb" package="Default">
+  <file path="Proem/Api/Dispatch/Standard.php" hash="fe4beec5793ccaf854e794ce6da010d2" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2001,7 +2001,7 @@ within the $class property of this Dispatch object.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="186" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Dispatch" line="185" package="">
         <name>dispatch</name>
         <type>function</type>
         <docblock line="172">
@@ -2013,7 +2013,6 @@ within the service manager.</p>
 
 <p>It will then execute the controllers preAction method, the action
 method provided by the payload, then postAction.</p>]]></long-description>
-          <tag line="172" name="todo" description="The preAction and postAction could likely be replaced by events"/>
           <tag line="172" name="return" description="" type="\Proem\Api\Dispatch\Standard">
             <type by_reference="false">\Proem\Api\Dispatch\Standard</type>
           </tag>
@@ -2433,59 +2432,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Proem/Api/Controller/Template.php" hash="4f9710fb3eb527ae8a6ba6e17c199a65" package="Default">
-    <docblock line="3">
-      <description><![CDATA[The MIT License]]></description>
-      <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
-
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
-
-<p>The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.</p>
-
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.</p>]]></long-description>
-    </docblock>
-    <namespace-alias name="ServiceManager">Proem\Service\Manager\Template</namespace-alias>
-    <interface namespace="Proem\Api\Controller" line="37" package="Default">
-      <name>Template</name>
-      <full_name>\Proem\Api\Controller\Template</full_name>
-      <extends/>
-      <docblock line="34">
-        <description><![CDATA[Interface describing a controller.]]></description>
-        <long-description><![CDATA[]]></long-description>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="44" package="">
-        <name>preAction</name>
-        <type>function</type>
-        <docblock line="39">
-          <description><![CDATA[Method called prior to any action.]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="39" name="todo" description="This could likely be replaced by some event"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="51" package="">
-        <name>postAction</name>
-        <type>function</type>
-        <docblock line="46">
-          <description><![CDATA[Method called after any action.]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="46" name="todo" description="This could likely be replaced by some event"/>
-        </docblock>
-      </method>
-    </interface>
-  </file>
-  <file path="Proem/Api/Controller/Standard.php" hash="89ae1913ba812391e8a7b21d0108fdf8" package="Default">
+  <file path="Proem/Api/Controller/Template.php" hash="e17a582fb8acf5b5794375d5fcf1f411" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -2509,62 +2456,125 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>]]></long-description>
     </docblock>
     <parse_markers>
-      <error line="47" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in __construct()</error>
+      <error line="44" code="50015">Argument $method is missing from the Docblock of dispatch()</error>
+    </parse_markers>
+    <namespace-alias name="ServiceManager">Proem\Service\Manager\Template</namespace-alias>
+    <interface namespace="Proem\Api\Controller" line="37" package="Default">
+      <name>Template</name>
+      <full_name>\Proem\Api\Controller\Template</full_name>
+      <extends/>
+      <docblock line="34">
+        <description><![CDATA[Interface describing a controller.]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="42" package="">
+        <name>init</name>
+        <type>function</type>
+        <docblock line="39">
+          <description><![CDATA[Method called on instantiation.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="47" package="">
+        <name>dispatch</name>
+        <type>function</type>
+        <docblock line="44">
+          <description><![CDATA[Method called to dispatch an action.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="47">
+          <name>$method</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+  </file>
+  <file path="Proem/Api/Controller/Standard.php" hash="a5e6beadd4870a8778d9217421ee9e9e" package="Default">
+    <docblock line="3">
+      <description><![CDATA[The MIT License]]></description>
+      <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>]]></long-description>
+    </docblock>
+    <parse_markers>
+      <error line="48" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $assets in __construct()</error>
+      <error line="69" code="50015">Argument $action is missing from the Docblock of dispatch()</error>
     </parse_markers>
     <namespace-alias name="ControllerTemplate">Proem\Controller\Template</namespace-alias>
+    <namespace-alias name="Bootstrap">Proem\Api\Bootstrap\Signal\Event\Bootstrap</namespace-alias>
     <namespace-alias name="ServiceManager">Proem\Service\Manager\Template</namespace-alias>
-    <class final="false" abstract="false" namespace="Proem\Api\Controller" line="38" package="Default">
+    <class final="false" abstract="false" namespace="Proem\Api\Controller" line="39" package="Default">
       <name>Standard</name>
       <full_name>\Proem\Api\Controller\Standard</full_name>
       <extends/>
       <implements>\Proem\Controller\Template</implements>
-      <docblock line="35">
+      <docblock line="36">
         <description><![CDATA[The standard controller implementation.]]></description>
         <long-description><![CDATA[]]></long-description>
       </docblock>
-      <property final="false" static="false" visibility="protected" line="45" package="Default">
+      <property final="false" static="false" visibility="protected" line="46" package="Default">
         <name>$assets</name>
         <default><![CDATA[]]></default>
-        <docblock line="40">
+        <docblock line="41">
           <description><![CDATA[Store the service manager.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="40" name="var" description="" type="\Proem\Api\Service\Manager\Template">
+          <tag line="41" name="var" description="" type="\Proem\Api\Service\Manager\Template">
             <type by_reference="false">\Proem\Api\Service\Manager\Template</type>
           </tag>
         </docblock>
       </property>
-      <method final="true" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="55" package="">
+      <method final="true" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="56" package="">
         <name>__construct</name>
         <type>function</type>
-        <docblock line="47">
+        <docblock line="48">
           <description><![CDATA[Setup the service manager.]]></description>
           <long-description><![CDATA[<p>This construct has been marked final so that it can not
 be overriden by child implementations.</p>]]></long-description>
-          <tag line="47" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
+          <tag line="48" name="param" description="Proem\Api\Service\Manager\Template" type="" variable="$assets"/>
         </docblock>
-        <argument line="55">
+        <argument line="56">
           <name>$assets</name>
           <default><![CDATA[]]></default>
           <type>ServiceManager</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="65" package="">
-        <name>preAction</name>
+        <name>init</name>
         <type>function</type>
-        <docblock line="60">
-          <description><![CDATA[Method called prior to any action.]]></description>
+        <docblock line="62">
+          <description><![CDATA[Method called on instantiation.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="60" name="todo" description="This could likely be replaced by some event"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="74" package="">
-        <name>postAction</name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Api\Controller" line="72" package="">
+        <name>dispatch</name>
         <type>function</type>
         <docblock line="69">
-          <description><![CDATA[Method called after any action.]]></description>
+          <description><![CDATA[Metod called to dispatch an action.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="69" name="todo" description="This could likely be replaced by some event"/>
         </docblock>
+        <argument line="72">
+          <name>$action</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
       </method>
     </class>
   </file>
@@ -6581,7 +6591,7 @@ THE SOFTWARE.</p>]]></long-description>
       </namespace>
     </namespace>
   </namespace>
-  <marker count="11">todo</marker>
+  <marker count="6">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
