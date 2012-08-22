@@ -29,8 +29,9 @@
               </div>
 <div class="nav-collapse"><ul class="nav">
 <li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
 <li><a href="https://proemframework.atlassian.net">Issues</a></li>
-<li><a href="/docs">Documentation</a></li>
+<li><a href="/docs/current">Documentation</a></li>
 <li><a href="/api/namespaces/Proem.html">API</a></li>
 <li><a href="/contrib.html">Contribute</a></li>
 <li><a href="/about.html">About</a></li>
@@ -58,54 +59,56 @@
 <li class="function  "><a href="#setOptions" title="setOptions :: Merge default options with user supplied arguments applying validation in the process."><span class="description">Merge default options with user supplied arguments applying validation in the process.</span><pre>setOptions</pre></a></li>
 <li class="nav-header">
 <i class="icon-custom icon-interface"></i> Interfaces</li>
-<li><a href="#Template" title="Interface that all request object must implement.">Template</a></li>
-<li><a href="#Template" title="Interface that all Response objects must implement.">Template</a></li>
-<li><a href="#Template" title="Interface all routers must implement.">Template</a></li>
-<li><a href="#Template" title="Interface that all routes must implement.">Template</a></li>
-<li><a href="#Template" title="Interface all dispatcher must implement.">Template</a></li>
 <li><a href="#Template" title="Interface describing a controller.">Template</a></li>
+<li><a href="#Template" title="Interface all dispatcher must implement.">Template</a></li>
 <li><a href="#Template" title="Base interface that all modules and plugins must implement.">Template</a></li>
-<li><a href="#Template" title="Interface that all assets must implement.">Template</a></li>
-<li><a href="#Template" title="Interface that all asset managers must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that all filter events must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that service managers must implement.">Template</a></li>
+<li><a href="#Template" title="Interface that all request object must implement.">Template</a></li>
+<li><a href="#Template" title="Interface that all Response objects must implement.">Template</a></li>
+<li><a href="#Template" title="Interface that all routes must implement.">Template</a></li>
+<li><a href="#Template" title="Interface all routers must implement.">Template</a></li>
+<li><a href="#Template" title="Interface that all assets must implement.">Template</a></li>
+<li><a href="#Template" title="Interface that all asset managers must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that all events must implement.">Template</a></li>
 <li><a href="#Template" title="Interface that all signal managers must implement.">Template</a></li>
 <li class="nav-header">
 <i class="icon-custom icon-class"></i> Classes</li>
 <li><a href="#Autoloader" title="The Proem Autoloader">Autoloader</a></li>
+<li><a href="#Dispatch" title='The default "Dispatch" filter event.'>Dispatch</a></li>
+<li><a href="#Request" title='The default "Request" filter event.'>Request</a></li>
+<li><a href="#Response" title='The default "Response" filter event.'>Response</a></li>
+<li><a href="#Route" title='The default "Route" filter event.'>Route</a></li>
+<li><a href="#Bootstrap" title="A custom event used by the bootstrap triggered events.">Bootstrap</a></li>
+<li><a href="#Standard" title="The standard controller implementation.">Standard</a></li>
+<li><a href="#Stage" title="The dispatch stage.">Stage</a></li>
+<li><a href="#Standard" title="Proem\Dispatch\Standard">Standard</a></li>
+<li><a href="#Generic" title="A base Module abstract.">Generic</a></li>
+<li><a href="#Generic" title="A base Plugin sbstract.">Generic</a></li>
+<li><a href="#Generic" title="Filter event abstract">Generic</a></li>
+<li><a href="#Standard" title="The standard filter manager.">Standard</a></li>
 <li><a href="#Fake" title="A fake http request implementation.">Fake</a></li>
 <li><a href="#Standard" title="The standard http request class.">Standard</a></li>
 <li><a href="#Standard" title="A standard http response implementation.">Standard</a></li>
-<li><a href="#Standard" title="The standard router.">Standard</a></li>
-<li><a href="#Payload" title="The route payload.">Payload</a></li>
-<li><a href="#Generic" title="Generic route abstract.">Generic</a></li>
-<li><a href="#Standard" title="Proem's standard route.">Standard</a></li>
-<li><a href="#RouteMatch" title="A custom event used by the router to communicate matching routes">RouteMatch</a></li>
-<li><a href="#RouteExhausted" title="Proem\Api\Bootstrap\Signal\Event\Bootstrap">RouteExhausted</a></li>
-<li><a href="#Standard" title="Proem\Dispatch\Standard">Standard</a></li>
-<li><a href="#Stage" title="The dispatch stage.">Stage</a></li>
 <li><a href="#Proem" title="The Proem boostrap wrapper">Proem</a></li>
-<li><a href="#Standard" title="The standard controller implementation.">Standard</a></li>
+<li><a href="#Generic" title="Generic route abstract.">Generic</a></li>
+<li><a href="#Payload" title="The route payload.">Payload</a></li>
+<li><a href="#Standard" title="Proem's standard route.">Standard</a></li>
+<li><a href="#StaticRoute" title="A simple static route.">StaticRoute</a></li>
+<li><a href="#Standard" title="The standard router.">Standard</a></li>
+<li><a href="#RouteDispatch" title="Proem\Routing\Signal\Event\RouteDispatch">RouteDispatch</a></li>
+<li><a href="#RouteExhausted" title="Proem\Routing\Signal\Event\RouteExhausted">RouteExhausted</a></li>
+<li><a href="#RouteMatch" title="A custom event used by the router to communicate matching routes">RouteMatch</a></li>
+<li><a href="#Standard" title="Standard asset container.">Standard</a></li>
+<li><a href="#Standard" title="A registry of assets.">Standard</a></li>
+<li><a href="#Standard" title="The standard event implementation">Standard</a></li>
+<li><a href="#Standard" title="Standard event manager implementation.">Standard</a></li>
+<li><a href="#Option" title="Provides a mechanism for validiting a value.">Option</a></li>
+<li><a href="#Payload" title="Options payload.">Payload</a></li>
+<li><a href="#Callback" title="A simple wrapper around call_user_func_array">Callback</a></li>
 <li><a href="#KeyValStore" title="A simple, generic key =&gt; value storage mechanism
 implementing the \Iterator interface.">KeyValStore</a></li>
 <li><a href="#Queue" title="Priority queue implementation.">Queue</a></li>
-<li><a href="#Payload" title="Options payload.">Payload</a></li>
-<li><a href="#Option" title="Provides a mechanism for validiting a value.">Option</a></li>
-<li><a href="#Callback" title="A simple wrapper around call_user_func_array">Callback</a></li>
-<li><a href="#Generic" title="A base Plugin sbstract.">Generic</a></li>
-<li><a href="#Generic" title="A base Module abstract.">Generic</a></li>
-<li><a href="#Standard" title="Standard asset container.">Standard</a></li>
-<li><a href="#Standard" title="A registry of assets.">Standard</a></li>
-<li><a href="#Generic" title="Filter event abstract">Generic</a></li>
-<li><a href="#Standard" title="The standard filter manager.">Standard</a></li>
-<li><a href="#Standard" title="The standard event implementation">Standard</a></li>
-<li><a href="#Standard" title="Standard event manager implementation.">Standard</a></li>
-<li><a href="#Request" title='The default "Request" filter event.'>Request</a></li>
-<li><a href="#Response" title='The default "Response" filter event.'>Response</a></li>
-<li><a href="#Dispatch" title='The default "Dispatch" filter event.'>Dispatch</a></li>
-<li><a href="#Route" title='The default "Route" filter event.'>Route</a></li>
-<li><a href="#Bootstrap" title="A custom event used by the bootstrap triggered events.">Bootstrap</a></li>
 </ul>
 </div>
 <div class="span8 package-contents">
@@ -140,7 +143,7 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
 </div>
 <a name="setOptions" id="setOptions"></a><div class="element clickable function  setOptions" data-toggle="collapse" data-target=".setOptions .collapse">
 <h2>Merge default options with user supplied arguments applying validation in the process.</h2>
-<pre>setOptions(array $defaults, array $options) : <a href="../classes/Proem.Api.Util.Opt.Payload.html">\Proem\Api\Util\Opt\Payload</a></pre>
+<pre>setOptions(array $defaults, array $options) : <a href="../classes/Proem.Util.Opt.Payload.html">\Proem\Util\Opt\Payload</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -153,319 +156,101 @@ $a = ['foo' => 'bar', 'bob' => 'boo'];
 <code>array</code><p>User supplied Options</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code><a href="../classes/Proem.Api.Util.Opt.Payload.html">\Proem\Api\Util\Opt\Payload</a></code>End result of merging default options with validated user options</div>
+<code><a href="../classes/Proem.Util.Opt.Payload.html">\Proem\Util\Opt\Payload</a></code>End result of merging default options with validated user options</div>
 </div></div>
 </div>
 <h3>
 <i class="icon-custom icon-class"></i> Classes and interfaces</h3>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Controller.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Controller.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Controller.Template.html">
+<h1>Template<a href="../classes/Proem.Controller.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface describing a controller.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Controller.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Controller.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Dispatch.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Dispatch.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Dispatch.Template.html">
+<h1>Template<a href="../classes/Proem.Dispatch.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface all dispatcher must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Dispatch.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Dispatch.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Ext.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Ext.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Ext.Template.html">
+<h1>Template<a href="../classes/Proem.Ext.Template.html">¶</a>
 </h1>
 <p class="short_description">Base interface that all modules and plugins must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Ext.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Ext.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Filter.Event.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Filter.Event.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Filter.Event.Template.html">
+<h1>Template<a href="../classes/Proem.Filter.Event.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all filter events must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Filter.Event.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Filter.Event.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Filter.Manager.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Filter.Manager.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Filter.Manager.Template.html">
+<h1>Template<a href="../classes/Proem.Filter.Manager.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that service managers must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Filter.Manager.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Filter.Manager.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.IO.Request.Template.html">
-<h1>Template<a href="../classes/Proem.Api.IO.Request.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.IO.Request.Template.html">
+<h1>Template<a href="../classes/Proem.IO.Request.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all request object must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.IO.Request.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.IO.Request.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.IO.Response.Template.html">
-<h1>Template<a href="../classes/Proem.Api.IO.Response.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.IO.Response.Template.html">
+<h1>Template<a href="../classes/Proem.IO.Response.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all Response objects must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.IO.Response.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.IO.Response.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Routing.Route.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Routing.Route.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Routing.Route.Template.html">
+<h1>Template<a href="../classes/Proem.Routing.Route.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all routes must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Route.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Routing.Route.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Routing.Router.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Routing.Router.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Routing.Router.Template.html">
+<h1>Template<a href="../classes/Proem.Routing.Router.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface all routers must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Router.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Routing.Router.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Service.Asset.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Service.Asset.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Service.Asset.Template.html">
+<h1>Template<a href="../classes/Proem.Service.Asset.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all assets must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Service.Asset.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Service.Asset.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Service.Manager.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Service.Manager.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Service.Manager.Template.html">
+<h1>Template<a href="../classes/Proem.Service.Manager.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all asset managers must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Service.Manager.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Service.Manager.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Signal.Event.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Signal.Event.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Signal.Event.Template.html">
+<h1>Template<a href="../classes/Proem.Signal.Event.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all events must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Signal.Event.Template.html" class="more">« More »</a>
+<a href="../classes/Proem.Signal.Event.Template.html" class="more">« More »</a>
 </div>
-<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Api.Signal.Manager.Template.html">
-<h1>Template<a href="../classes/Proem.Api.Signal.Manager.Template.html">¶</a>
+<a name="Template" id="Template"></a><div class="element ajax clickable interface" href="../classes/Proem.Signal.Manager.Template.html">
+<h1>Template<a href="../classes/Proem.Signal.Manager.Template.html">¶</a>
 </h1>
 <p class="short_description">Interface that all signal managers must implement.</p>
 <div class="details collapse"></div>
-<a href="../classes/Proem.Api.Signal.Manager.Template.html" class="more">« More »</a>
-</div>
-<a name="Dispatch" id="Dispatch"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Bootstrap.Filter.Event.Dispatch.html">
-<h1>Dispatch<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Dispatch.html">¶</a>
-</h1>
-<p class="short_description">The default "Dispatch" filter event.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Dispatch.html" class="more">« More »</a>
-</div>
-<a name="Request" id="Request"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Bootstrap.Filter.Event.Request.html">
-<h1>Request<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Request.html">¶</a>
-</h1>
-<p class="short_description">The default "Request" filter event.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Request.html" class="more">« More »</a>
-</div>
-<a name="Response" id="Response"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Bootstrap.Filter.Event.Response.html">
-<h1>Response<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Response.html">¶</a>
-</h1>
-<p class="short_description">The default "Response" filter event.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Response.html" class="more">« More »</a>
-</div>
-<a name="Route" id="Route"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Bootstrap.Filter.Event.Route.html">
-<h1>Route<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Route.html">¶</a>
-</h1>
-<p class="short_description">The default "Route" filter event.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Bootstrap.Filter.Event.Route.html" class="more">« More »</a>
-</div>
-<a name="Bootstrap" id="Bootstrap"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Bootstrap.Signal.Event.Bootstrap.html">
-<h1>Bootstrap<a href="../classes/Proem.Api.Bootstrap.Signal.Event.Bootstrap.html">¶</a>
-</h1>
-<p class="short_description">A custom event used by the bootstrap triggered events.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Bootstrap.Signal.Event.Bootstrap.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Controller.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Controller.Standard.html">¶</a>
-</h1>
-<p class="short_description">The standard controller implementation.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Controller.Standard.html" class="more">« More »</a>
-</div>
-<a name="Stage" id="Stage"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Dispatch.Stage.html">
-<h1>Stage<a href="../classes/Proem.Api.Dispatch.Stage.html">¶</a>
-</h1>
-<p class="short_description">The dispatch stage.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Dispatch.Stage.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Dispatch.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Dispatch.Standard.html">¶</a>
-</h1>
-<p class="short_description">Proem\Dispatch\Standard</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Dispatch.Standard.html" class="more">« More »</a>
-</div>
-<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Ext.Module.Generic.html">
-<h1>Generic<a href="../classes/Proem.Api.Ext.Module.Generic.html">¶</a>
-</h1>
-<p class="short_description">A base Module abstract.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Ext.Module.Generic.html" class="more">« More »</a>
-</div>
-<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Ext.Plugin.Generic.html">
-<h1>Generic<a href="../classes/Proem.Api.Ext.Plugin.Generic.html">¶</a>
-</h1>
-<p class="short_description">A base Plugin sbstract.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Ext.Plugin.Generic.html" class="more">« More »</a>
-</div>
-<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Filter.Event.Generic.html">
-<h1>Generic<a href="../classes/Proem.Api.Filter.Event.Generic.html">¶</a>
-</h1>
-<p class="short_description">Filter event abstract</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Filter.Event.Generic.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Filter.Manager.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Filter.Manager.Standard.html">¶</a>
-</h1>
-<p class="short_description">The standard filter manager.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Filter.Manager.Standard.html" class="more">« More »</a>
-</div>
-<a name="Fake" id="Fake"></a><div class="element ajax clickable class" href="../classes/Proem.Api.IO.Request.Http.Fake.html">
-<h1>Fake<a href="../classes/Proem.Api.IO.Request.Http.Fake.html">¶</a>
-</h1>
-<p class="short_description">A fake http request implementation.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.IO.Request.Http.Fake.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.IO.Request.Http.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.IO.Request.Http.Standard.html">¶</a>
-</h1>
-<p class="short_description">The standard http request class.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.IO.Request.Http.Standard.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.IO.Response.Http.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.IO.Response.Http.Standard.html">¶</a>
-</h1>
-<p class="short_description">A standard http response implementation.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.IO.Response.Http.Standard.html" class="more">« More »</a>
-</div>
-<a name="Proem" id="Proem"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Proem.html">
-<h1>Proem<a href="../classes/Proem.Api.Proem.html">¶</a>
-</h1>
-<p class="short_description">The Proem boostrap wrapper</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Proem.html" class="more">« More »</a>
-</div>
-<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Route.Generic.html">
-<h1>Generic<a href="../classes/Proem.Api.Routing.Route.Generic.html">¶</a>
-</h1>
-<p class="short_description">Generic route abstract.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Route.Generic.html" class="more">« More »</a>
-</div>
-<a name="Payload" id="Payload"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Route.Payload.html">
-<h1>Payload<a href="../classes/Proem.Api.Routing.Route.Payload.html">¶</a>
-</h1>
-<p class="short_description">The route payload.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Route.Payload.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Route.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Routing.Route.Standard.html">¶</a>
-</h1>
-<p class="short_description">Proem's standard route.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Route.Standard.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Router.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Routing.Router.Standard.html">¶</a>
-</h1>
-<p class="short_description">The standard router.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Router.Standard.html" class="more">« More »</a>
-</div>
-<a name="RouteExhausted" id="RouteExhausted"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Signal.Event.RouteExhausted.html">
-<h1>RouteExhausted<a href="../classes/Proem.Api.Routing.Signal.Event.RouteExhausted.html">¶</a>
-</h1>
-<p class="short_description">Proem\Api\Bootstrap\Signal\Event\Bootstrap</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Signal.Event.RouteExhausted.html" class="more">« More »</a>
-</div>
-<a name="RouteMatch" id="RouteMatch"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Routing.Signal.Event.RouteMatch.html">
-<h1>RouteMatch<a href="../classes/Proem.Api.Routing.Signal.Event.RouteMatch.html">¶</a>
-</h1>
-<p class="short_description">A custom event used by the router to communicate matching routes</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Routing.Signal.Event.RouteMatch.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Service.Asset.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Service.Asset.Standard.html">¶</a>
-</h1>
-<p class="short_description">Standard asset container.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Service.Asset.Standard.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Service.Manager.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Service.Manager.Standard.html">¶</a>
-</h1>
-<p class="short_description">A registry of assets.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Service.Manager.Standard.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Signal.Event.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Signal.Event.Standard.html">¶</a>
-</h1>
-<p class="short_description">The standard event implementation</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Signal.Event.Standard.html" class="more">« More »</a>
-</div>
-<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Signal.Manager.Standard.html">
-<h1>Standard<a href="../classes/Proem.Api.Signal.Manager.Standard.html">¶</a>
-</h1>
-<p class="short_description">Standard event manager implementation.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Signal.Manager.Standard.html" class="more">« More »</a>
-</div>
-<a name="Option" id="Option"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Util.Opt.Option.html">
-<h1>Option<a href="../classes/Proem.Api.Util.Opt.Option.html">¶</a>
-</h1>
-<p class="short_description">Provides a mechanism for validiting a value.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Util.Opt.Option.html" class="more">« More »</a>
-</div>
-<a name="Payload" id="Payload"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Util.Opt.Payload.html">
-<h1>Payload<a href="../classes/Proem.Api.Util.Opt.Payload.html">¶</a>
-</h1>
-<p class="short_description">Options payload.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Util.Opt.Payload.html" class="more">« More »</a>
-</div>
-<a name="Callback" id="Callback"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Util.Process.Callback.html">
-<h1>Callback<a href="../classes/Proem.Api.Util.Process.Callback.html">¶</a>
-</h1>
-<p class="short_description">A simple wrapper around call_user_func_array</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Util.Process.Callback.html" class="more">« More »</a>
-</div>
-<a name="KeyValStore" id="KeyValStore"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Util.Storage.KeyValStore.html">
-<h1>KeyValStore<a href="../classes/Proem.Api.Util.Storage.KeyValStore.html">¶</a>
-</h1>
-<p class="short_description">A simple, generic key => value storage mechanism
-implementing the \Iterator interface.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Util.Storage.KeyValStore.html" class="more">« More »</a>
-</div>
-<a name="Queue" id="Queue"></a><div class="element ajax clickable class" href="../classes/Proem.Api.Util.Storage.Queue.html">
-<h1>Queue<a href="../classes/Proem.Api.Util.Storage.Queue.html">¶</a>
-</h1>
-<p class="short_description">Priority queue implementation.</p>
-<div class="details collapse"></div>
-<a href="../classes/Proem.Api.Util.Storage.Queue.html" class="more">« More »</a>
+<a href="../classes/Proem.Signal.Manager.Template.html" class="more">« More »</a>
 </div>
 <a name="Autoloader" id="Autoloader"></a><div class="element ajax clickable class" href="../classes/Proem.Autoloader.html">
 <h1>Autoloader<a href="../classes/Proem.Autoloader.html">¶</a>
@@ -473,6 +258,238 @@ implementing the \Iterator interface.</p>
 <p class="short_description">The Proem Autoloader</p>
 <div class="details collapse"></div>
 <a href="../classes/Proem.Autoloader.html" class="more">« More »</a>
+</div>
+<a name="Dispatch" id="Dispatch"></a><div class="element ajax clickable class" href="../classes/Proem.Bootstrap.Filter.Event.Dispatch.html">
+<h1>Dispatch<a href="../classes/Proem.Bootstrap.Filter.Event.Dispatch.html">¶</a>
+</h1>
+<p class="short_description">The default "Dispatch" filter event.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Bootstrap.Filter.Event.Dispatch.html" class="more">« More »</a>
+</div>
+<a name="Request" id="Request"></a><div class="element ajax clickable class" href="../classes/Proem.Bootstrap.Filter.Event.Request.html">
+<h1>Request<a href="../classes/Proem.Bootstrap.Filter.Event.Request.html">¶</a>
+</h1>
+<p class="short_description">The default "Request" filter event.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Bootstrap.Filter.Event.Request.html" class="more">« More »</a>
+</div>
+<a name="Response" id="Response"></a><div class="element ajax clickable class" href="../classes/Proem.Bootstrap.Filter.Event.Response.html">
+<h1>Response<a href="../classes/Proem.Bootstrap.Filter.Event.Response.html">¶</a>
+</h1>
+<p class="short_description">The default "Response" filter event.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Bootstrap.Filter.Event.Response.html" class="more">« More »</a>
+</div>
+<a name="Route" id="Route"></a><div class="element ajax clickable class" href="../classes/Proem.Bootstrap.Filter.Event.Route.html">
+<h1>Route<a href="../classes/Proem.Bootstrap.Filter.Event.Route.html">¶</a>
+</h1>
+<p class="short_description">The default "Route" filter event.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Bootstrap.Filter.Event.Route.html" class="more">« More »</a>
+</div>
+<a name="Bootstrap" id="Bootstrap"></a><div class="element ajax clickable class" href="../classes/Proem.Bootstrap.Signal.Event.Bootstrap.html">
+<h1>Bootstrap<a href="../classes/Proem.Bootstrap.Signal.Event.Bootstrap.html">¶</a>
+</h1>
+<p class="short_description">A custom event used by the bootstrap triggered events.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Bootstrap.Signal.Event.Bootstrap.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Controller.Standard.html">
+<h1>Standard<a href="../classes/Proem.Controller.Standard.html">¶</a>
+</h1>
+<p class="short_description">The standard controller implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Controller.Standard.html" class="more">« More »</a>
+</div>
+<a name="Stage" id="Stage"></a><div class="element ajax clickable class" href="../classes/Proem.Dispatch.Stage.html">
+<h1>Stage<a href="../classes/Proem.Dispatch.Stage.html">¶</a>
+</h1>
+<p class="short_description">The dispatch stage.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Dispatch.Stage.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Dispatch.Standard.html">
+<h1>Standard<a href="../classes/Proem.Dispatch.Standard.html">¶</a>
+</h1>
+<p class="short_description">Proem\Dispatch\Standard</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Dispatch.Standard.html" class="more">« More »</a>
+</div>
+<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Ext.Module.Generic.html">
+<h1>Generic<a href="../classes/Proem.Ext.Module.Generic.html">¶</a>
+</h1>
+<p class="short_description">A base Module abstract.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Ext.Module.Generic.html" class="more">« More »</a>
+</div>
+<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Ext.Plugin.Generic.html">
+<h1>Generic<a href="../classes/Proem.Ext.Plugin.Generic.html">¶</a>
+</h1>
+<p class="short_description">A base Plugin sbstract.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Ext.Plugin.Generic.html" class="more">« More »</a>
+</div>
+<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Filter.Event.Generic.html">
+<h1>Generic<a href="../classes/Proem.Filter.Event.Generic.html">¶</a>
+</h1>
+<p class="short_description">Filter event abstract</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Filter.Event.Generic.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Filter.Manager.Standard.html">
+<h1>Standard<a href="../classes/Proem.Filter.Manager.Standard.html">¶</a>
+</h1>
+<p class="short_description">The standard filter manager.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Filter.Manager.Standard.html" class="more">« More »</a>
+</div>
+<a name="Fake" id="Fake"></a><div class="element ajax clickable class" href="../classes/Proem.IO.Request.Http.Fake.html">
+<h1>Fake<a href="../classes/Proem.IO.Request.Http.Fake.html">¶</a>
+</h1>
+<p class="short_description">A fake http request implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.IO.Request.Http.Fake.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.IO.Request.Http.Standard.html">
+<h1>Standard<a href="../classes/Proem.IO.Request.Http.Standard.html">¶</a>
+</h1>
+<p class="short_description">The standard http request class.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.IO.Request.Http.Standard.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.IO.Response.Http.Standard.html">
+<h1>Standard<a href="../classes/Proem.IO.Response.Http.Standard.html">¶</a>
+</h1>
+<p class="short_description">A standard http response implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.IO.Response.Http.Standard.html" class="more">« More »</a>
+</div>
+<a name="Proem" id="Proem"></a><div class="element ajax clickable class" href="../classes/Proem.Proem.html">
+<h1>Proem<a href="../classes/Proem.Proem.html">¶</a>
+</h1>
+<p class="short_description">The Proem boostrap wrapper</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Proem.html" class="more">« More »</a>
+</div>
+<a name="Generic" id="Generic"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Route.Generic.html">
+<h1>Generic<a href="../classes/Proem.Routing.Route.Generic.html">¶</a>
+</h1>
+<p class="short_description">Generic route abstract.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Route.Generic.html" class="more">« More »</a>
+</div>
+<a name="Payload" id="Payload"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Route.Payload.html">
+<h1>Payload<a href="../classes/Proem.Routing.Route.Payload.html">¶</a>
+</h1>
+<p class="short_description">The route payload.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Route.Payload.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Route.Standard.html">
+<h1>Standard<a href="../classes/Proem.Routing.Route.Standard.html">¶</a>
+</h1>
+<p class="short_description">Proem's standard route.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Route.Standard.html" class="more">« More »</a>
+</div>
+<a name="StaticRoute" id="StaticRoute"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Route.StaticRoute.html">
+<h1>StaticRoute<a href="../classes/Proem.Routing.Route.StaticRoute.html">¶</a>
+</h1>
+<p class="short_description">A simple static route.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Route.StaticRoute.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Router.Standard.html">
+<h1>Standard<a href="../classes/Proem.Routing.Router.Standard.html">¶</a>
+</h1>
+<p class="short_description">The standard router.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Router.Standard.html" class="more">« More »</a>
+</div>
+<a name="RouteDispatch" id="RouteDispatch"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Signal.Event.RouteDispatch.html">
+<h1>RouteDispatch<a href="../classes/Proem.Routing.Signal.Event.RouteDispatch.html">¶</a>
+</h1>
+<p class="short_description">Proem\Routing\Signal\Event\RouteDispatch</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Signal.Event.RouteDispatch.html" class="more">« More »</a>
+</div>
+<a name="RouteExhausted" id="RouteExhausted"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Signal.Event.RouteExhausted.html">
+<h1>RouteExhausted<a href="../classes/Proem.Routing.Signal.Event.RouteExhausted.html">¶</a>
+</h1>
+<p class="short_description">Proem\Routing\Signal\Event\RouteExhausted</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Signal.Event.RouteExhausted.html" class="more">« More »</a>
+</div>
+<a name="RouteMatch" id="RouteMatch"></a><div class="element ajax clickable class" href="../classes/Proem.Routing.Signal.Event.RouteMatch.html">
+<h1>RouteMatch<a href="../classes/Proem.Routing.Signal.Event.RouteMatch.html">¶</a>
+</h1>
+<p class="short_description">A custom event used by the router to communicate matching routes</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Routing.Signal.Event.RouteMatch.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Service.Asset.Standard.html">
+<h1>Standard<a href="../classes/Proem.Service.Asset.Standard.html">¶</a>
+</h1>
+<p class="short_description">Standard asset container.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Service.Asset.Standard.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Service.Manager.Standard.html">
+<h1>Standard<a href="../classes/Proem.Service.Manager.Standard.html">¶</a>
+</h1>
+<p class="short_description">A registry of assets.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Service.Manager.Standard.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Signal.Event.Standard.html">
+<h1>Standard<a href="../classes/Proem.Signal.Event.Standard.html">¶</a>
+</h1>
+<p class="short_description">The standard event implementation</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Signal.Event.Standard.html" class="more">« More »</a>
+</div>
+<a name="Standard" id="Standard"></a><div class="element ajax clickable class" href="../classes/Proem.Signal.Manager.Standard.html">
+<h1>Standard<a href="../classes/Proem.Signal.Manager.Standard.html">¶</a>
+</h1>
+<p class="short_description">Standard event manager implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Signal.Manager.Standard.html" class="more">« More »</a>
+</div>
+<a name="Option" id="Option"></a><div class="element ajax clickable class" href="../classes/Proem.Util.Opt.Option.html">
+<h1>Option<a href="../classes/Proem.Util.Opt.Option.html">¶</a>
+</h1>
+<p class="short_description">Provides a mechanism for validiting a value.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Util.Opt.Option.html" class="more">« More »</a>
+</div>
+<a name="Payload" id="Payload"></a><div class="element ajax clickable class" href="../classes/Proem.Util.Opt.Payload.html">
+<h1>Payload<a href="../classes/Proem.Util.Opt.Payload.html">¶</a>
+</h1>
+<p class="short_description">Options payload.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Util.Opt.Payload.html" class="more">« More »</a>
+</div>
+<a name="Callback" id="Callback"></a><div class="element ajax clickable class" href="../classes/Proem.Util.Process.Callback.html">
+<h1>Callback<a href="../classes/Proem.Util.Process.Callback.html">¶</a>
+</h1>
+<p class="short_description">A simple wrapper around call_user_func_array</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Util.Process.Callback.html" class="more">« More »</a>
+</div>
+<a name="KeyValStore" id="KeyValStore"></a><div class="element ajax clickable class" href="../classes/Proem.Util.Storage.KeyValStore.html">
+<h1>KeyValStore<a href="../classes/Proem.Util.Storage.KeyValStore.html">¶</a>
+</h1>
+<p class="short_description">A simple, generic key => value storage mechanism
+implementing the \Iterator interface.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Util.Storage.KeyValStore.html" class="more">« More »</a>
+</div>
+<a name="Queue" id="Queue"></a><div class="element ajax clickable class" href="../classes/Proem.Util.Storage.Queue.html">
+<h1>Queue<a href="../classes/Proem.Util.Storage.Queue.html">¶</a>
+</h1>
+<p class="short_description">Priority queue implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proem.Util.Storage.Queue.html" class="more">« More »</a>
 </div>
 </div>
 </div>

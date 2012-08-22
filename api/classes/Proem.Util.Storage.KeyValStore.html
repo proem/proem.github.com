@@ -1,0 +1,281 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Proem\Util\Storage\KeyValStore</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-21713077-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+</head>
+<body>
+<div class="topnav"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><div class="brand">
+<strong>Proem</strong> Framework
+              </div>
+<div class="nav-collapse"><ul class="nav">
+<li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="https://proemframework.atlassian.net">Issues</a></li>
+<li><a href="/docs/current">Documentation</a></li>
+<li><a href="/api/namespaces/Proem.html">API</a></li>
+<li><a href="/contrib.html">Contribute</a></li>
+<li><a href="/about.html">About</a></li>
+</ul></div>
+</div></div></div></div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Instantiate"><span class="description">Instantiate</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#__get" title="__get :: Magic proxy to get()"><span class="description">Magic proxy to get()</span><pre>__get()</pre></a></li>
+<li class="method public "><a href="#__set" title="__set :: Magic proxy to set()"><span class="description">Magic proxy to set()</span><pre>__set()</pre></a></li>
+<li class="method public "><a href="#all" title="all :: Retrieve all data."><span class="description">Retrieve all data.</span><pre>all()</pre></a></li>
+<li class="method public "><a href="#current" title="current :: Return the current element"><span class="description">Return the current element</span><pre>current()</pre></a></li>
+<li class="method public "><a href="#get" title="get :: Retrieve a value by index."><span class="description">Retrieve a value by index.</span><pre>get()</pre></a></li>
+<li class="method public "><a href="#has" title="has :: Does storage have index?"><span class="description">Does storage have index?</span><pre>has()</pre></a></li>
+<li class="method public "><a href="#key" title="key :: Fetch current key"><span class="description">Fetch current key</span><pre>key()</pre></a></li>
+<li class="method public "><a href="#next" title="next :: Advance the internal pointer and return its data"><span class="description">Advance the internal pointer and return its data</span><pre>next()</pre></a></li>
+<li class="method public "><a href="#remove" title="remove :: Remove an item by index"><span class="description">Remove an item by index</span><pre>remove()</pre></a></li>
+<li class="method public "><a href="#rewind" title="rewind :: Reset internal pointer"><span class="description">Reset internal pointer</span><pre>rewind()</pre></a></li>
+<li class="method public "><a href="#set" title="set :: Set value by index."><span class="description">Set value by index.</span><pre>set()</pre></a></li>
+<li class="method public "><a href="#valid" title="valid :: Does the current internal pointer position point to an existing element?"><span class="description">Does the current internal pointer position point to an existing element?</span><pre>valid()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24data" title="$data :: Store the data."><span class="description">Store the data.</span><pre>$data</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CProem%5CUtil%5CStorage%5CKeyValStore" id="\Proem\Util\Storage\KeyValStore"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Proem.html">Proem</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Proem.Util.html">Util</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Proem.Util.Storage.html">Storage</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Proem.Util.Storage.KeyValStore.html">KeyValStore</a>
+</li>
+</ul>
+<div href="../classes/Proem.Util.Storage.KeyValStore.html" class="element class">
+<p class="short_description">A simple, generic key => value storage mechanism
+implementing the \Iterator interface.</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Instantiate</h2>
+<pre>__construct(array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="__get" id="__get"></a><div class="element clickable method public __get" data-toggle="collapse" data-target=".__get .collapse">
+<h2>Magic proxy to get()</h2>
+<pre>__get(string $index) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="__set" id="__set"></a><div class="element clickable method public __set" data-toggle="collapse" data-target=".__set .collapse">
+<h2>Magic proxy to set()</h2>
+<pre>__set(string $index, mixed $value) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="all" id="all"></a><div class="element clickable method public all" data-toggle="collapse" data-target=".all .collapse">
+<h2>Retrieve all data.</h2>
+<pre>all() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="current" id="current"></a><div class="element clickable method public current" data-toggle="collapse" data-target=".current .collapse">
+<h2>Return the current element</h2>
+<pre>current() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="get" id="get"></a><div class="element clickable method public get" data-toggle="collapse" data-target=".get .collapse">
+<h2>Retrieve a value by index.</h2>
+<pre>get(string $index, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Optionaly returns a default value.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="has" id="has"></a><div class="element clickable method public has" data-toggle="collapse" data-target=".has .collapse">
+<h2>Does storage have index?</h2>
+<pre>has(string $index) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="key" id="key"></a><div class="element clickable method public key" data-toggle="collapse" data-target=".key .collapse">
+<h2>Fetch current key</h2>
+<pre>key() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="next" id="next"></a><div class="element clickable method public next" data-toggle="collapse" data-target=".next .collapse">
+<h2>Advance the internal pointer and return its data</h2>
+<pre>next() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="remove" id="remove"></a><div class="element clickable method public remove" data-toggle="collapse" data-target=".remove .collapse">
+<h2>Remove an item by index</h2>
+<pre>remove(string $index) : <a href="../classes/Proem.Util.Storage.KeyValStore.html">\Proem\Util\Storage\KeyValStore</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Proem.Util.Storage.KeyValStore.html">\Proem\Util\Storage\KeyValStore</a></code></div>
+</div></div>
+</div>
+<a name="rewind" id="rewind"></a><div class="element clickable method public rewind" data-toggle="collapse" data-target=".rewind .collapse">
+<h2>Reset internal pointer</h2>
+<pre>rewind() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="set" id="set"></a><div class="element clickable method public set" data-toggle="collapse" data-target=".set .collapse">
+<h2>Set value by index.</h2>
+<pre>set(string $index, mixed $value) : <a href="../classes/Proem.Util.Storage.KeyValStore.html">\Proem\Util\Storage\KeyValStore</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Proem.Util.Storage.KeyValStore.html">\Proem\Util\Storage\KeyValStore</a></code></div>
+</div></div>
+</div>
+<a name="valid" id="valid"></a><div class="element clickable method public valid" data-toggle="collapse" data-target=".valid .collapse">
+<h2>Does the current internal pointer position point to an existing element?</h2>
+<pre>valid() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24data" id="$data"> </a><div class="element clickable property protected $data" data-toggle="collapse" data-target=".$data .collapse">
+<h2>Store the data.</h2>
+<pre>$data : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12"></footer></div>
+</div>
+</body>
+</html>

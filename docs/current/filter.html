@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Proem Framework &mdash; A lightweight, simple, fast MVC implementation for PHP5.4</title>
+    <meta name="description" content="">
+    <meta name="author" content="Tony R Quilkey">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/prettify.js"></script>
+    <script src="/scripts/proem.js"></script>
+    <script type="text/javascript">
+      var disqus_developer = 1;
+      var disqus_shortname = 'proemframework';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21713077-3']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/styles/proem.css">
+    <link rel="shortcut icon" href="media/img/favicon.ico">
+  </head>
+  <body>
+    <div class="topnav">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="brand">
+            <a href="/">
+              <strong>Proem</strong> Framework
+            </a>
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/index.html">Blog</a></li>
+              <li><a href="https://github.com/proem/proem/issues">Issues</a></li>
+              <li><a href="/docs/current">Documentation</a></li>
+              <li><a href="/api/namespaces/Proem.html">API</a></li>
+              <li><a href="/contrib.html">Contribute</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="docs container">
+      <div class="row">
+        <div class="span3">
+          <div style="padding: 8px;" class="well">
+            <h3>An Overview</h3>
+            <ul class="nav nav-tabs nav-stacked">
+              <li><a href="/docs/current/installation.html">Installation</a></li>
+              <li><a href="/docs/current/quickstart.html">Quick Start Guide</a></li>
+              <li><a href="/docs/current/bootstrap.html">The Bootstrap Process</a></li>
+            </ul>
+          </div>
+          <div style="padding: 8px;" class="well">
+            <h3>The Components</h3>
+            <ul class="nav nav-tabs nav-stacked">
+              <li><a href="/docs/current/autoloader.html">Autoloading</a></li>
+              <li><a href="/docs/current/route-component.html">Routing Component</a></li>
+              <li><a href="/docs/current/signal-component.html">Signal Component</a></li>
+              <li><a href="/docs/current/services-component.html">Service Component</a></li>
+              <li><a href="/docs/current/dispatch.html">Dispatch Component</a></li>
+              <li><a href="/docs/current/filter.html">The Filter Chain</a></li>
+              <li><a href="/docs/current/io.html">IO</a></li>
+            </ul>
+          </div>
+          <div style="padding: 8px;" class="well">
+            <h3>Userland Code</h3>
+            <ul class="nav nav-tabs nav-stacked">
+              <li><a href="/docs/current/controllers.html">Controllers</a></li>
+              <li><a href="/docs/current/modules.html">Modules</a></li>
+              <li><a href="/docs/current/plugins.html">Plugins</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="well">
+  <h3>The Filter Chain</h3>
+  <p>
+    The <em>Filter Chain Component</em> sits at the heart of Proem's <a href="/docs/current/bootstrap.html">Bootsrap Process</a> and is used to easily flow through the logic required to setup and
+    configure the other components within Proem. The <em>Filter Chain</em> itself is a fairly simple implementation of the
+    <a href="http://java.sun.com/blueprints/corej2eepatterns/Patterns/InterceptingFilter.html">Filter Chain Pattern</a>, which really, is just a simple mechanism for executing a series of methods
+    which are passed the same data to operate on.
+  </p>
+  <p>
+    While within Proem the <em>Filter Chain</em> has a very specific use case (It is being used to filter an incoming request into an outgoing response), it has however also been designed flexibly
+    enough to easily be used outside of that particular use case if need be.
+  </p>
+  <p>
+    This means, if you have a need to filter data, the <em>Filter Chain</em> could potentially be a good place to start.
+  </p>
+</div>
+<div class="well">
+  <h3>Creating Filter Chain Events</h3>
+  <p>
+    Usage is fairly simple. First you need your <em>Chain Events</em>. These events must implement the Proem\Filter\Event\Template interface and (like most classes in Proem) there exists a
+    Proem\Filter\Event\Generic abstract class that you can build on if desired.
+  <p>
+  <pre class="prettyprint">
+    class Event1 extends Proem\Filter\Event\Generic
+    {
+        public function inBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event1 inBound\n";
+        }
+
+        public function outBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event1 outBound\n";
+        }
+    }
+
+    class Event2 extends Proem\Filter\Event\Generic
+    {
+        public function inBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event2 inBound\n";
+        }
+
+        public function outBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event2 outBound\n";
+        }
+    }
+  </pre>
+</div>
+<div class="well">
+  <h3>Attaching Events to the Filter Manager</h3>
+  <p>
+    Then simply attach these to the <em>Filter Manager</em> and call <em>init()</em>.
+  </p>
+  <pre class="prettyprint">
+    (new Proem\Filter\Manager\Standard)
+        ->setServiceManager(new Proem\Service\Manager\Standard)
+        ->attachEvent(new Event1)
+        ->attachEvent(new Event2)
+        ->init();
+  </pre>
+  <p>
+    You can see from this example that the <em>Filter Manager</em> depends on a <em>Service Manager</em> being passed to into it. It is this manager that contains any assets you want to filter.
+    It is passed into the <em>inBound</em> and <em>outBound()</em> methods as they are executed. The above example would produce:
+  <p>
+  <div class="alert alert-error">
+    <p>
+      Looking at the code while writing this documentation I can see that the dependency on the <em>Service Manager</em> needs to be better implemented or removed all together.
+      As of > 0.6.1, a <a href="https://github.com/proem/proem/issues/108">ticket has been created</a> to look at this issue.
+    </p>
+  </div>
+  <pre>
+    event1 inBound
+    event2 inBound
+    event2 outBound
+    event1 outBound
+  </pre>
+  <p>
+    You can also change the priority of events within the <em>Filter Chain</em> by passing a second argument to <em>attachEvent()</em>. The higher the number, the higher the priority, default is 0.
+  </p>
+  <pre class="prettyprint">
+    (new Proem\Filter\Manager\Standard)
+        ->setServiceManager(new Proem\Service\Manager\Standard)
+        ->attachEvent(new Event1)
+        ->attachEvent(new Event2, 200)
+        ->init();
+  </pre>
+  <p>
+    Produces:
+  </p>
+  <pre>
+    event2 inBound
+    event1 inBound
+    event1 outBound
+    event2 outBound
+  </pre>
+</div>
+<div class="well" id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_identifier = '/docs/current/filter';
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+      </div>
+    </div>
+      </body>
+</html>

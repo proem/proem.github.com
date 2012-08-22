@@ -29,8 +29,9 @@
               </div>
 <div class="nav-collapse"><ul class="nav">
 <li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
 <li><a href="https://proemframework.atlassian.net">Issues</a></li>
-<li><a href="/docs">Documentation</a></li>
+<li><a href="/docs/current">Documentation</a></li>
 <li><a href="/api/namespaces/Proem.html">API</a></li>
 <li><a href="/contrib.html">Contribute</a></li>
 <li><a href="/about.html">About</a></li>
@@ -49,18 +50,24 @@
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Instantiate our Autoloader and check for APC."><span class="description">Instantiate our Autoloader and check for APC.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#attachNamespace" title="attachNamespace :: Register a namespace."><span class="description">Register a namespace.</span><pre>attachNamespace()</pre></a></li>
+<li class="method public "><a href="#attachNamespaces" title="attachNamespaces :: Register an array of namespaces"><span class="description">Register an array of namespaces</span><pre>attachNamespaces()</pre></a></li>
+<li class="method public "><a href="#attachPearPrefix" title="attachPearPrefix :: Register a class using the PEAR naming convention"><span class="description">Register a class using the PEAR naming convention</span><pre>attachPearPrefix()</pre></a></li>
+<li class="method public "><a href="#attachPearPrefixes" title="attachPearPrefixes :: Registers an array of classes using the Pear naming convention"><span class="description">Registers an array of classes using the Pear naming convention</span><pre>attachPearPrefixes()</pre></a></li>
 <li class="method public "><a href="#load" title="load :: Load a class"><span class="description">Load a class</span><pre>load()</pre></a></li>
 <li class="method public "><a href="#register" title="register :: Register the autoloader."><span class="description">Register the autoloader.</span><pre>register()</pre></a></li>
-<li class="method public "><a href="#registerNamespace" title="registerNamespace :: Register a namespace."><span class="description">Register a namespace.</span><pre>registerNamespace()</pre></a></li>
-<li class="method public "><a href="#registerNamespaces" title="registerNamespaces :: Register an array of namespaces"><span class="description">Register an array of namespaces</span><pre>registerNamespaces()</pre></a></li>
-<li class="method public "><a href="#registerPearPrefix" title="registerPearPrefix :: Register a class using the PEAR naming convention"><span class="description">Register a class using the PEAR naming convention</span><pre>registerPearPrefix()</pre></a></li>
-<li class="method public "><a href="#registerPearPrefixes" title="registerPearPrefixes :: Registers an array of classes using the Pear naming convention"><span class="description">Registers an array of classes using the Pear naming convention</span><pre>registerPearPrefixes()</pre></a></li>
 <li class="method public "><a href="#unregister" title="unregister :: Unregister the autoloader."><span class="description">Unregister the autoloader.</span><pre>unregister()</pre></a></li>
 <li class="nav-header private">» Private</li>
-<li class="method private "><a href="#locate" title="locate :: Locate the path to the file where $class is defined."><span class="description">Locate the path to the file where $class is defined.</span><pre>locate()</pre></a></li>
+<li class="method private "><a href="#locate" title="locate :: A simple wrapper around locateFile() that first
+checks to see if we are using APC caching."><span class="description">A simple wrapper around locateFile() that first
+checks to see if we are using APC caching.</span><pre>locate()</pre></a></li>
+<li class="method private "><a href="#locateFile" title="locateFile :: Locate the path to the file where $class is defined."><span class="description">Locate the path to the file where $class is defined.</span><pre>locateFile()</pre></a></li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties</li>
 <li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24apcEnabled" title="$apcEnabled :: Store a flag indicating the abilty to load the APC extension"><span class="description">Store a flag indicating the abilty to load the APC extension</span><pre>$apcEnabled</pre></a></li>
+<li class="property protected "><a href="#%24loadProem" title="$loadProem :: Flag wether or not to attach the Proem namespace."><span class="description">Flag wether or not to attach the Proem namespace.</span><pre>$loadProem</pre></a></li>
 <li class="property protected "><a href="#%24namespaces" title="$namespaces :: Store namespaces"><span class="description">Store namespaces</span><pre>$namespaces</pre></a></li>
 <li class="property protected "><a href="#%24pearPrefixes" title="$pearPrefixes :: Store Pear prefixes"><span class="description">Store Pear prefixes</span><pre>$pearPrefixes</pre></a></li>
 </ul>
@@ -85,42 +92,22 @@
 </tr></table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
-<h2>Load a class</h2>
-<pre>load(string $class) : \Proem\Api\Autoloader</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="span8">
-<p class="long_description"><p>This load mechanism is not only responsible for locating and including the
-file where a class is defined, but is also responsible for implementing Proem's
-cascading file system. This is achieved by suffixing \Api onto the Proem part
-of any namespace starting with Proem, including the class from within the Proem\Api
-namespace, and then aliasing that class back to Proem (without the \Api suffix)</p></p>
-<table class="table table-bordered"><tr>
-<th>link</th>
-<td><a href="http://proemframework.org/docs/cascading-namespace.html">http://proemframework.org/docs/cascading-namespace.html</a></td>
-</tr></table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$class</h4>
-<code>string</code><p>The absolute (including namespace) name of the class</p>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
-</div></div>
-</div>
-<a name="register" id="register"></a><div class="element clickable method public register" data-toggle="collapse" data-target=".register .collapse">
-<h2>Register the autoloader.</h2>
-<pre>register() : \Proem\Api\Autoloader</pre>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Instantiate our Autoloader and check for APC.</h2>
+<pre>__construct($loadProem) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
-<h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$loadProem</h4>
+<code></code>
+</div>
 </div></div>
 </div>
-<a name="registerNamespace" id="registerNamespace"></a><div class="element clickable method public registerNamespace" data-toggle="collapse" data-target=".registerNamespace .collapse">
+<a name="attachNamespace" id="attachNamespace"></a><div class="element clickable method public attachNamespace" data-toggle="collapse" data-target=".attachNamespace .collapse">
 <h2>Register a namespace.</h2>
-<pre>registerNamespace(string $namespace, array | string $paths) : \Proem\Api\Autoloader</pre>
+<pre>attachNamespace(string $namespace, array | string $paths) : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -132,12 +119,12 @@ namespace, and then aliasing that class back to Proem (without the \Api suffix)<
 <h4>$paths</h4>
 <code>arraystring</code><p>The path to the namespace</p></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
 </div></div>
 </div>
-<a name="registerNamespaces" id="registerNamespaces"></a><div class="element clickable method public registerNamespaces" data-toggle="collapse" data-target=".registerNamespaces .collapse">
+<a name="attachNamespaces" id="attachNamespaces"></a><div class="element clickable method public attachNamespaces" data-toggle="collapse" data-target=".attachNamespaces .collapse">
 <h2>Register an array of namespaces</h2>
-<pre>registerNamespaces(array $namespaces) : \Proem\Api\Autoloader</pre>
+<pre>attachNamespaces(array $namespaces) : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -146,12 +133,12 @@ namespace, and then aliasing that class back to Proem (without the \Api suffix)<
 <h4>$namespaces</h4>
 <code>array</code><p>An array of namespaces</p></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
 </div></div>
 </div>
-<a name="registerPearPrefix" id="registerPearPrefix"></a><div class="element clickable method public registerPearPrefix" data-toggle="collapse" data-target=".registerPearPrefix .collapse">
+<a name="attachPearPrefix" id="attachPearPrefix"></a><div class="element clickable method public attachPearPrefix" data-toggle="collapse" data-target=".attachPearPrefix .collapse">
 <h2>Register a class using the PEAR naming convention</h2>
-<pre>registerPearPrefix(string $prefix, array | string $paths) : \Proem\Api\Autoloader</pre>
+<pre>attachPearPrefix(string $prefix, array | string $paths) : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -163,12 +150,12 @@ namespace, and then aliasing that class back to Proem (without the \Api suffix)<
 <h4>$paths</h4>
 <code>arraystring</code><p>The path</p></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
 </div></div>
 </div>
-<a name="registerPearPrefixes" id="registerPearPrefixes"></a><div class="element clickable method public registerPearPrefixes" data-toggle="collapse" data-target=".registerPearPrefixes .collapse">
+<a name="attachPearPrefixes" id="attachPearPrefixes"></a><div class="element clickable method public attachPearPrefixes" data-toggle="collapse" data-target=".attachPearPrefixes .collapse">
 <h2>Registers an array of classes using the Pear naming convention</h2>
-<pre>registerPearPrefixes(array $classes) : \Proem\Api\Autoloader</pre>
+<pre>attachPearPrefixes(array $classes) : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -178,22 +165,71 @@ namespace, and then aliasing that class back to Proem (without the \Api suffix)<
 <code>array</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
 </div></div>
 </div>
-<a name="unregister" id="unregister"></a><div class="element clickable method public unregister" data-toggle="collapse" data-target=".unregister .collapse">
-<h2>Unregister the autoloader.</h2>
-<pre>unregister() : \Proem\Api\Autoloader</pre>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Load a class</h2>
+<pre>load(string $class) : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>This load mechanism is not only responsible for locating and including the
+file where a class is defined, but is also responsible for implementing Proem's
+cascading file system. This is achieved by suffixing \Api onto the Proem part
+of any namespace starting with Proem, including the class from within the Proem
+namespace, and then aliasing that class back to Proem (without the \Api suffix)</p></p>
+<table class="table table-bordered"><tr>
+<th>link</th>
+<td><a href="http://proemframework.org/docs/cascading-namespace.html">http://proemframework.org/docs/cascading-namespace.html</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>The absolute (including namespace) name of the class</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
+</div></div>
+</div>
+<a name="register" id="register"></a><div class="element clickable method public register" data-toggle="collapse" data-target=".register .collapse">
+<h2>Register the autoloader.</h2>
+<pre>register() : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Proem\Api\Autoloader</code></div>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
+</div></div>
+</div>
+<a name="unregister" id="unregister"></a><div class="element clickable method public unregister" data-toggle="collapse" data-target=".unregister .collapse">
+<h2>Unregister the autoloader.</h2>
+<pre>unregister() : <a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Proem.Autoloader.html">\Proem\Autoloader</a></code></div>
 </div></div>
 </div>
 <a name="locate" id="locate"></a><div class="element clickable method private locate" data-toggle="collapse" data-target=".locate .collapse">
-<h2>Locate the path to the file where $class is defined.</h2>
+<h2>A simple wrapper around locateFile() that first
+checks to see if we are using APC caching.</h2>
 <pre>locate(string $class) : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>The name of the class</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>The path, if found</div>
+</div></div>
+</div>
+<a name="locateFile" id="locateFile"></a><div class="element clickable method private locateFile" data-toggle="collapse" data-target=".locateFile .collapse">
+<h2>Locate the path to the file where $class is defined.</h2>
+<pre>locateFile(string $class) : string | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8">
 <p class="long_description"></p>
@@ -208,6 +244,18 @@ namespace, and then aliasing that class back to Proem (without the \Api suffix)<
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24apcEnabled" id="$apcEnabled"> </a><div class="element clickable property protected $apcEnabled" data-toggle="collapse" data-target=".$apcEnabled .collapse">
+<h2>Store a flag indicating the abilty to load the APC extension</h2>
+<pre>$apcEnabled </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24loadProem" id="$loadProem"> </a><div class="element clickable property protected $loadProem" data-toggle="collapse" data-target=".$loadProem .collapse">
+<h2>Flag wether or not to attach the Proem namespace.</h2>
+<pre>$loadProem </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
 <a name="%24namespaces" id="$namespaces"> </a><div class="element clickable property protected $namespaces" data-toggle="collapse" data-target=".$namespaces .collapse">
 <h2>Store namespaces</h2>
 <pre>$namespaces : array</pre>

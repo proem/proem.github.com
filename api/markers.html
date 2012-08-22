@@ -29,8 +29,9 @@
               </div>
 <div class="nav-collapse"><ul class="nav">
 <li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
 <li><a href="https://proemframework.atlassian.net">Issues</a></li>
-<li><a href="/docs">Documentation</a></li>
+<li><a href="/docs/current">Documentation</a></li>
 <li><a href="/api/namespaces/Proem.html">API</a></li>
 <li><a href="/contrib.html">Contribute</a></li>
 <li><a href="/about.html">About</a></li>
@@ -44,11 +45,8 @@
 <div class="row">
 <div class="span4"><ul class="side-nav nav nav-list">
 <li class="nav-header">Navigation</li>
-<li><a href="#Proem/Api/Routing/Router/Template.php"><i class="icon-file"></i>Proem/Api/Routing/Router/Template.php</a></li>
-<li><a href="#Proem/Api/Routing/Router/Standard.php"><i class="icon-file"></i>Proem/Api/Routing/Router/Standard.php</a></li>
-<li><a href="#Proem/Api/Dispatch/Stage.php"><i class="icon-file"></i>Proem/Api/Dispatch/Stage.php</a></li>
-<li><a href="#Proem/Api/Util/Opt/Option.php"><i class="icon-file"></i>Proem/Api/Util/Opt/Option.php</a></li>
-<li><a href="#Proem/Api/Filter/Event/Generic.php"><i class="icon-file"></i>Proem/Api/Filter/Event/Generic.php</a></li>
+<li><a href="#Proem/Filter/Event/Generic.php"><i class="icon-file"></i>Proem/Filter/Event/Generic.php</a></li>
+<li><a href="#Proem/Util/Opt/Option.php"><i class="icon-file"></i>Proem/Util/Opt/Option.php</a></li>
 </ul></div>
 <div class="span8">
 <ul class="breadcrumb">
@@ -60,86 +58,13 @@
 <div class="alert alert-info">
                         The following markers were found:
                         <ul><li>todo 
-                <span class="label label-info">6</span>
+                <span class="label label-info">2</span>
 </li></ul>
 </div>
 <div id="marker-accordion">
 <div class="package-contents">
-<a name="Proem/Api/Routing/Router/Template.php" id="Proem/Api/Routing/Router/Template.php"></a><h3>
-<i class="icon-file"></i>Proem/Api/Routing/Router/Template.php<small style="float: right;padding-right: 10px;">1</small>
-</h3>
-<div><table class="table markers table-bordered">
-<tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>todo</td>
-<td>40</td>
-<td>This method should be renamed to register()</td>
-</tr>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Proem/Api/Routing/Router/Standard.php" id="Proem/Api/Routing/Router/Standard.php"></a><h3>
-<i class="icon-file"></i>Proem/Api/Routing/Router/Standard.php<small style="float: right;padding-right: 10px;">1</small>
-</h3>
-<div><table class="table markers table-bordered">
-<tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>todo</td>
-<td>68</td>
-<td>This method should be renamed to register()</td>
-</tr>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Proem/Api/Dispatch/Stage.php" id="Proem/Api/Dispatch/Stage.php"></a><h3>
-<i class="icon-file"></i>Proem/Api/Dispatch/Stage.php<small style="float: right;padding-right: 10px;">1</small>
-</h3>
-<div><table class="table markers table-bordered">
-<tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>todo</td>
-<td>106</td>
-<td>Instead of setting a dispatchable flag, a new event could likely be triggered</td>
-</tr>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Proem/Api/Util/Opt/Option.php" id="Proem/Api/Util/Opt/Option.php"></a><h3>
-<i class="icon-file"></i>Proem/Api/Util/Opt/Option.php<small style="float: right;padding-right: 10px;">2</small>
-</h3>
-<div><table class="table markers table-bordered">
-<tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>todo</td>
-<td>107</td>
-<td>Using the __FILE__ constant here sux. Fix it!</td>
-</tr>
-<tr>
-<td>todo</td>
-<td>264</td>
-<td>This method should likely be broken down into smaller chunks</td>
-</tr>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Proem/Api/Filter/Event/Generic.php" id="Proem/Api/Filter/Event/Generic.php"></a><h3>
-<i class="icon-file"></i>Proem/Api/Filter/Event/Generic.php<small style="float: right;padding-right: 10px;">1</small>
+<a name="Proem/Filter/Event/Generic.php" id="Proem/Filter/Event/Generic.php"></a><h3>
+<i class="icon-file"></i>Proem/Filter/Event/Generic.php<small style="float: right;padding-right: 10px;">1</small>
 </h3>
 <div><table class="table markers table-bordered">
 <tr>
@@ -154,6 +79,23 @@
 is really only useful when used by the bootstrap process. The
 pre* and post* events should likely be moved into another filter
 designed specifically for the bootstrap.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Proem/Util/Opt/Option.php" id="Proem/Util/Opt/Option.php"></a><h3>
+<i class="icon-file"></i>Proem/Util/Opt/Option.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>107</td>
+<td>Using the __FILE__ constant here sux. Fix it!</td>
 </tr>
 </table></div>
 </div>
