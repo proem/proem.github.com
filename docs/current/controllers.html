@@ -62,7 +62,13 @@
               <li><a href="/">Home</a></li>
               <li><a href="/blog/index.html">Blog</a></li>
               <li><a href="https://github.com/proem/proem/issues">Issues</a></li>
-              <li><a href="/docs/current">Documentation</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/docs/current">Current Release</a></li>
+                  <li><a href="/docs/dev">Development</a></li>
+                </ul>
+              </li>
               <li><a href="/api/namespaces/Proem.html">API</a></li>
               <li><a href="/contrib.html">Contribute</a></li>
               <li><a href="/about.html">About</a></li>
@@ -75,8 +81,10 @@
     <div class="docs container">
       <div class="row">
         <div class="span3">
+          <h5>Current Documentation</h5>
+          <p><small><em>HEAD of <a href="https://github.com/proem/proem/tree/master">master branch</a></em></small></p>
           <div style="padding: 8px;" class="well">
-            <h3>An Overview</h3>
+            <h5>An Overview</h5>
             <ul class="nav nav-tabs nav-stacked">
               <li><a href="/docs/current/installation.html">Installation</a></li>
               <li><a href="/docs/current/quickstart.html">Quick Start Guide</a></li>
@@ -84,7 +92,7 @@
             </ul>
           </div>
           <div style="padding: 8px;" class="well">
-            <h3>The Components</h3>
+            <h5>The Components</h5>
             <ul class="nav nav-tabs nav-stacked">
               <li><a href="/docs/current/autoloader.html">Autoloading</a></li>
               <li><a href="/docs/current/route-component.html">Routing Component</a></li>
@@ -96,7 +104,7 @@
             </ul>
           </div>
           <div style="padding: 8px;" class="well">
-            <h3>Userland Code</h3>
+            <h5>Userland Code</h5>
             <ul class="nav nav-tabs nav-stacked">
               <li><a href="/docs/current/controllers.html">Controllers</a></li>
               <li><a href="/docs/current/modules.html">Modules</a></li>

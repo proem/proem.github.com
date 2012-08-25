@@ -81,8 +81,8 @@
     <div class="docs container">
       <div class="row">
         <div class="span3">
-          <h5>Current Documentation</h5>
-          <p><small><em>HEAD of <a href="https://github.com/proem/proem/tree/master">master branch</a></em></small></p>
+          <h5>Development Documentation</h5>
+          <p><small><em>HEAD of <a href="https://github.com/proem/proem">develop branch</a></em></small></p>
           <div style="padding: 8px;" class="well">
             <h5>An Overview</h5>
             <ul class="nav nav-tabs nav-stacked">
@@ -114,92 +114,106 @@
         </div>
         <div class="span9">
           <div class="well">
-  <h3>Plugins</h3>
+  <h3>The Filter Chain</h3>
   <p>
-    Plugins are nothing more than a simple mechanism for packaging third party code. Like <a href="/docs/current/modules.html">Modules</a> they have an <em>init</em> method which
-    is executed on instantiation. Within this <em>init()</em> method you can attach <a href="/docs/current/signal-component.html">event listeners</a>, attach namespaces to the
-    <a href="/docs/current/autoloader.html">Autoloader</a> and generally do whatever needs to be done to get your functionality into Proem.
+    The <em>Filter Chain Component</em> sits at the heart of Proem's <a href="/docs/dev/bootstrap.html">Bootsrap Process</a> and is used to easily flow through the logic required to setup and
+    configure the other components within Proem. The <em>Filter Chain</em> itself is a fairly simple implementation of the
+    <a href="http://java.sun.com/blueprints/corej2eepatterns/Patterns/InterceptingFilter.html">Filter Chain Pattern</a>, which really, is just a simple mechanism for executing a series of methods
+    which are passed the same data to operate on.
   </p>
   <p>
-    At present, the plugin implementation is <strong>very</strong> simple, yet still quite flexible. The easiest way to demonstrate is with a simple example.
+    While within Proem the <em>Filter Chain</em> has a very specific use case (It is being used to filter an incoming request into an outgoing response), it has however also been designed flexibly
+    enough to easily be used outside of that particular use case if need be.
+  </p>
+  <p>
+    This means, if you have a need to filter data, the <em>Filter Chain</em> could potentially be a good place to start.
   </p>
 </div>
 <div class="well">
-  <h3>An Example</h3>
+  <h3>Creating Filter Chain Events</h3>
   <p>
-    Working from the code covered within the <a href="/docs/current/modules.html">Modules</a> docs we are going to build a very simple plugin that makes all output
-    upper case. I'll call it <em>Upper</em>.
-  </p>
+    Usage is fairly simple. First you need your <em>Chain Events</em>. These events must implement the Proem\Filter\Event\Template interface and (like most classes in Proem) there exists a
+    Proem\Filter\Event\Generic abstract class that you can build on if desired.
   <p>
-    From the root of the myproject app create a directory:
-  </p>
-  <code>mkdir lib/Plugin</code>
-  <p>
-    Now, create a file <em>Plugin/Upper.php</em>
-  </p>
   <pre class="prettyprint">
-    namespace Plugin;
-
-    class Upper extends \Proem\Ext\Plugin\Generic
+    class Event1 extends Proem\Filter\Event\Generic
     {
-        public function init(\Proem\Service\Manager\Template $assets, $environment = null)
+        public function inBound(Proem\Service\Manager\Template $assets)
         {
-            $assets->get('events')->attach('proem.pre.out.response', [$this, 'upperCase']);
+            echo "event1 inBound\n";
         }
 
-        public function upperCase($event) {
-            $response = $event->getServiceManager()->get('response');
-            $response->setBody(strtoupper($response->getBody()));
+        public function outBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event1 outBound\n";
+        }
+    }
+
+    class Event2 extends Proem\Filter\Event\Generic
+    {
+        public function inBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event2 inBound\n";
+        }
+
+        public function outBound(Proem\Service\Manager\Template $assets)
+        {
+            echo "event2 outBound\n";
         }
     }
   </pre>
-  <p>
-    Nothing flash here. We are listening for the <em>proem.pre.out.response</em> event which is triggered just prior to the <a href="/docs/current/io.html#response">Response</a> object sending
-    it's output to the client. We are then grabing the <em>response body</em> running it through <a href="http://php.net/strtoupper">strtoupper</a> and placing it back into the <a href="/docs/current/io.html#response">Response</a>
-    object.
-  </p>
 </div>
 <div class="well">
-  <h3>Loading a Plugin</h3>
+  <h3>Attaching Events to the Filter Manager</h3>
   <p>
-    Next, we need to load our <em>Plugin</em>. Simple, open our <em>htdocs/index.php</em> file and edit it to look like:
+    Then simply attach these to the <em>Filter Manager</em> and call <em>init()</em>.
   </p>
   <pre class="prettyprint">
-    require_once '/Users/thorpe/www/lib/proem/framework/lib/Proem/Autoloader.php';
-
-    (new Proem\Autoloader())
-        ->attachNamespace('Module', '../lib')
-        ->attachNamespace('Plugin', '../lib')
-        ->register();
-
-    (new Proem\Proem)
-        ->attachPlugin(new Plugin\Upper)
-        ->attachModule(new Module\Foo\Foo)
-        ->attachEventListener('proem.post.in.router', function($event) {
-        $event->getServiceManager()->get('router')->attach(
-            'hello-route', new \Proem\Routing\Route\Standard([
-                'rule'      => '/hello/:name/:params',
-                'targets'   => ['module' => 'index', 'controller' => 'index', 'action' => 'hello']
-            ])
-        );
-    })->init();
+    (new Proem\Filter\Manager\Standard)
+        ->setServiceManager(new Proem\Service\Manager\Standard)
+        ->attachEvent(new Event1)
+        ->attachEvent(new Event2)
+        ->init();
   </pre>
   <p>
-    We have attached the <em>Plugin</em> namespace to the <a href="/docs/current/autoloader.html">Autoloader</a> and loaded our <em>Plugin</em> in exactly the same way as we did with our
-    <a href="/docs/current/modules.html">Module</a>.
-  </p>
+    You can see from this example that the <em>Filter Manager</em> depends on a <em>Service Manager</em> being passed to into it. It is this manager that contains any assets you want to filter.
+    It is passed into the <em>inBound</em> and <em>outBound()</em> methods as they are executed. The above example would produce:
   <p>
-    In fact, under the hood, a <em>Module</em> and a <em>Plugin</em> are currently exactly the same. This will likely change somewhat in future versions, but for now, it's more a simple naming convention.
-    <em>Modules</em> are designed to manipulate <a href="http://prdoc/docs/current/route-component.html">Routes</a> and house <a href="/docs/current/controllers.html">Controllers</a> while <em>Plugins</em>
-    are designed to inject third party code.
-  </p>
+  <div class="alert alert-error">
+    <p>
+      Looking at the code while writing this documentation I can see that the dependency on the <em>Service Manager</em> needs to be better implemented or removed all together.
+      As of > 0.6.1, a <a href="https://github.com/proem/proem/issues/108">ticket has been created</a> to look at this issue.
+    </p>
+  </div>
+  <pre>
+    event1 inBound
+    event2 inBound
+    event2 outBound
+    event1 outBound
+  </pre>
   <p>
-    Take a look at <a href="http://127.0.0.1:8080/foo">http://127.0.0.1:8080/foo</a> and you should now see: <em>HELLO FROM FOO!</em>.
+    You can also change the priority of events within the <em>Filter Chain</em> by passing a second argument to <em>attachEvent()</em>. The higher the number, the higher the priority, default is 0.
   </p>
+  <pre class="prettyprint">
+    (new Proem\Filter\Manager\Standard)
+        ->setServiceManager(new Proem\Service\Manager\Standard)
+        ->attachEvent(new Event1)
+        ->attachEvent(new Event2, 200)
+        ->init();
+  </pre>
+  <p>
+    Produces:
+  </p>
+  <pre>
+    event2 inBound
+    event1 inBound
+    event1 outBound
+    event2 outBound
+  </pre>
 </div>
 <div class="well" id="disqus_thread"></div>
 <script type="text/javascript">
-  var disqus_identifier = '/docs/current/plugins';
+  var disqus_identifier = '/docs/dev/filter';
   (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
