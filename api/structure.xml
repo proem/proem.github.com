@@ -5574,7 +5574,7 @@ THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Proem/Signal/Manager/Standard.php" hash="b5406f74a6c0d795276c5ef3bec1dddf" package="Default">
+  <file path="Proem/Signal/Manager/Standard.php" hash="0a4b8a262528b9b13e75614422e151c2" package="Default">
     <docblock line="3">
       <description><![CDATA[The MIT License]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2010 - 2012 Tony R Quilkey <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;">&#x74;&#x72;&#x71;&#x40;&#x70;&#x72;&#x6f;&#x65;&#x6d;&#x66;&#x72;&#x61;&#x6d;&#x65;&#x77;&#x6f;&#x72;&#x6b;&#x2e;&#x6f;&#x72;&#x67;</a></p>
@@ -5598,7 +5598,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>]]></long-description>
     </docblock>
     <parse_markers>
-      <error line="154" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $event in trigger()</error>
+      <error line="173" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $event in trigger()</error>
     </parse_markers>
     <namespace-alias name="Queue">Proem\Util\Storage\Queue</namespace-alias>
     <namespace-alias name="Callback">Proem\Util\Process\Callback</namespace-alias>
@@ -5616,7 +5616,7 @@ required to trigger an event.</p>]]></long-description>
       </docblock>
       <constant namespace="Proem\Signal\Manager" line="49" package="Default">
         <name>WILDCARD</name>
-        <value><![CDATA['*']]></value>
+        <value><![CDATA['.*']]></value>
         <docblock line="46">
           <description><![CDATA[Wildcard used when listening for all events]]></description>
           <long-description><![CDATA[]]></long-description>
@@ -5644,31 +5644,48 @@ required to trigger an event.</p>]]></long-description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="75" package="">
+      <property final="false" static="false" visibility="protected" line="68" package="Default">
+        <name>$wildcardSearching</name>
+        <default><![CDATA[false]]></default>
+        <docblock line="65">
+          <description><![CDATA[Store a flag regarding searching for wildcards]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="80" package="">
         <name>remove</name>
         <type>function</type>
-        <docblock line="65">
+        <docblock line="70">
           <description><![CDATA[Remove event listeners from a particular index.]]></description>
           <long-description><![CDATA[<p>Be aware that removeing listeners from the wildcard '<em>' will not literally
 remove them from *all</em> events. If they have been attached to a specifically
 named event that will need to be removed seperately.</p>]]></long-description>
-          <tag line="65" name="param" description="" type="string" variable="$name">
+          <tag line="70" name="param" description="" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="65" name="return" description="" type="\Proem\Signal\Manager\Template">
+          <tag line="70" name="return" description="" type="\Proem\Signal\Manager\Template">
             <type by_reference="false">\Proem\Signal\Manager\Template</type>
           </tag>
         </docblock>
-        <argument line="75">
+        <argument line="80">
           <name>$name</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="112" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="94" package="">
+        <name>enableWildcards</name>
+        <type>function</type>
+        <docblock line="88">
+          <description><![CDATA[Enable wildcard searching.]]></description>
+          <long-description><![CDATA[<p>Wildcard searching is a rather expensive
+process, so we make it an optional.</p>]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="129" package="">
         <name>attach</name>
         <type>function</type>
-        <docblock line="83">
+        <docblock line="100">
           <description><![CDATA[Register a listener attached to a particular named event.]]></description>
           <long-description><![CDATA[<p>All listeners have there callbacks firstly stored within an associative array
 using a unique md5 hash as an index and the callback as it's value.</p>
@@ -5689,58 +5706,58 @@ listener to be triggered against all events.</p>
 
 <p>Be aware that attaching a listener to the same event multiple times will trigger
 that listener multiple times. This includes using the wildcard.</p>]]></long-description>
-          <tag line="83" name="param" description="The name(s) of the event(s) to listen for." type="string|array" variable="$name">
+          <tag line="100" name="param" description="The name(s) of the event(s) to listen for." type="string|array" variable="$name">
             <type by_reference="false">string</type>
             <type by_reference="false">array</type>
           </tag>
-          <tag line="83" name="param" description="The callback to execute when the event is triggered." type="\Proem\Signal\Manager\callable" variable="$callback">
+          <tag line="100" name="param" description="The callback to execute when the event is triggered." type="\Proem\Signal\Manager\callable" variable="$callback">
             <type by_reference="false">\Proem\Signal\Manager\callable</type>
           </tag>
-          <tag line="83" name="param" description="The priority at which to execute this listener." type="int" variable="$priority">
+          <tag line="100" name="param" description="The priority at which to execute this listener." type="int" variable="$priority">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="83" name="return" description="" type="\Proem\Signal\Manager\Template">
+          <tag line="100" name="return" description="" type="\Proem\Signal\Manager\Template">
             <type by_reference="false">\Proem\Signal\Manager\Template</type>
           </tag>
         </docblock>
-        <argument line="112">
+        <argument line="129">
           <name>$name</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="112">
+        <argument line="129">
           <name>$callback</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="112">
+        <argument line="129">
           <name>$priority</name>
           <default><![CDATA[0]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="162" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Proem\Signal\Manager" line="181" package="">
         <name>trigger</name>
         <type>function</type>
-        <docblock line="154">
+        <docblock line="173">
           <description><![CDATA[Trigger the execution of all event listeners attached to a named event.]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="154" name="param" description="The event being triggered." type="\Proem\Signal\Event\Standard" variable="$event">
+          <tag line="173" name="param" description="The event being triggered." type="\Proem\Signal\Event\Standard" variable="$event">
             <type by_reference="false">\Proem\Signal\Event\Standard</type>
           </tag>
-          <tag line="154" name="param" description="A callback that can be used to respond to any response sent back from a listener." type="\Proem\Signal\Manager\callable" variable="$callback">
+          <tag line="173" name="param" description="A callback that can be used to respond to any response sent back from a listener." type="\Proem\Signal\Manager\callable" variable="$callback">
             <type by_reference="false">\Proem\Signal\Manager\callable</type>
           </tag>
-          <tag line="154" name="return" description="" type="\Proem\Signal\Manager\Template">
+          <tag line="173" name="return" description="" type="\Proem\Signal\Manager\Template">
             <type by_reference="false">\Proem\Signal\Manager\Template</type>
           </tag>
         </docblock>
-        <argument line="162">
+        <argument line="181">
           <name>$event</name>
           <default><![CDATA[]]></default>
           <type>Event</type>
         </argument>
-        <argument line="162">
+        <argument line="181">
           <name>$callback</name>
           <default><![CDATA[null]]></default>
           <type/>

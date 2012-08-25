@@ -86,29 +86,29 @@
           <div style="padding: 8px;" class="well">
             <h5>An Overview</h5>
             <ul class="nav nav-tabs nav-stacked">
-              <li><a href="/docs/current/installation.html">Installation</a></li>
-              <li><a href="/docs/current/quickstart.html">Quick Start Guide</a></li>
-              <li><a href="/docs/current/bootstrap.html">The Bootstrap Process</a></li>
+              <li><a href="/docs/dev/installation.html">Installation</a></li>
+              <li><a href="/docs/dev/quickstart.html">Quick Start Guide</a></li>
+              <li><a href="/docs/dev/bootstrap.html">The Bootstrap Process</a></li>
             </ul>
           </div>
           <div style="padding: 8px;" class="well">
             <h5>The Components</h5>
             <ul class="nav nav-tabs nav-stacked">
-              <li><a href="/docs/current/autoloader.html">Autoloading</a></li>
-              <li><a href="/docs/current/route-component.html">Routing Component</a></li>
-              <li><a href="/docs/current/signal-component.html">Signal Component</a></li>
-              <li><a href="/docs/current/services-component.html">Service Component</a></li>
-              <li><a href="/docs/current/dispatch.html">Dispatch Component</a></li>
-              <li><a href="/docs/current/filter.html">The Filter Chain</a></li>
-              <li><a href="/docs/current/io.html">IO</a></li>
+              <li><a href="/docs/dev/autoloader.html">Autoloading</a></li>
+              <li><a href="/docs/dev/route-component.html">Routing Component</a></li>
+              <li><a href="/docs/dev/signal-component.html">Signal Component</a></li>
+              <li><a href="/docs/dev/services-component.html">Service Component</a></li>
+              <li><a href="/docs/dev/dispatch.html">Dispatch Component</a></li>
+              <li><a href="/docs/dev/filter.html">The Filter Chain</a></li>
+              <li><a href="/docs/dev/io.html">IO</a></li>
             </ul>
           </div>
           <div style="padding: 8px;" class="well">
             <h5>Userland Code</h5>
             <ul class="nav nav-tabs nav-stacked">
-              <li><a href="/docs/current/controllers.html">Controllers</a></li>
-              <li><a href="/docs/current/modules.html">Modules</a></li>
-              <li><a href="/docs/current/plugins.html">Plugins</a></li>
+              <li><a href="/docs/dev/controllers.html">Controllers</a></li>
+              <li><a href="/docs/dev/modules.html">Modules</a></li>
+              <li><a href="/docs/dev/plugins.html">Plugins</a></li>
             </ul>
           </div>
         </div>
@@ -196,6 +196,40 @@
     Event 1
     Event 2
   </pre>
+</div>
+<div class="well">
+  <a name="wilcards"></a>
+  <h3>Attaching listeners using wildcard notation</h3>
+  <p>
+    You can attach listeners to multiple events using wildcard notation.
+  </p>
+  <pre class="prettyprint">
+    $signal_manager = new Proem\Signal\Manager\Standard;
+
+    $signal_manager->enableWildcards()->attach('this.is.*', function($event) {
+        echo $event->getName();
+    })->attach('this.*', function($event) {
+        echo $event->getName();
+    });
+
+    // Trigger the 'some.event' event.
+    $signal_manager->trigger(new Proem\Signal\Event\Standard('this.is.some.event'));
+  </pre>
+  <p>
+    The above would produce:
+    <pre>
+      this.is.some.event
+      this.is.some.event
+    </pre>
+    because the <em>this.is.some.event</em> is within the same namespace as both of the listener wildcards.
+  </p>
+  <p>
+    You can for example, attach a listener to all <em>proem</em> events using proem.* or, to attach to <em>all</em> events you would use .*
+  </p>
+  <p>
+    Wildcard notation is disabled by default because it is a fairly process intesive operation. To enable it's usage, call the <em>enableWildcards()</em>
+    method on the <em>Signal Manager</em>
+  </p>
 </div>
 <div class="well">
   <h3>Prioritising the order in which <em>Listeners</em> are called.</h3>
