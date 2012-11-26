@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/scripts/bootstrap.min.js"></script>
-    <script src="/scripts/prettify.js"></script>
-    <script src="/scripts/proem.js"></script>
+    <script src="/assets/js/jquery-1.8.2.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/prettify.js"></script>
+    <script src="/assets/js/proem.js"></script>
     <script type="text/javascript">
       //var disqus_developer = 1;
       var disqus_shortname = 'proemframework';
@@ -36,11 +36,11 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-responsive.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prettify.css">
-    <link rel="stylesheet" type="text/css" href="/styles/proem.css">
-    <link rel="shortcut icon" href="media/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/proem.css">
+    <link rel="shortcut icon" href="/assets/media/img/favicon.ico">
   </head>
   <body>
     <div class="topnav">
@@ -60,16 +60,22 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/">Home</a></li>
-              <li><a href="/blog/index.html">Blog</a></li>
-              <li><a href="https://github.com/proem/proem/issues">Issues</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
                 <ul class="dropdown-menu">
                   <li><a href="/docs/current">Current Release</a></li>
-                  <li><a href="/docs/dev">Development</a></li>
+                  <li><a href="/docs/dev">Developement</a></li>
                 </ul>
               </li>
-              <li><a href="/api/namespaces/Proem.html">API</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+                  <li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+                </ul>
+              </li>
               <li><a href="/contrib.html">Contribute</a></li>
               <li><a href="/about.html">About</a></li>
             </ul>
@@ -81,9 +87,9 @@
     <div class="docs container">
       <div class="row">
         <div class="span3">
-          <h5>Development Documentation</h5>
-          <p><small><em>HEAD of <a href="https://github.com/proem/proem">develop branch</a></em></small></p>
-          <div style="padding: 8px;" class="well">
+                    <h5>Development Documentation</h5>
+          <p><small><em>HEAD of <a href="https://github.com/proem/proem/tree/develop">develop branch</a></em></small></p>
+                    <div style="padding: 8px;" class="well">
             <h5>An Overview</h5>
             <ul class="nav nav-tabs nav-stacked">
               <li><a href="/docs/dev/installation.html">Installation</a></li>
@@ -94,12 +100,12 @@
           <div style="padding: 8px;" class="well">
             <h5>The Components</h5>
             <ul class="nav nav-tabs nav-stacked">
-              <li><a href="/docs/dev/autoloader.html">Autoloading</a></li>
+              <li><a href="/docs/dev/autoloader.html">Autoloader</a></li>
               <li><a href="/docs/dev/route-component.html">Routing Component</a></li>
               <li><a href="/docs/dev/signal-component.html">Signal Component</a></li>
               <li><a href="/docs/dev/services-component.html">Service Component</a></li>
               <li><a href="/docs/dev/dispatch.html">Dispatch Component</a></li>
-              <li><a href="/docs/dev/filter.html">The Filter Chain</a></li>
+              <li><a href="/docs/dev/filter.html">The Filter Component</a></li>
               <li><a href="/docs/dev/io.html">IO</a></li>
             </ul>
           </div>
@@ -143,7 +149,7 @@
   </pre>
   <p>
     However, that doesn't really help us much. Below, we are going to describe what exactly happens when you call Proem's <a href="/docs/dev/bootstrap.html#init">init()</a> method, and later
-    how you can attach code to <a href="/docs/dev/signals-component.html">Events</a> that will allow you to customise this process.
+    how you can attach code to <a href="/docs/dev/signal-component.html">Events</a> that will allow you to customise this process.
   </p>
 </div>
 <div class="well">
@@ -169,8 +175,8 @@
     }
   </pre>
   <p>
-    Here Proem sets up a <a href="/docs/dev/signal-component.html">Signal Manager</a> and a <a href="/docs/services-component.html">Service Manager</a>.
-    (Asset is an alias of <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Service/Asset/Standard.php">\Proem\Service\Asset\Standard</a>).
+    Here Proem sets up a <a href="/docs/dev/signal-component.html">Signal Manager</a> and a <a href="/docs/dev/services-component.html">Service Manager</a>.
+    (Asset is an alias of <a href="https://github.com/proem/proem/tree/develop/lib/Proem/Service/Asset/Standard.php">Proem\Service\Asset\Standard</a>.
     These two objects form the heart of an application built on top of Proem and are passed around the entire bootstrap process and into userland <em>(your application)</em>.
   </p>
   <p>
@@ -290,13 +296,12 @@
     <li>Dispatch</li>
   </ul>
   <p>
-    As the names suggest, these Events are responsible for setting up the <a href="/docs/dev/io.html#request">Request</a>, <a href="/docs/dev/io.html#response">Response</a>, <a href="/docs/dev/route-component.html">Routing</a>
+    As the names suggest, these Events are responsible for setting up the <a href="/docs/dev/io.html">Request</a>, <a href="/docs/dev/io.html#response">Response</a> <a href="/docs/dev/route-component.html">Routing</a>
     and <a href="/docs/dev/dispatch.html">Dispatch</a> parts of the framework.
   </p>
   <p>
-    Each of these events extend the <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Filter/Event/Generic.php">Proem\Filter\Event\Generic</a> object
-    which is as I said little more robust (along with the <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Filter/Manager/Standard.php">Filter Manager</a> <em>(Chain)</em>) than
-    the simple example shown above.
+    Each of these events extend the <a href="https://github.com/proem/proem/tree/develop/lib/Proem/Filter/Event/Generic.php">Proem\Filter\Event\Generic</a> object which is as I said little more robust (along with the <a href="https://github.com/proem/proem/tree/develop/lib/Proem/Filter/Manager/Standard.php">Proem\Filter\Manager\Standard</a>
+    <em>(Chain)</em>) than the simple example shown above.
   </p>
   <p>
     One of the differences is that each of these <em>Filter Events</em> has it's own <strong>in</strong>Bound and <strong>out</strong>Bound methods.
@@ -305,7 +310,7 @@
   <p>
     It might be best to illistrate this with an image:
   </p>
-  <img src="/media/img/filter-chain-2.png" />
+  <img src="/assets/media/img/filter-chain-2.png" />
   <p>
     These Filter Events do the bulk of the grunt work in terms of setting up the framework ready to bootstrap an application.
   </p>
@@ -314,33 +319,32 @@
   <h3>How can we customise this process?</h3>
   <p>
     So now we have an understanding of what happens when we call <em>(new Proem\Proem)->init()</em>, but how can we customise this process? If you look again
-    at the <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Filter/Event/Generic.php">Proem\Filter\Event\Generic</a> abstract you will notice
-    <strong>pre*</strong> and <strong>post*</strong> methods surround the <strong>inBound</strong> and <strong>outBound</strong> methods. These pre / post methods
-    are responsible for publishing <a href="/docs/dev/signal-component.html">Events</a> which we can listen to in order to customise the bootstrap process.
+    at the <a href="https://github.com/proem/proem/tree/develop/lib/Proem/Filter/Event/Generic.php">Proem\Filter\Event\Generic</a> abstract you will notice <strong>pre*</strong> and <strong>post*</strong> methods surround the <strong>inBound</strong>
+    and <strong>outBound</strong> methods. These pre / post methods are responsible for publishing <a href="/docs/dev/signal-component.html">Events</a> which we can listen to in order to customise the bootstrap process.
   </p>
   <p>
-    This means that the Chain can potentially publish 16 different events that we can listen to using the <a href="/docs/dev/signal-component.html">Signals</a> component. On top of that, there is
+    This means that the Chain can potentially publish 16 different events that we can listen to using the <a href="/docs/dev/signal-component.html">Signal Component</a>. On top of that, there is
     the initial "proem.init" event (which we can also see within the <a href="#init">init()</a> code) and some of these events themselves have the potential to again trigger more events
     <em>(the <a href="/docs/dev/dispatch.html">dispatch stage</a> comes to mind)</em>. The main Events triggered here are:
   </p>
   <ul>
     <li>proem.init</li>
-    <li>pre.in.response</li>
-    <li>post.in.response</li>
-    <li>pre.in.request</li>
-    <li>post.in.request</li>
-    <li>pre.in.router</li>
-    <li>post.in.router</li>
-    <li>pre.in.dispatch</li>
-    <li>post.in.dispatch</li>
-    <li>pre.out.dispatch</li>
-    <li>post.out.dispatch</li>
-    <li>pre.out.route</li>
-    <li>post.out.route</li>
-    <li>pre.out.request</li>
-    <li>post.out.request</li>
-    <li>pre.out.response</li>
-    <li>post.out.response</li>
+    <li>proem.pre.in.response</li>
+    <li>proem.post.in.response</li>
+    <li>proem.pre.in.request</li>
+    <li>proem.post.in.request</li>
+    <li>proem.pre.in.router</li>
+    <li>proem.post.in.router</li>
+    <li>proem.pre.in.dispatch</li>
+    <li>proem.post.in.dispatch</li>
+    <li>proem.pre.out.dispatch</li>
+    <li>proem.post.out.dispatch</li>
+    <li>proem.pre.out.router</li>
+    <li>proem.post.out.router</li>
+    <li>proem.pre.out.request</li>
+    <li>proem.post.out.request</li>
+    <li>proem.pre.out.response</li>
+    <li>proem.post.out.response</li>
   </ul>
   <div class="alert alert-info">
     As of 0.6.0 the first thing the Signal Manager does with an Event is checks to see if there are any listeners, if there are no listeners, the Signal Manager does nothing. This
@@ -358,10 +362,10 @@
   <p>
 </div>
 <div class="well">
-  <a name="attach-events"></a>
+  <a name="attach-events" style="position: relative; top: -80px">&nbsp;</a>
   <h3>A simple example, adding a <em>Route</em> to the <em>Router</em></h3>
   <pre class="prettyprint">
-    (new \Proem\Proem)->attachEventListener('proem.post.in.route', function($event) {
+    (new \Proem\Proem)->attachEventListener('proem.post.in.router', function($event) {
         $event->getServiceManager()->get('router')->attach(
             'logout', new \Proem\Routing\Route\Standard([
                 'rule'      => '/logout',
@@ -375,19 +379,16 @@
     to the main <a href="/docs/dev/signal-component.html">Signal Manager</a> that is passed around the framework.
   </p>
   <p>
-    All Events triggered directly from the Bootstrap Filter Chain are instances of the custom
-    <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Bootstrap/Signal/Event/Bootstrap.php">Bootstrap Signal Event</a> which provides a few extra methods
-    that are specific to the bootstrap process. <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Bootstrap/Signal/Event/Bootstrap.php#L67">getServiceManager()</a> is
-    one such method and provides us access to the Services that have been set up.
+    All Events triggered directly from the Bootstrap Filter Chain are instances of the custom <a href="https://github.com/proem/proem/tree/develop/lib/Proem/Bootstrap/Signal/Event/Bootstrap.php">Proem\Bootstrap\Signal\Event\Bootstrap</a> event which provides a few extra methods
+    that are specific to the bootstrap process.
   </p>
   <p>
-    Because we are listening for the <strong>post.in.route</strong> event, the router already exists and is within the <em>Service Manager</em> ready for us to customise. A general rule of thumb
+    Because we are listening for the <strong>proem.post.in.route</strong> event, the router already exists and is within the <em>Service Manager</em> ready for us to customise. A general rule of thumb
     is that default implementations of objects are added during the inBound() filter Events. These can be overridden completely by sending your own implementation as a response to the applicable
-    pre.in.* Event, or can be configured by listening to and responding to the applicable post.in.*
+    proem.pre.in.* Event (see <a href="/docs/dev/signal-component.html#event-responses">The Signal Component</a>, or can be configured by listening to and responding to the applicable proem.post.in.*
   </p>
   <p>
-    But what if we don't want to use the <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Routing/Router/Standard.php">Standard Router</a>? Using the <em>Events</em> provided
-    we can overload it on the fly.
+    But what if we don't want to use the <a href="https://github.com/proem/proem/tree/develop/lib/Proem/Routing/Router/Standard.php">Standard Router</a>? Using the <em>Events</em> provided we can overload it on the fly.
   </p>
 </div>
 <div class="well">
@@ -397,8 +398,8 @@
     going to provide us with by default? Easy.
   <p>
   <p>
-    The <em>Router</em> is created within the Router Filter Chain Event <em>inBound()</em>. All we need do is listen for the <strong>pre.in.route</strong> event and from within our listener, return a
-    new <em>Router</em> wrapped within a <a href="/docs/dev/services-component.html">Service Asset Container</a> (Being sure to pass it a valid url to it's constructor).
+    The <em>Router</em> is created within the Router Filter Chain Event <em>inBound()</em>. All we need do is listen for the <strong>proem.pre.in.route</strong> event and from within our listener, return an
+    event with the 'router.asset' parameter set to our new <em>Router</em> wrapped within a <a href="/docs/dev/services-component.html">Service Asset Container</a> (Being sure to pass it a valid url to it's constructor).
   </p>
   <pre class="prettyprint">
     namespace MyApp;
@@ -411,29 +412,16 @@
         }
     }
 
-    (new \Proem\Proem)->attachEventListener('pre.in.route', function($e) {
-        return (new \Proem\Service\Asset\Generic)->set('MyApp\Router', function() use ($e) {
-            return new MyApp\Router($e->getServiceManager()->get('request')->getBaseUri());
-        });
+    $proem->attachEventListener('proem.pre.in.route', function($event) {
+        $asset = new \Proem\Service\Asset\Generic;
+        $event->setParam('router.asset', $asset->set('MyApp\Router', function() use ($event) {
+            return new MyApp\Router(
+                $event->getServiceManager()->get('request')->getBaseUri()
+            );
+        }));
+        return $event;
     })->init();
   </pre>
-</div>
-<div class="well">
-  <h3>So what Events do what?</h3>
-  <p>
-    I'm a little hesitant to document this at this early stage. It's safe to say however that any if the pre.in.* event's will accept a listener
-    that can return an <em>Asset</em> holding a <em>Service</em>. Eg; The <em>pre.in.request</em> Event could return an implementation of the
-    <a href="https://github.com/proem/proem/blob/develop/lib/Proem/IO/Request/Template.php">Request Template</a>. The following inBound()
-    <em>Chain Event</em> will then use this to populate the <em>Service Manager</em> instead of creating it's default.
-  </p>
-  <p>
-    The waters get a bit more unclear when we start dealing with the <em>Response</em> object which is set up on the inBound() <em>Chain Event</em> but will actually
-    also do some work on the way <em>out</em> of the chain.
-  </p>
-  <p>
-    For instance, if you take a look at the <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Bootstrap/Filter/Event/Response.php#L136">outBound</a>
-    method on the <em>Response Filter Event</em> you can see that this is used to send any response to the client.
-  </p>
 </div>
 <div class="well">
   <h3>Summary</h3>
@@ -446,19 +434,24 @@
     looking at <a href="/docs/dev/modules.html">Modules</a> and <a href="/docs/dev/plugins.html">Plugins</a> you will see that there are ways around this as well.
   </p>
 </div>
-<div class="well" id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_identifier = '/docs/dev/bootstrap';
-  (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="well" id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_identifier = "/docs/dev/bootstrap";
+                (function() {
+                    var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                    dsq.src = "http://" + disqus_shortname + ".disqus.com/embed.js";
+                    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+            </script>
+        
         </div>
       </div>
     </div>
-      </body>
+      <div class="row">
+    <div class="span6 gen-footer">
+      Generated from <a href="https://github.com/proem/proemframework.org-src">Source</a> by <a href="https://github.com/trq/Gen">Gen</a> 27/11/2012  08:31
+    </div>
+  </div>
+  </body>
 </html>

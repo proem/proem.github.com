@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Proem\Autoloader</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-21713077-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+</head>
+<body>
+<div class="topnav"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><div class="brand"><a href="/"><strong>Proem</strong> Framework
+                </a></div>
+<div class="nav-collapse"><ul class="nav">
+<li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a><ul class="dropdown-menu">
+<li><a href="/docs/current">Current</a></li>
+<li><a href="/docs/dev">Development</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a><ul class="dropdown-menu">
+<li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+<li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+</ul>
+</li>
+<li><a href="/contrib.html">Contribute</a></li>
+<li><a href="/about.html">About</a></li>
+</ul></div>
+</div></div></div></div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#__construct" title="__construct :: Instantiate our Autoloader and check for APC."><span class="description">Instantiate our Autoloader and check for APC.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#attachNamespace" title="attachNamespace :: Register a namespace."><span class="description">Register a namespace.</span><pre>attachNamespace()</pre></a></li>
+<li class="method public "><a href="#attachNamespaces" title="attachNamespaces :: Register an array of namespaces"><span class="description">Register an array of namespaces</span><pre>attachNamespaces()</pre></a></li>
+<li class="method public "><a href="#attachPearPrefix" title="attachPearPrefix :: Register a class using the PEAR naming convention"><span class="description">Register a class using the PEAR naming convention</span><pre>attachPearPrefix()</pre></a></li>
+<li class="method public "><a href="#attachPearPrefixes" title="attachPearPrefixes :: Registers an array of classes using the Pear naming convention"><span class="description">Registers an array of classes using the Pear naming convention</span><pre>attachPearPrefixes()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Load a class"><span class="description">Load a class</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#register" title="register :: Register the autoloader."><span class="description">Register the autoloader.</span><pre>register()</pre></a></li>
+<li class="method public "><a href="#unregister" title="unregister :: Unregister the autoloader."><span class="description">Unregister the autoloader.</span><pre>unregister()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#locate" title="locate :: A simple wrapper around locateFile() that first
+checks to see if we are using APC caching."><span class="description">A simple wrapper around locateFile() that first
+checks to see if we are using APC caching.</span><pre>locate()</pre></a></li>
+<li class="method private "><a href="#locateFile" title="locateFile :: Locate the path to the file where $class is defined."><span class="description">Locate the path to the file where $class is defined.</span><pre>locateFile()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#%24apcEnabled" title="$apcEnabled :: Store a flag indicating the abilty to load the APC extension"><span class="description"></span><pre>$apcEnabled</pre></a></li>
+<li class="property protected "><a href="#%24loadProem" title="$loadProem :: Flag wether or not to attach the Proem namespace."><span class="description"></span><pre>$loadProem</pre></a></li>
+<li class="property protected "><a href="#%24namespaces" title="$namespaces :: Store namespaces"><span class="description"></span><pre>$namespaces</pre></a></li>
+<li class="property protected "><a href="#%24pearPrefixes" title="$pearPrefixes :: Store Pear prefixes"><span class="description"></span><pre>$pearPrefixes</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Proem\Autoloader"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Proem.html">Proem</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Proem.Autoloader.html">Autoloader</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">The Proem Autoloader</p>
+<div class="details">
+<div class="long_description"><p>An autoloader implementing the PSR-0 standard</p></div>
+<table class="table table-bordered"><tr>
+<th>link</th>
+<td><a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Instantiate our Autoloader and check for APC.</h2>
+<pre>__construct($loadProem) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$loadProem</h4></div>
+</div></div>
+</div>
+<a id="attachNamespace"></a><div class="element clickable method public attachNamespace" data-toggle="collapse" data-target=".attachNamespace .collapse">
+<h2>Register a namespace.</h2>
+<pre>attachNamespace(string $namespace, array | string $paths) : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code><p>The namespace</p></div>
+<div class="subelement argument">
+<h4>$paths</h4>
+<code>array</code><code>string</code><p>The path to the namespace</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="attachNamespaces"></a><div class="element clickable method public attachNamespaces" data-toggle="collapse" data-target=".attachNamespaces .collapse">
+<h2>Register an array of namespaces</h2>
+<pre>attachNamespaces(array $namespaces) : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespaces</h4>
+<code>array</code><p>An array of namespaces</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="attachPearPrefix"></a><div class="element clickable method public attachPearPrefix" data-toggle="collapse" data-target=".attachPearPrefix .collapse">
+<h2>Register a class using the PEAR naming convention</h2>
+<pre>attachPearPrefix(string $prefix, array | string $paths) : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code><p>The prefix</p></div>
+<div class="subelement argument">
+<h4>$paths</h4>
+<code>array</code><code>string</code><p>The path</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="attachPearPrefixes"></a><div class="element clickable method public attachPearPrefixes" data-toggle="collapse" data-target=".attachPearPrefixes .collapse">
+<h2>Registers an array of classes using the Pear naming convention</h2>
+<pre>attachPearPrefixes(array $classes) : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classes</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Load a class</h2>
+<pre>load(string $class) : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This load mechanism is not only responsible for locating and including the
+file where a class is defined, but is also responsible for implementing Proem's
+cascading file system. This is achieved by suffixing \Api onto the Proem part
+of any namespace starting with Proem, including the class from within the Proem
+namespace, and then aliasing that class back to Proem (without the \Api suffix)</p></div>
+<table class="table table-bordered"><tr>
+<th>link</th>
+<td><a href="http://proemframework.org/docs/cascading-namespace.html">http://proemframework.org/docs/cascading-namespace.html</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>The absolute (including namespace) name of the class</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="register"></a><div class="element clickable method public register" data-toggle="collapse" data-target=".register .collapse">
+<h2>Register the autoloader.</h2>
+<pre>register() : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="unregister"></a><div class="element clickable method public unregister" data-toggle="collapse" data-target=".unregister .collapse">
+<h2>Unregister the autoloader.</h2>
+<pre>unregister() : \Proem\Proem\Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Proem\Autoloader</code></div>
+</div></div>
+</div>
+<a id="locate"></a><div class="element clickable method private locate" data-toggle="collapse" data-target=".locate .collapse">
+<h2>A simple wrapper around locateFile() that first
+checks to see if we are using APC caching.</h2>
+<pre>locate(string $class) : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>The name of the class</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>The path, if found</div>
+</div></div>
+</div>
+<a id="locateFile"></a><div class="element clickable method private locateFile" data-toggle="collapse" data-target=".locateFile .collapse">
+<h2>Locate the path to the file where $class is defined.</h2>
+<pre>locateFile(string $class) : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>The name of the class</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>The path, if found</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="$apcEnabled"> </a><div class="element clickable property protected $apcEnabled" data-toggle="collapse" data-target=".$apcEnabled .collapse">
+<h2></h2>
+<pre>$apcEnabled </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$loadProem"> </a><div class="element clickable property protected $loadProem" data-toggle="collapse" data-target=".$loadProem .collapse">
+<h2></h2>
+<pre>$loadProem </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$namespaces"> </a><div class="element clickable property protected $namespaces" data-toggle="collapse" data-target=".$namespaces .collapse">
+<h2></h2>
+<pre>$namespaces : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$pearPrefixes"> </a><div class="element clickable property protected $pearPrefixes" data-toggle="collapse" data-target=".$pearPrefixes .collapse">
+<h2></h2>
+<pre>$pearPrefixes : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12"></footer></div>
+</div>
+</body>
+</html>

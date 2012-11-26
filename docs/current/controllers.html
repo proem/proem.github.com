@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/scripts/bootstrap.min.js"></script>
-    <script src="/scripts/prettify.js"></script>
-    <script src="/scripts/proem.js"></script>
+    <script src="/assets/js/jquery-1.8.2.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/prettify.js"></script>
+    <script src="/assets/js/proem.js"></script>
     <script type="text/javascript">
       //var disqus_developer = 1;
       var disqus_shortname = 'proemframework';
@@ -36,11 +36,11 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-responsive.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prettify.css">
-    <link rel="stylesheet" type="text/css" href="/styles/proem.css">
-    <link rel="shortcut icon" href="media/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/proem.css">
+    <link rel="shortcut icon" href="/assets/media/img/favicon.ico">
   </head>
   <body>
     <div class="topnav">
@@ -60,16 +60,22 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/">Home</a></li>
-              <li><a href="/blog/index.html">Blog</a></li>
-              <li><a href="https://github.com/proem/proem/issues">Issues</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
                 <ul class="dropdown-menu">
                   <li><a href="/docs/current">Current Release</a></li>
-                  <li><a href="/docs/dev">Development</a></li>
+                  <li><a href="/docs/dev">Developement</a></li>
                 </ul>
               </li>
-              <li><a href="/api/namespaces/Proem.html">API</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+                  <li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+                </ul>
+              </li>
               <li><a href="/contrib.html">Contribute</a></li>
               <li><a href="/about.html">About</a></li>
             </ul>
@@ -81,9 +87,9 @@
     <div class="docs container">
       <div class="row">
         <div class="span3">
-          <h5>Current Documentation</h5>
+                    <h5>Current Documentation</h5>
           <p><small><em>HEAD of <a href="https://github.com/proem/proem/tree/master">master branch</a></em></small></p>
-          <div style="padding: 8px;" class="well">
+                    <div style="padding: 8px;" class="well">
             <h5>An Overview</h5>
             <ul class="nav nav-tabs nav-stacked">
               <li><a href="/docs/current/installation.html">Installation</a></li>
@@ -94,12 +100,12 @@
           <div style="padding: 8px;" class="well">
             <h5>The Components</h5>
             <ul class="nav nav-tabs nav-stacked">
-              <li><a href="/docs/current/autoloader.html">Autoloading</a></li>
+              <li><a href="/docs/current/autoloader.html">Autoloader</a></li>
               <li><a href="/docs/current/route-component.html">Routing Component</a></li>
               <li><a href="/docs/current/signal-component.html">Signal Component</a></li>
               <li><a href="/docs/current/services-component.html">Service Component</a></li>
               <li><a href="/docs/current/dispatch.html">Dispatch Component</a></li>
-              <li><a href="/docs/current/filter.html">The Filter Chain</a></li>
+              <li><a href="/docs/current/filter.html">The Filter Component</a></li>
               <li><a href="/docs/current/io.html">IO</a></li>
             </ul>
           </div>
@@ -123,7 +129,7 @@
 <div class="well">
   <h3>Creating a controller</h3>
   <p>
-    Controllers are simple to create. Within Proem, all controllers extend the <a href="https://github.com/proem/proem/blob/develop/lib/Proem/Controller/Standard.php">Proem\Controller\Standard</a> object.
+    Controllers are simple to create. Within Proem, all controllers extend the <a href="https://github.com/proem/proem/tree/master/lib/Proem/Controller/Standard.php">Proem\Controller\Standard</a> object.
   </p>
   <pre class="prettyprint">
     class Index extends Proem\Controller\Standard
@@ -169,8 +175,8 @@
     }
   </pre>
   <p>
-    There are also two <a href="/docs/current/signal-component.html">events</a> triggered when an action is called. The <em>proem.pre.action.*</em> and <em>proem.post.action.*</em> events. Where the *
-    is the <em>action</em> being called. You can setup listeners for these events wherever you like, however, you might often setup these listeners within the actual controller itself.
+    There are also two <a href="/docs/current/signal-component.html">events</a> triggered when an action is called. The <em>proem.pre.action.&lt;actionname&gt;</em> and <em>proem.post.action.&lt;actioname&gt;</em> events. Where the
+    &lt;actionname&gt; is the <em>action</em> being called. You can setup listeners for these events wherever you like, however, you might often setup these listeners within the actual controller itself.
   </p>
   <pre class="prettyprint">
     class Index extends Proem\Controller\Standard
@@ -188,42 +194,44 @@
         }
     }
   </pre>
-  <div class="alert alert-info">
-    <p>
-      There is also work planned on adding <a href="https://github.com/proem/proem/issues/121">True namespacing</a> to events which will make these listeners much more flexible in that they won't need to be tied to
-      a particular action. eg;
-    </p>
-    <pre class="prettyprint">
-      class Index extends Proem\Controller\Standard
-      {
-          private $db;
+  <p>
+    If you want to have common code setup for all actions, just use <a href="/docs/current/signal-component.html#wildcards">wildcard notation</a>.
+  </p>
+  <pre class="prettyprint">
+    class Index extends Proem\Controller\Standard
+    {
+        private $db;
 
-          public function init()
-          {
-              $this->assets->get('events')->attach('proem.pre.action.*', [$this, 'dbLoader']);
-          }
+        public function init()
+        {
+            $this->assets->get('events')->attach('proem.pre.action.*', [$this, 'dbLoader']);
+        }
 
-          public function dbLoader()
-          {
-              $this->db = new SomeDBA;
-          }
-      }
-    </pre>
-  </div>
+        public function dbLoader()
+        {
+            $this->db = new SomeDBA;
+        }
+    }
+  </pre>
 </div>
-<div class="well" id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_identifier = '/docs/current/controllers';
-  (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="well" id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_identifier = "/docs/dev/controllers";
+                (function() {
+                    var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                    dsq.src = "http://" + disqus_shortname + ".disqus.com/embed.js";
+                    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+            </script>
+        
         </div>
       </div>
     </div>
-      </body>
+      <div class="row">
+    <div class="span6 gen-footer">
+      Generated from <a href="https://github.com/proem/proemframework.org-src">Source</a> by <a href="https://github.com/trq/Gen">Gen</a> 27/11/2012  08:31
+    </div>
+  </div>
+  </body>
 </html>

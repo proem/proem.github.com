@@ -1,0 +1,142 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Proem Framework &mdash; A lightweight, simple, fast MVC implementation for PHP5.4</title>
+    <meta name="description" content="">
+    <meta name="author" content="Tony R Quilkey">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="/assets/js/jquery-1.8.2.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/prettify.js"></script>
+    <script src="/assets/js/proem.js"></script>
+    <script type="text/javascript">
+      //var disqus_developer = 1;
+      var disqus_shortname = 'proemframework';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21713077-3']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/proem.css">
+    <link rel="shortcut icon" href="/assets/media/img/favicon.ico">
+  </head>
+  <body>
+    <div class="topnav">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="brand">
+            <a href="/">
+              <strong>Proem</strong> Framework
+            </a>
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/docs/current">Current Release</a></li>
+                  <li><a href="/docs/dev">Developement</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+                  <li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+                </ul>
+              </li>
+              <li><a href="/contrib.html">Contribute</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="docs container">
+      <div class="row">
+        <div class="span12">
+          <div class="well">
+  <h3>0.7.0 Released.</h3>
+  <p>
+    I have just bundled and pushed a pretty lame 0.7.0 release to github. Why so lame? Well, this release was mostly pushed to get the *current* docs
+    to line up with the *dev* docs. So, more of a documentation up than anything else. This finally sees the site move to <a href="https://github.com/trq/Gen">Gen</a>
+    for generation, the source is available <a href="https://github.com/proem/proemframework.org-src">here</a>.
+  </p>
+  <p>
+    Having said that however, there is a lot of work in this release. It just doesn't really close any of the outstanding issues in the 0.7.0 milestone. These will
+    likely be moved into a 0.8.0 or maybe in fact a 0.10.0 release. See the <a href="https://github.com/proem/proem/compare/0.6.5...0.7.0">Changelog</a>
+  </p>
+  <h4>Moving forward &mdash; 0.10.0</h4>
+  <p>
+    The next version may indeed skip a few beats. Why? Some major refactoring.
+  </p>
+  <p>
+    For a while now there have been a few fairly major niggles eating away with me. These things need to be fixed before the framework can really start to move forward. These include
+    but are not really limited to:
+  </p>
+  <ul>
+    <li>Directory structure. - <em>The current structure and naming convention is terrible.</em></li>
+    <li>The test suite - <em>Needs a serious overhaul</em></li>
+    <li>IO - <em>I've been thinking for  along while now that this could use the Symfony\HttpFoundation component.</em></li>
+    <li>The Bootstrap Filter Chain - <em>Currently a lot more complex than it needs to be. This is somewhat of a performance bottleneck.</em></li>
+  </ul>
+  <p>
+    None of these are small tasks, and in some cases, things will be completely rewritten.
+  </p>
+  <p>
+    Anyway, for now, I'm just glad to see some movement in the repos.
+  </p>
+</div>
+
+            <div class="well" id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_identifier = "/blog/27-11-2012/0.7.0-released";
+                (function() {
+                    var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                    dsq.src = "http://" + disqus_shortname + ".disqus.com/embed.js";
+                    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+            </script>
+        
+        </div>
+      </div>
+    </div>
+      <div class="row">
+    <div class="span6 gen-footer">
+      Generated from <a href="https://github.com/proem/proemframework.org-src">Source</a> by <a href="https://github.com/trq/Gen">Gen</a> 27/11/2012  08:31
+    </div>
+  </div>
+  </body>
+</html>

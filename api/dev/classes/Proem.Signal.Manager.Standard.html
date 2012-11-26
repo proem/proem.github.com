@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Proem\Signal\Manager\Standard</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-21713077-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+</head>
+<body>
+<div class="topnav"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><div class="brand"><a href="/"><strong>Proem</strong> Framework
+                </a></div>
+<div class="nav-collapse"><ul class="nav">
+<li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a><ul class="dropdown-menu">
+<li><a href="/docs/current">Current</a></li>
+<li><a href="/docs/dev">Development</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a><ul class="dropdown-menu">
+<li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+<li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+</ul>
+</li>
+<li><a href="/contrib.html">Contribute</a></li>
+<li><a href="/about.html">About</a></li>
+</ul></div>
+</div></div></div></div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#attach" title="attach :: Register a listener attached to a particular named event."><span class="description">Register a listener attached to a particular named event.</span><pre>attach()</pre></a></li>
+<li class="method public "><a href="#getListeners" title="getListeners :: Retrieve listeners by name"><span class="description">Retrieve listeners by name</span><pre>getListeners()</pre></a></li>
+<li class="method public "><a href="#remove" title="remove :: Remove event listeners from a particular index."><span class="description">Remove event listeners from a particular index.</span><pre>remove()</pre></a></li>
+<li class="method public "><a href="#trigger" title="trigger :: Trigger the execution of all event listeners attached to a named event."><span class="description">Trigger the execution of all event listeners attached to a named event.</span><pre>trigger()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#populateQueueFromWildSearch" title="populateQueueFromWildSearch :: Given an event name, this method searches for all possible
+wildcard matches in the queues."><span class="description">Given an event name, this method searches for all possible
+wildcard matches in the queues.</span><pre>populateQueueFromWildSearch()</pre></a></li>
+<li class="method protected "><a href="#pushToQueue" title="pushToQueue :: Store a callback's key and priority in a queue indexed
+by the event they are attached to."><span class="description">Store a callback's key and priority in a queue indexed
+by the event they are attached to.</span><pre>pushToQueue()</pre></a></li>
+<li class="method protected "><a href="#storeCallback" title="storeCallback :: Store a callback index by a generated key"><span class="description">Store a callback index by a generated key</span><pre>storeCallback()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#%24callbacks" title="$callbacks :: Store listener callbacks."><span class="description"></span><pre>$callbacks</pre></a></li>
+<li class="property protected "><a href="#%24queues" title="$queues :: Stores listeners in a hash of priority queues."><span class="description"></span><pre>$queues</pre></a></li>
+<li class="property protected "><a href="#%24wildcardSearching" title="$wildcardSearching :: Store a flag regarding searching for wildcards"><span class="description"></span><pre>$wildcardSearching</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul><li class="constant  "><a href="#WILDCARD" title="WILDCARD :: Wildcard used when listening for all events"><span class="description">Wildcard used when listening for all events</span><pre>WILDCARD</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Proem\Signal\Manager\Standard"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Proem.html">Proem</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Proem.Signal.html">Signal</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Proem.Signal.Manager.html">Manager</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Proem.Signal.Manager.Standard.html">Standard</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Standard event manager implementation.</p>
+<div class="details">
+<div class="long_description"><p>Stores event listeners and provides the functionality
+required to trigger an event.</p></div>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="attach"></a><div class="element clickable method public attach" data-toggle="collapse" data-target=".attach .collapse">
+<h2>Register a listener attached to a particular named event.</h2>
+<pre>attach(string | array $name, callable $callback, int $priority) : \Proem\Signal\Manager\Proem\Signal\Manager\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>All listeners have there callbacks firstly stored within an associative array
+using a unique md5 hash as an index and the callback as it's value.</p>
+
+<p>All event names are then stored within an associative array of splpriorityqueues. The
+index of these arrays is the name of the event while the value inserted into the queue
+is the above metnioned unique md5 hash.</p>
+
+<p>This allows a listener to attach itself to be triggered against multiple events
+without having multiple copies of the callback being stored.</p>
+
+<p>Default priority is 0, the higher the number of the priority the earlier the
+listener will respond, negative priorities are allowed.</p>
+
+<p>The name option can optionally take the form of an array of events for the listener
+to attach itself with. A wildcard '*' is also provided and will attach the
+listener to be triggered against all events.</p>
+
+<p>Be aware that attaching a listener to the same event multiple times will trigger
+that listener multiple times. This includes using the wildcard.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><code>array</code><p>The name(s) of the event(s) to listen for.</p>
+</div>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>callable</code><p>The callback to execute when the event is triggered.</p></div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code><p>The priority at which to execute this listener.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Signal\Manager\Proem\Signal\Manager\Template</code></div>
+</div></div>
+</div>
+<a id="getListeners"></a><div class="element clickable method public getListeners" data-toggle="collapse" data-target=".getListeners .collapse">
+<h2>Retrieve listeners by name</h2>
+<pre>getListeners(string $name) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>$listeners</div>
+</div></div>
+</div>
+<a id="remove"></a><div class="element clickable method public remove" data-toggle="collapse" data-target=".remove .collapse">
+<h2>Remove event listeners from a particular index.</h2>
+<pre>remove(string $name) : \Proem\Signal\Manager\Proem\Signal\Manager\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Be aware that removeing listeners from the wildcard '<em>' will not literally
+remove them from *all</em> events. If they have been attached to a specifically
+named event that will need to be removed seperately.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Signal\Manager\Proem\Signal\Manager\Template</code></div>
+</div></div>
+</div>
+<a id="trigger"></a><div class="element clickable method public trigger" data-toggle="collapse" data-target=".trigger .collapse">
+<h2>Trigger the execution of all event listeners attached to a named event.</h2>
+<pre>trigger(\Proem\Signal\Event\Template $event, callable $callback) : \Proem\Signal\Manager\Proem\Signal\Manager\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$event</h4>
+<code>\Proem\Signal\Manager\Proem\Signal\Event\Standard</code><p>The event being triggered.</p></div>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>callable</code><p>A callback that can be used to respond to any response sent back from a listener.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Signal\Manager\Proem\Signal\Manager\Template</code></div>
+</div></div>
+</div>
+<a id="populateQueueFromWildSearch"></a><div class="element clickable method protected populateQueueFromWildSearch" data-toggle="collapse" data-target=".populateQueueFromWildSearch .collapse">
+<h2>Given an event name, this method searches for all possible
+wildcard matches in the queues.</h2>
+<pre>populateQueueFromWildSearch($name) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>When/If a match is found
+it will then copy it's key and priority from the wildcards
+queue into the named event's queue.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4><p>The event name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if match is found</div>
+</div></div>
+</div>
+<a id="pushToQueue"></a><div class="element clickable method protected pushToQueue" data-toggle="collapse" data-target=".pushToQueue .collapse">
+<h2>Store a callback's key and priority in a queue indexed
+by the event they are attached to.</h2>
+<pre>pushToQueue($event, string $key, $priority) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>priority</th>
+<td>The priority this callback has within this queue</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$event</h4><p>The name of the event this callback is being attached to</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The key the callback is stored under</p></div>
+<div class="subelement argument"><h4>$priority</h4></div>
+</div></div>
+</div>
+<a id="storeCallback"></a><div class="element clickable method protected storeCallback" data-toggle="collapse" data-target=".storeCallback .collapse">
+<h2>Store a callback index by a generated key</h2>
+<pre>storeCallback(callable $callback) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>callable</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$key</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="$callbacks"> </a><div class="element clickable property protected $callbacks" data-toggle="collapse" data-target=".$callbacks .collapse">
+<h2></h2>
+<pre>$callbacks : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$queues"> </a><div class="element clickable property protected $queues" data-toggle="collapse" data-target=".$queues .collapse">
+<h2></h2>
+<pre>$queues : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$wildcardSearching"> </a><div class="element clickable property protected $wildcardSearching" data-toggle="collapse" data-target=".$wildcardSearching .collapse">
+<h2></h2>
+<pre>$wildcardSearching </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="WILDCARD"> </a><div class="element clickable constant  WILDCARD" data-toggle="collapse" data-target=".WILDCARD .collapse">
+<h2>Wildcard used when listening for all events</h2>
+<pre>WILDCARD </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12"></footer></div>
+</div>
+</body>
+</html>

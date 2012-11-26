@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Proem\Routing\Route\Standard</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-21713077-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+</head>
+<body>
+<div class="topnav"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><div class="brand"><a href="/"><strong>Proem</strong> Framework
+                </a></div>
+<div class="nav-collapse"><ul class="nav">
+<li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a><ul class="dropdown-menu">
+<li><a href="/docs/current">Current</a></li>
+<li><a href="/docs/dev">Development</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a><ul class="dropdown-menu">
+<li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+<li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+</ul>
+</li>
+<li><a href="/contrib.html">Contribute</a></li>
+<li><a href="/about.html">About</a></li>
+</ul></div>
+</div></div></div></div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#__construct" title="__construct :: Instantiate object &amp; setup default filters / tokens."><span class="description">Instantiate object &amp; setup default filters / tokens.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#call" title="call :: Method used to execute a route callback."><span class="description">Method used to execute a route callback.</span><pre>call()</pre></a></li>
+<li class="method public inherited"><a href="#getPayload" title="getPayload :: Retrieve the Payload."><span class="description">Retrieve the Payload.</span><pre>getPayload()</pre></a></li>
+<li class="method public inherited"><a href="#hasCallback" title="hasCallback :: Do we have a callback?"><span class="description">Do we have a callback?</span><pre>hasCallback()</pre></a></li>
+<li class="method public inherited"><a href="#isMatch" title="isMatch :: Was a match found?"><span class="description">Was a match found?</span><pre>isMatch()</pre></a></li>
+<li class="method public "><a href="#process" title="process :: Process the supplied url."><span class="description">Process the supplied url.</span><pre>process()</pre></a></li>
+<li class="method public inherited"><a href="#setMatch" title="setMatch :: Set matched flag."><span class="description">Set matched flag.</span><pre>setMatch()</pre></a></li>
+<li class="method public inherited"><a href="#testRequestMethod" title="testRequestMethod :: A generic testMethod function used to test a route
+against a request type."><span class="description">A generic testMethod function used to test a route
+against a request type.</span><pre>testRequestMethod()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#%24default_filters" title="$default_filters :: Store default filters."><span class="description"></span><pre>$default_filters</pre></a></li>
+<li class="property protected "><a href="#%24default_tokens" title="$default_tokens :: Store default tokens."><span class="description"></span><pre>$default_tokens</pre></a></li>
+<li class="property protected inherited"><a href="#%24hasCallback" title="$hasCallback :: Store a flag indicating the presence of a callback."><span class="description"></span><pre>$hasCallback</pre></a></li>
+<li class="property protected inherited"><a href="#%24matched" title="$matched :: Store a flag indicating a route match"><span class="description"></span><pre>$matched</pre></a></li>
+<li class="property protected inherited"><a href="#%24options" title="$options :: Store the options for this route"><span class="description"></span><pre>$options</pre></a></li>
+<li class="property protected inherited"><a href="#%24payload" title="$payload :: Store matched parameters within a Dispatch\Payload object."><span class="description"></span><pre>$payload</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Proem\Routing\Route\Standard"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Proem.html">Proem</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Proem.Routing.html">Routing</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Proem.Routing.Route.html">Route</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Proem.Routing.Route.Standard.html">Standard</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Proem's standard route.</p>
+<div class="details">
+<div class="long_description"><p>This route should cover most use cases and is currently the only
+route provided within the framework.</p></div>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Instantiate object &amp; setup default filters / tokens.</h2>
+<pre>__construct(array $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>$options = ['rule', 'targets', 'filters', 'method', 'callback'];</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><p>Array of Proem\Utils\Option objects</p>
+</div>
+</div></div>
+</div>
+<a id="call"></a><div class="element clickable method public call" data-toggle="collapse" data-target=".call .collapse">
+<h2>Method used to execute a route callback.</h2>
+<pre>call(\Proem\IO\Request\Template $request) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request</h4>
+<code>\Proem\Routing\Route\Proem\IO\Request\Template</code>
+</div>
+</div></div>
+</div>
+<a id="getPayload"></a><div class="element clickable method public getPayload" data-toggle="collapse" data-target=".getPayload .collapse">
+<h2>Retrieve the Payload.</h2>
+<pre>getPayload() : \Proem\Routing\Route\Proem\Routing\Route\Payload</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::getPayload()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Routing\Route\Proem\Routing\Route\Payload</code></div>
+</div></div>
+</div>
+<a id="hasCallback"></a><div class="element clickable method public hasCallback" data-toggle="collapse" data-target=".hasCallback .collapse">
+<h2>Do we have a callback?</h2>
+<pre>hasCallback() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::hasCallback()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="isMatch"></a><div class="element clickable method public isMatch" data-toggle="collapse" data-target=".isMatch .collapse">
+<h2>Was a match found?</h2>
+<pre>isMatch() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::isMatch()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="process"></a><div class="element clickable method public process" data-toggle="collapse" data-target=".process .collapse">
+<h2>Process the supplied url.</h2>
+<pre>process(\Proem\IO\Request\Template $request) : \Proem\Routing\Route\Proem\Routing\Route\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This route takes a simplified series of patterns such as :controller and
+replaces them with more complex regular expressions which are then used
+within a preg_match_callback to match against the given uri.</p>
+
+<p>A default rule of /:controller/:action/:params is used if no rule is
+provided through the $options array.</p>
+
+<p>If a 'filter' regex is set within the $options array that regex will be
+used within the preg_match_callback. Otherwise a default regex of
+([a-zA-Z0-9_&#43;&#45;%]+) is used.</p>
+
+<p>If one of the 'simplified' patterns within the rule is :params, this is
+treated specially and uses a ([a-zA-Z0-9_&#43;&#45;%\/]+) regex which will match
+the same as the default as well as / .</p>
+
+<p>This causes the pattern to match entire sections of uri's. Allowing a
+simple pattern like the default /:controller/:action/:params to match
+uri's like /foo/bar/a/b/c/d/e/f/g/h and cause everything after /foo/bar
+to be added to the Payload object as params (which are in turn transformed
+into key => value pairs).</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request</h4>
+<code>\Proem\Routing\Route\Proem\IO\Request\Template</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Routing\Route\Proem\Routing\Route\Template</code></div>
+</div></div>
+</div>
+<a id="setMatch"></a><div class="element clickable method public setMatch" data-toggle="collapse" data-target=".setMatch .collapse">
+<h2>Set matched flag.</h2>
+<pre>setMatch() : \Proem\Routing\Route\Proem\Routing\Route\Template</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::setMatch()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Routing\Route\Proem\Routing\Route\Template</code></div>
+</div></div>
+</div>
+<a id="testRequestMethod"></a><div class="element clickable method public testRequestMethod" data-toggle="collapse" data-target=".testRequestMethod .collapse">
+<h2>A generic testMethod function used to test a route
+against a request type.</h2>
+<pre>testRequestMethod(\Proem\IO\Request\Template $request) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This should be called within any process() method</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::testRequestMethod()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$request</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="$default_filters"> </a><div class="element clickable property protected $default_filters" data-toggle="collapse" data-target=".$default_filters .collapse">
+<h2></h2>
+<pre>$default_filters : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$default_tokens"> </a><div class="element clickable property protected $default_tokens" data-toggle="collapse" data-target=".$default_tokens .collapse">
+<h2></h2>
+<pre>$default_tokens : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$hasCallback"> </a><div class="element clickable property protected $hasCallback" data-toggle="collapse" data-target=".$hasCallback .collapse">
+<h2></h2>
+<pre>$hasCallback : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::$$hasCallback</td>
+</tr></table>
+</div></div>
+</div>
+<a id="$matched"> </a><div class="element clickable property protected $matched" data-toggle="collapse" data-target=".$matched .collapse">
+<h2></h2>
+<pre>$matched : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::$$matched</td>
+</tr></table>
+</div></div>
+</div>
+<a id="$options"> </a><div class="element clickable property protected $options" data-toggle="collapse" data-target=".$options .collapse">
+<h2></h2>
+<pre>$options : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::$$options</td>
+</tr></table>
+</div></div>
+</div>
+<a id="$payload"> </a><div class="element clickable property protected $payload" data-toggle="collapse" data-target=".$payload .collapse">
+<h2></h2>
+<pre>$payload : \Proem\Routing\Route\Proem\Routing\Route\Payload</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Proem\Routing\Route\Generic::$$payload</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12"></footer></div>
+</div>
+</body>
+</html>

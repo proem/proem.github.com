@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/scripts/bootstrap.min.js"></script>
-    <script src="/scripts/prettify.js"></script>
-    <script src="/scripts/proem.js"></script>
+    <script src="/assets/js/jquery-1.8.2.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/prettify.js"></script>
+    <script src="/assets/js/proem.js"></script>
     <script type="text/javascript">
       //var disqus_developer = 1;
       var disqus_shortname = 'proemframework';
@@ -36,11 +36,11 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-responsive.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prettify.css">
-    <link rel="stylesheet" type="text/css" href="/styles/proem.css">
-    <link rel="shortcut icon" href="media/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/proem.css">
+    <link rel="shortcut icon" href="/assets/media/img/favicon.ico">
   </head>
   <body>
     <div class="topnav">
@@ -60,16 +60,22 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/">Home</a></li>
-              <li><a href="/blog/index.html">Blog</a></li>
-              <li><a href="https://github.com/proem/proem/issues">Issues</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
                 <ul class="dropdown-menu">
                   <li><a href="/docs/current">Current Release</a></li>
-                  <li><a href="/docs/dev">Development</a></li>
+                  <li><a href="/docs/dev">Developement</a></li>
                 </ul>
               </li>
-              <li><a href="/api/namespaces/Proem.html">API</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+                  <li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+                </ul>
+              </li>
               <li><a href="/contrib.html">Contribute</a></li>
               <li><a href="/about.html">About</a></li>
             </ul>
@@ -81,9 +87,9 @@
     <div class="docs container">
       <div class="row">
         <div class="span3">
-          <h5>Development Documentation</h5>
-          <p><small><em>HEAD of <a href="https://github.com/proem/proem">develop branch</a></em></small></p>
-          <div style="padding: 8px;" class="well">
+                    <h5>Development Documentation</h5>
+          <p><small><em>HEAD of <a href="https://github.com/proem/proem/tree/develop">develop branch</a></em></small></p>
+                    <div style="padding: 8px;" class="well">
             <h5>An Overview</h5>
             <ul class="nav nav-tabs nav-stacked">
               <li><a href="/docs/dev/installation.html">Installation</a></li>
@@ -94,12 +100,12 @@
           <div style="padding: 8px;" class="well">
             <h5>The Components</h5>
             <ul class="nav nav-tabs nav-stacked">
-              <li><a href="/docs/dev/autoloader.html">Autoloading</a></li>
+              <li><a href="/docs/dev/autoloader.html">Autoloader</a></li>
               <li><a href="/docs/dev/route-component.html">Routing Component</a></li>
               <li><a href="/docs/dev/signal-component.html">Signal Component</a></li>
               <li><a href="/docs/dev/services-component.html">Service Component</a></li>
               <li><a href="/docs/dev/dispatch.html">Dispatch Component</a></li>
-              <li><a href="/docs/dev/filter.html">The Filter Chain</a></li>
+              <li><a href="/docs/dev/filter.html">The Filter Component</a></li>
               <li><a href="/docs/dev/io.html">IO</a></li>
             </ul>
           </div>
@@ -158,7 +164,7 @@
     This section contains guides designed to give you a high level view of how things work, as well as detailed information about the Bootstrap process.
   </p>
   <p>
-    <a href="/docs/dev/installation.html">Installation</a> is a fairly obvious first step, the <a href="/docs/dev/quickstart.html">Quickstart</a> then guides you through building a <b>very</b>
+    <a href="/docs/dev/installation.html">Installation</a> is a fairly obvious first step, the <a href="/docs/dev/quickstart.html">Quick Start Guide</a> then guides you through building a <b>very</b>
     simple application without going into too much detail before <a href="/docs/dev/bootstrap.html">The Bootstrap Process</a> walks you through a first introduction to the Proem internals and how
     the framework is held together.
   </p>
@@ -172,7 +178,7 @@
     The <em>Userland</em> section covers how you can write code to extend and build upon the Proem framework.
   </p>
   <p>
-    If you are then still looking for more detail we also have available the <a href="http://prdoc/api/namespaces/Proem.html">API Documentation</a>. This documentation documents every class and method
+    If you are then still looking for more detail we also have available the <a href="/api/dev/namespaces/Proem.html">API Documentation</a>. This documentation documents every class and method
     within Proem and is automatically generated from comments within the actual code itself.
   </p>
   <p>
@@ -182,5 +188,10 @@
         </div>
       </div>
     </div>
-      </body>
+      <div class="row">
+    <div class="span6 gen-footer">
+      Generated from <a href="https://github.com/proem/proemframework.org-src">Source</a> by <a href="https://github.com/trq/Gen">Gen</a> 27/11/2012  08:31
+    </div>
+  </div>
+  </body>
 </html>

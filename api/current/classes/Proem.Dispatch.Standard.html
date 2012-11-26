@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Proem\Dispatch\Standard</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-21713077-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+</head>
+<body>
+<div class="topnav"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><div class="brand"><a href="/"><strong>Proem</strong> Framework
+                </a></div>
+<div class="nav-collapse"><ul class="nav">
+<li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="https://github.com/proem/proem/issues">Issue Tracker</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a><ul class="dropdown-menu">
+<li><a href="/docs/current">Current</a></li>
+<li><a href="/docs/dev">Development</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">API</a><ul class="dropdown-menu">
+<li><a href="/api/current/namespaces/Proem.html">Current</a></li>
+<li><a href="/api/dev/namespaces/Proem.html">Development</a></li>
+</ul>
+</li>
+<li><a href="/contrib.html">Contribute</a></li>
+<li><a href="/about.html">About</a></li>
+</ul></div>
+</div></div></div></div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#__construct" title="__construct :: Setup the dispatcher"><span class="description">Setup the dispatcher</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#attachControllerMap" title="attachControllerMap :: Add a new controller map onto the stack of controller
+maps."><span class="description">Add a new controller map onto the stack of controller
+maps.</span><pre>attachControllerMap()</pre></a></li>
+<li class="method public "><a href="#dispatch" title="dispatch :: Dispatch the current controller stored within
+the $class property."><span class="description">Dispatch the current controller stored within
+the $class property.</span><pre>dispatch()</pre></a></li>
+<li class="method public "><a href="#getAction" title="getAction :: Get the current action"><span class="description">Get the current action</span><pre>getAction()</pre></a></li>
+<li class="method public "><a href="#getController" title="getController :: Get the current controller"><span class="description">Get the current controller</span><pre>getController()</pre></a></li>
+<li class="method public "><a href="#getModule" title="getModule :: Get the current module"><span class="description">Get the current module</span><pre>getModule()</pre></a></li>
+<li class="method public "><a href="#isDispatchable" title="isDispatchable :: Test to see if the current payload is dispatchable."><span class="description">Test to see if the current payload is dispatchable.</span><pre>isDispatchable()</pre></a></li>
+<li class="method public "><a href="#setAction" title="setAction :: Set the current action"><span class="description">Set the current action</span><pre>setAction()</pre></a></li>
+<li class="method public "><a href="#setActionMap" title="setActionMap :: Allows the customisation of the *action map*."><span class="description">Allows the customisation of the *action map*.</span><pre>setActionMap()</pre></a></li>
+<li class="method public "><a href="#setController" title="setController :: Set the current controller"><span class="description">Set the current controller</span><pre>setController()</pre></a></li>
+<li class="method public "><a href="#setModule" title="setModule :: Set the current module"><span class="description">Set the current module</span><pre>setModule()</pre></a></li>
+<li class="method public "><a href="#setPayload" title="setPayload :: Set the payload object"><span class="description">Set the payload object</span><pre>setPayload()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#%24action" title="$action :: Store the action name"><span class="description"></span><pre>$action</pre></a></li>
+<li class="property protected "><a href="#%24actionMap" title="$actionMap :: Store the *action map* pattern."><span class="description"></span><pre>$actionMap</pre></a></li>
+<li class="property protected "><a href="#%24assets" title="$assets :: Store the Assets manager"><span class="description"></span><pre>$assets</pre></a></li>
+<li class="property protected "><a href="#%24class" title="$class :: Store the absolute namespace to the current class"><span class="description"></span><pre>$class</pre></a></li>
+<li class="property protected "><a href="#%24controller" title="$controller :: Store the controller name"><span class="description"></span><pre>$controller</pre></a></li>
+<li class="property protected "><a href="#%24controllerMaps" title="$controllerMaps :: Store an array of patterns used to searching
+for classes within a namepspace."><span class="description"></span><pre>$controllerMaps</pre></a></li>
+<li class="property protected "><a href="#%24module" title="$module :: Store the module name"><span class="description"></span><pre>$module</pre></a></li>
+<li class="property protected "><a href="#%24payload" title="$payload :: Store the Router Payload."><span class="description"></span><pre>$payload</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#ACTION_PLACEHOLDER" title="ACTION_PLACEHOLDER :: "><span class="description">ACTION_PLACEHOLDER</span><pre>ACTION_PLACEHOLDER</pre></a></li>
+<li class="constant  "><a href="#CONTROLLER_PLACEHOLDER" title="CONTROLLER_PLACEHOLDER :: "><span class="description">CONTROLLER_PLACEHOLDER</span><pre>CONTROLLER_PLACEHOLDER</pre></a></li>
+<li class="constant  "><a href="#DEFAULT_CONTROLLERMAP_PRIORITY" title="DEFAULT_CONTROLLERMAP_PRIORITY :: Priorities"><span class="description">Priorities</span><pre>DEFAULT_CONTROLLERMAP_PRIORITY</pre></a></li>
+<li class="constant  "><a href="#MODULE_PLACEHOLDER" title="MODULE_PLACEHOLDER :: Placeholders"><span class="description">Placeholders</span><pre>MODULE_PLACEHOLDER</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Proem\Dispatch\Standard"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Proem.html">Proem</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Proem.Dispatch.html">Dispatch</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Proem.Dispatch.Standard.html">Standard</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Proem\Dispatch\Standard</p>
+<div class="details">
+<div class="long_description"></div>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Setup the dispatcher</h2>
+<pre>__construct(\Proem\Service\Manager\Template $assets) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$assets</h4>
+<code>\Proem\Dispatch\Proem\Service\Manager\Template</code>
+</div>
+</div></div>
+</div>
+<a id="attachControllerMap"></a><div class="element clickable method public attachControllerMap" data-toggle="collapse" data-target=".attachControllerMap .collapse">
+<h2>Add a new controller map onto the stack of controller
+maps.</h2>
+<pre>attachControllerMap(string $map, int $priority) : \Proem\Dispatch\Proem\Dispatch\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method allows us to add different directory structures
+which the dispatcher can use to locate controllers.</p>
+
+<p>The default controller map looks like: 'Module&#123;:module}\Controller&#123;:controller}' where
+{:module} and {:controller} are respectfully replaced by data provided by the payload.</p>
+
+<p>This controller map is injected with a priority of 0.</p>
+
+<p>If you want custom controller maps to be looked at before the default controller map,
+give them a higher priority.</p>
+
+<p>You can create your own. The tokens :module and :controller will be replaced
+with the module and controller that are made available via the payload.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$map</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Dispatch\Proem\Dispatch\Template</code></div>
+</div></div>
+</div>
+<a id="dispatch"></a><div class="element clickable method public dispatch" data-toggle="collapse" data-target=".dispatch .collapse">
+<h2>Dispatch the current controller stored within
+the $class property.</h2>
+<pre>dispatch() : \Proem\Dispatch\Proem\Dispatch\Standard</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Prior to dispatch this method will send the Payload to the Request
+object stored within the Service Manager. At this point we also call
+the Payload's prepare method, which prepares the Payload for the Request.</p>
+
+<p>It will then execute the controllers preAction method, the action
+method provided by the payload, then postAction.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Dispatch\Proem\Dispatch\Standard</code></div>
+</div></div>
+</div>
+<a id="getAction"></a><div class="element clickable method public getAction" data-toggle="collapse" data-target=".getAction .collapse">
+<h2>Get the current action</h2>
+<pre>getAction() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="getController"></a><div class="element clickable method public getController" data-toggle="collapse" data-target=".getController .collapse">
+<h2>Get the current controller</h2>
+<pre>getController() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="getModule"></a><div class="element clickable method public getModule" data-toggle="collapse" data-target=".getModule .collapse">
+<h2>Get the current module</h2>
+<pre>getModule() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="isDispatchable"></a><div class="element clickable method public isDispatchable" data-toggle="collapse" data-target=".isDispatchable .collapse">
+<h2>Test to see if the current payload is dispatchable.</h2>
+<pre>isDispatchable() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method iterates through all of the controller maps
+and checks to see if the class can be instantiated and the
+action executed.</p>
+
+<p>This method will actually store an instantiated controller
+within the $class property of this Dispatch object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="setAction"></a><div class="element clickable method public setAction" data-toggle="collapse" data-target=".setAction .collapse">
+<h2>Set the current action</h2>
+<pre>setAction(string $action) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$action</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="setActionMap"></a><div class="element clickable method public setActionMap" data-toggle="collapse" data-target=".setActionMap .collapse">
+<h2>Allows the customisation of the *action map*.</h2>
+<pre>setActionMap(string $mapping) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default implementation looks like {:action}Action</p>
+
+<p>{:action} gets replaced by the action returning from the
+router.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mapping</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="setController"></a><div class="element clickable method public setController" data-toggle="collapse" data-target=".setController .collapse">
+<h2>Set the current controller</h2>
+<pre>setController(string $controller) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$controller</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="setModule"></a><div class="element clickable method public setModule" data-toggle="collapse" data-target=".setModule .collapse">
+<h2>Set the current module</h2>
+<pre>setModule(string $module) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$module</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="setPayload"></a><div class="element clickable method public setPayload" data-toggle="collapse" data-target=".setPayload .collapse">
+<h2>Set the payload object</h2>
+<pre>setPayload(\Proem\Routing\Route\Payload $payload) : \Proem\Dispatch\Proem\Dispatch\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$payload</h4>
+<code>\Proem\Dispatch\Proem\Routing\Route\Payload</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Proem\Dispatch\Proem\Dispatch\Template</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="$action"> </a><div class="element clickable property protected $action" data-toggle="collapse" data-target=".$action .collapse">
+<h2></h2>
+<pre>$action : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$actionMap"> </a><div class="element clickable property protected $actionMap" data-toggle="collapse" data-target=".$actionMap .collapse">
+<h2></h2>
+<pre>$actionMap </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$assets"> </a><div class="element clickable property protected $assets" data-toggle="collapse" data-target=".$assets .collapse">
+<h2></h2>
+<pre>$assets : \Proem\Dispatch\Proem\Service\Manager\Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$class"> </a><div class="element clickable property protected $class" data-toggle="collapse" data-target=".$class .collapse">
+<h2></h2>
+<pre>$class : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$controller"> </a><div class="element clickable property protected $controller" data-toggle="collapse" data-target=".$controller .collapse">
+<h2></h2>
+<pre>$controller : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$controllerMaps"> </a><div class="element clickable property protected $controllerMaps" data-toggle="collapse" data-target=".$controllerMaps .collapse">
+<h2></h2>
+<pre>$controllerMaps : <a href="../classes/Proem.Util.Storage.Queue.html">\Proem\Util\Storage\Queue</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Controller maps are actually stored within a priority
+queue with the default controller map sitting at priority 0.
+If you want custom controller maps to be looked at before
+the default controller map, give them a higher priority.</p></div></div></div>
+</div>
+<a id="$module"> </a><div class="element clickable property protected $module" data-toggle="collapse" data-target=".$module .collapse">
+<h2></h2>
+<pre>$module : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="$payload"> </a><div class="element clickable property protected $payload" data-toggle="collapse" data-target=".$payload .collapse">
+<h2></h2>
+<pre>$payload : \Proem\Dispatch\Proem\Routing\Route\Payload</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="ACTION_PLACEHOLDER"> </a><div class="element clickable constant  ACTION_PLACEHOLDER" data-toggle="collapse" data-target=".ACTION_PLACEHOLDER .collapse">
+<h2>ACTION_PLACEHOLDER</h2>
+<pre>ACTION_PLACEHOLDER </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="CONTROLLER_PLACEHOLDER"> </a><div class="element clickable constant  CONTROLLER_PLACEHOLDER" data-toggle="collapse" data-target=".CONTROLLER_PLACEHOLDER .collapse">
+<h2>CONTROLLER_PLACEHOLDER</h2>
+<pre>CONTROLLER_PLACEHOLDER </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="DEFAULT_CONTROLLERMAP_PRIORITY"> </a><div class="element clickable constant  DEFAULT_CONTROLLERMAP_PRIORITY" data-toggle="collapse" data-target=".DEFAULT_CONTROLLERMAP_PRIORITY .collapse">
+<h2>Priorities</h2>
+<pre>DEFAULT_CONTROLLERMAP_PRIORITY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="MODULE_PLACEHOLDER"> </a><div class="element clickable constant  MODULE_PLACEHOLDER" data-toggle="collapse" data-target=".MODULE_PLACEHOLDER .collapse">
+<h2>Placeholders</h2>
+<pre>MODULE_PLACEHOLDER </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12"></footer></div>
+</div>
+</body>
+</html>
