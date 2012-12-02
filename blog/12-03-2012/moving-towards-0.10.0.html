@@ -88,28 +88,41 @@
       <div class="row">
         <div class="span12">
           <div class="well">
-  <h2>Where did Proem come from?</h2>
-  <blockquote>
-    –noun an introductory discourse; introduction; preface; preamble.<br />
-    Origin: 1350–1400; < L prooemium < Gk prooímion prelude (pro- pro-2 + oím(ē) song + -ion dim. suffix); r. ME proheme < MF < L, as above
-  </blockquote>
+  <h3>Moving towards 0.10.0</h3>
   <p>
-    Proem started life in around early 2010 and has seen a few different incarnations since. At one stage
-    around the end of 2010 I had an almost complete framework in place. Things change however and a few
-    rewrites latter it is where it is today.
+    Recently I announced the release of <a href="/blog/11-27-2012/0.7.0-released.html">0.7.0</a>. In these release not I hinted at the fact that there may be a large gap in between
+    0.7.0 and the next release (0.10.0). Today, I am here to announce that this is indeed the case.
+  </p>
+  <h5>Why the gap?</h5>
+  <p>
+    A large gap like this is generally used to indicate that a lot of work has been done. In this case, we have a lot of work planned. As such, by the time 0.10.0 is released, the framework
+    wont likely look like it does now.
+  </p>
+  <h5>Why such a large re factor?</h5>
+  <p>
+    There are certain areas of Proem I haven't been happy with for quite some time. Some are over engineered, others have been neglected, while other are just poorly designed and need to be
+    fixed. Rest assured, 0.10.0 is going to fix a lot of issues and make the framework better.
+  </p>
+  <h5>We may loose some history.</h5>
+  <p>
+    This re factor is indeed such a large change that big chunks of the current framework are being moved or removed and rewritten. In doing so we may loose some history of changes, but really
+    once 0.10.0 is released, you wont need to know about anything prior.
   </p>
   <p>
-    The current incarnation was started at the end of 2011 after playing with the PHP5.4 alphas for about 6 months.
+    I am not expecting these re factor to take a considerable amount of time. I am hoping to get this release complete and packaged by late February. Though as always, I'm not promising anything.
   </p>
 </div>
-<a name="contact"></a>
-<div class="well">
-  <h3>Contact me</h3>
-  <p>
-    I can be contacted via email at <a mailto="trq@proemframework.org">trq@proemframework.org</a>, find me
-    lurking on our #proem channel on freenode, or follow <a href="http://twitter.com/proem">@proem</a> or <a href="http://twitter.com">@tonyrq</a>
-  </p>
-</div>
+
+            <div class="well" id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_identifier = "/blog/03-12-2012/moving-towards-0.10.0";
+                (function() {
+                    var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                    dsq.src = "http://" + disqus_shortname + ".disqus.com/embed.js";
+                    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+            </script>
+        
         </div>
       </div>
     </div>
